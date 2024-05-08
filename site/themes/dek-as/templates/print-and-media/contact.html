@@ -1,0 +1,29 @@
+---
+en: 
+    btn_next: 'SHOW MORE'
+cz: 
+   btn_next: 'ZOBRAZIT DALŠÍ'
+sk: 
+   btn_next: 'ZOBRAZIŤ ĎALŠIE'
+---
+
+<div class="uk-container media-list">
+    <h1 class="page-name">{{title}}</h1>
+    
+    <div id="filters-container">       
+        <ul class="uk-subnav uk-subnav-pill uk-flex-center" data-uk-margin>
+            <li class="{{ main_addon:is_url_active page="news-ann" :lang="locale"  }}"><a id="news-ann" class="btn" href="{{ main_addon:translate type='url' :lang="locale" page="news-ann" }}">{{ main_addon:translate type='name' :lang="locale" page="news-ann" }}</a></li>
+            <li class="{{ main_addon:is_url_active page="news-about" :lang="locale"  }}"><a id="news-about" class="btn" href="{{ main_addon:translate type='url' :lang="locale" page="news-about" }}">{{ main_addon:translate type='name' :lang="locale" page="news-about" }}</a></li>
+            <li class="{{ main_addon:is_url_active page="news-appr" :lang="locale"  }}"><a  id="news-appr" class="btn" href="{{ main_addon:translate type='url' :lang="locale" page="news-appr" }}">{{ main_addon:translate type='name' :lang="locale" page="news-appr" }}</a></li>
+            <li class="{{ main_addon:is_url_active page="news-kontakt" :lang="locale"  }}"><a  id="news-kontakt" class="btn" href="{{ main_addon:translate type='url' :lang="locale" page="news-kontakt" }}">{{ main_addon:translate type='name' :lang="locale" page="news-kontakt" }}</a></li>
+        </ul>
+    </div>
+    
+    <div style="max-width: 820px;margin: 0 auto;" class="media-boxes uk-height-small" data-uk-height-match="target: > .matched" >
+        {{content}}
+    </div>   
+</div>
+
+
+
+<script src="{{ theme:js src="media.js" cache_bust="true" }}"></script>

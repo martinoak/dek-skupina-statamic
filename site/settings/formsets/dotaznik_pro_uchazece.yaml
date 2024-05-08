@@ -1,0 +1,38 @@
+title: 'Dotazník pro uchazeče'
+fields:
+  name:
+    display: 'Jméno a příjmení'
+    validate: required
+  e-mail:
+    display: E-mail
+    validate: email|required
+  phone:
+    display: Telefon
+  files:
+    display: Soubory
+    type: files
+    destination: uploads/
+    validate: required
+  location:
+    display: Lokalita
+  note:
+    display: Poznámka
+  agree:
+    display: Souhlas
+    validate: required
+  lang:
+    display: 'Verze formuláře'
+  advertisement:
+    display: 'Zdroj inzerátu'
+#  specialization:
+#    display: Obor
+  vr_id:
+    display: 'id pozice'
+columns:
+  - name
+  - e-mail
+  - phone
+  - files
+  - location
+  - note
+  - agree

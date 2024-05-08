@@ -1,0 +1,321 @@
+        .redactor-style ul {
+            padding-bottom: 10px;
+            padding-top   : 5px;
+        }
+
+        * {
+            margin    : 0;
+            padding   : 0;
+            box-sizing: border-box;
+        }
+
+        div.fakeinput,
+        #candidate input:not([type="checkbox"]),
+        #candidate select {
+            width     : 100%;
+            display   : block;
+            padding   : 8px;
+            border    : 1px solid #e3e3e3;
+            margin-top: 5px;
+            font-size : 14px;
+        }
+
+        .error-message {
+            color     : #E30013;
+            visibility: hidden;
+            font-size : 12px;
+        }
+
+        #candidate select {
+            position          : relative;
+            font-size         : 16px;
+            -webkit-appearance: none;
+            -moz-appearance   : none;
+            appearance        : none;
+            cursor            : pointer;
+            z-index           : 1;
+            background        : transparent;
+            padding-top       : 0;
+            padding-bottom    : 0;
+            height            : 37px;
+        }
+
+        #candidate select option {
+            color: #464646;
+        }
+
+        #candidate select+#select-arrow {
+            width     : 20px;
+            height    : 37px;
+            position  : absolute;
+            top       : 25px;
+            right     : 12px;
+            background: #e3e3e3;
+            color     : #696969;
+            z-index   : 0;
+        }
+
+        #candidate select+#select-arrow::before {
+            content     : '';
+            border-left : 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top  : 10px solid #696969;
+            position    : absolute;
+            top         : 14px;
+            left        : 4px;
+        }
+
+        #candidate select:active+#select-arrow::before,
+        #candidate select:hover+#select-arrow::before {
+            border-top: 10px solid #e3e3e3;
+        }
+
+        #candidate select:active+#select-arrow,
+        #candidate select:hover+#select-arrow {
+            background: #696969;
+        }
+
+        #candidate select:hover,
+        #candidate select:focus {
+            border-color: #696969;
+        }
+
+        span.file {
+            padding : 8px;
+            display : block;
+            position: relative;
+        }
+
+        div.fakeinput {
+            padding      : 0;
+            position     : relative;
+            height       : 35px;
+            padding-top  : 7px;
+            padding-left : 10px;
+            margin-bottom: 7px;
+        }
+
+        input[type="file"] {
+            position: absolute;
+            padding : 0;
+            height  : 100%;
+            bottom  : 12px;
+            right   : 12px;
+            opacity : 0;
+            margin  : 0 !important;
+        }
+
+        #candidate {
+            position       : relative;
+            padding        : 50px 0;
+            width          : 100%;
+            display        : flex;
+            justify-content: center;
+            background     : #f9f9f9;
+        }
+
+        #candidate h1 {
+            text-align    : center;
+            padding-bottom: 20px;
+        }
+
+        #candidate table {
+            min-width : 980px;
+            background: #fff;
+            padding   : 20px;
+        }
+
+        #candidate td {
+            padding: 0 11px;
+        }
+
+        #candidate td:not(.required) {
+            padding-bottom: 14px;
+        }
+
+        #files {
+            padding-top: 0 !important;
+        }
+
+        #candidate .cross {
+            top  : calc(50% - 7px);
+            right: 15px;
+        }
+
+        #candidate .cross:before,
+        #candidate .cross:after {
+            height: 15px;
+        }
+
+        #files label:before {
+            content      : '\002B';
+            background   : #e8313f;
+            width        : 20px;
+            height       : 20px;
+            display      : inline-block;
+            text-align   : center;
+            border-radius: 50%;
+            color        : #fff;
+            font-weight  : 800;
+            font-size    : 16px;
+            margin-right : 10px;
+            line-height  : 20px;
+            display: flex  ;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #files label:hover:before {
+            background: #E30013;
+            cursor    : pointer;
+        }
+
+        #candidate .btn {
+            cursor        : pointer;
+            border        : none;
+            font-size     : 13px;
+            border-radius : 17px;
+            height        : 33px;
+            display       : block;
+            line-height   : 2.8;
+            text-align    : center;
+            padding       : 0 26px;
+            text-transform: uppercase;
+            min-width     : 120px;
+            width         : 200px;
+            margin-left   : auto;
+            margin-right  : auto;
+            margin-top    : 20px;
+        }
+
+        .btn.red {
+            background-color: #E30013;
+            color           : #FFF;
+        }
+
+        #candidate .btn {
+            position     : absolute;
+            bottom       : 30px;
+            left         : calc(50% - 60px);
+            width        : 120px !important;
+            height       : 40px !important;
+            border-radius: 20px !important;
+            font-weight  : 800;
+        }
+
+        h3 {
+            font-size: 16pt;
+        }
+
+        #candidate input[type="checkbox"] {
+            -webkit-box-shadow: 0px 0px 0px 1px #e3e3e3;
+            -moz-box-shadow   : 0px 0px 0px 1px #e3e3e3;
+            box-shadow        : 0px 0px 0px 1px #e3e3e3;
+        }
+
+        #candidate label#agree {
+            position: relative;
+        }
+
+        #candidate #agree input[type="checkbox"] {
+            opacity: 0;
+        }
+
+        #candidate #agree .checkmark {
+            position  : absolute;
+            background: transparent;
+            border    : 1px solid #dfdfdf;
+            width     : 12px;
+            height    : 12px;
+            top       : 0px;
+            left      : -20px;
+            cursor    : pointer;
+        }
+
+        #candidate #agree input[type="checkbox"]:checked~.checkmark:after {
+            content  : "\2714";
+            font-size: 16px;
+            top      : -6px;
+            color    : #464646;
+            position : absolute;
+        }
+
+        @media(max-width: 980px) {
+            #candidate table {
+                min-width: 650px;
+            }
+        }
+
+        @media(max-width: 650px) {
+            #candidate table {
+                min-width: 100%
+            }
+
+            #candidate table td:not([colspan="2"]) {
+                display: block;
+            }
+        }
+
+        a#close {
+            color   : #aaa;
+            z-index : 2;
+            position: absolute;
+            right   : 15px;
+        }
+
+        a#close:before {
+            position : absolute;
+            top      : 2px;
+            left     : -20px;
+            content  : url(../icons/arrows.svg);
+            height   : 15px;
+            width    : 15px;
+            transform: rotate(180deg);
+        }
+
+
+        .career__back {
+            color: #ccc;
+        }
+
+        .career__back:before {
+            content     : url(../../icons/arrows-gray.svg);
+            width       : 20px;
+            height      : 27px;
+            display     : inline-block;
+            margin-right: 6px;
+            transform   : rotate(180deg);
+        }
+
+        .career__additionalinfo {
+            margin   : 3rem auto;
+            max-width: 980px;
+        }
+
+        .career__additionalinfo a {
+            font-weight    : bold;
+            text-decoration: underline;
+            color          : #000;
+
+        }
+
+
+        .career__list {
+            list-style: none;
+            /* Remove default bullets */
+        }
+
+        .career__list li::before {
+            content       : "\2022";
+            /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color         : #e30013;
+            /* Change the color */
+            font-weight   : bold;
+            /* If you want it to be bold */
+            display       : inline-block;
+            /* Needed to add space between the bullet and the text */
+            width         : 1em;
+            /* Also needed for space (tweak if needed) */
+            margin-left   : -1em;
+            /* Also needed for space (tweak if needed) */
+        }

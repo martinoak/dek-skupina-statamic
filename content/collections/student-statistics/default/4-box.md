@@ -1,0 +1,5 @@
+item: Mentorů
+value: '52'
+title: '4. box'
+id: e6d035a3-2d5e-45b0-922b-c6a1d7a7e4c6
+blueprint: statistics

@@ -1,0 +1,790 @@
+.section-kariera,
+.section-career {
+.internship {
+    #statistics {
+        background-color: #efefefee;
+    }
+
+    .card {
+        background-color: #FFF;
+        text-align: center;
+        max-width: 95%;
+        height: 250px;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 3px 5px 6px #00000029;
+    }
+
+    .card > h2 {
+        padding-left: 0;
+        font-size: 60px;
+        font-weight: 400;
+        padding-top: 50px;
+
+    }
+
+    .card > h2:after {
+        display: block;
+        width: 70px;
+        content: '';
+        height: 2px;
+        background: @dek-color-red;
+        margin: 10px auto 20px;
+    }
+
+    .card > p {
+        font-weight: 500;
+    }
+
+    #statistics .column > p {
+        max-width: 390px;
+    }
+
+    .parts {
+        display: inherit;
+        padding: 0;
+    }
+
+
+    .content {
+        width: 100%;
+    }
+
+    .row {
+        display  : flex;
+        flex-grow: 1;
+        flex-wrap: wrap;
+    }
+
+    .row>* {
+        position     : relative;
+        padding-right: 20px;
+        padding-left : 20px;
+        width        : 100%;
+        max-width    : 100%;
+    }
+
+    .column {
+        padding: 1.55em 0;
+        flex: 1;
+        font-size: 16px;
+    }
+
+    .column>p {
+        margin-top   : 11px;
+        line-height  : 1.3;
+        margin-bottom: 1.55em;
+        word-wrap    : break-word;
+        overflow-wrap: break-word;
+        font-weight  : normal;
+        padding      : 10px;
+    }
+
+    .container {
+        display        : flex;
+        justify-content: space-between;
+        margin-left    : auto;
+        margin-right   : auto;
+        margin-bottom  : 40px;
+        position       : relative;
+        max-width      : 1300px;
+    }
+}
+
+#companies {
+    background-color: #fff;
+    padding: 50px 100px;
+}
+
+.company-wrap {
+    background : radial-gradient(#eee, #fff 65%);
+    display    : flex;
+    flex-wrap  : wrap;
+    margin     : 0;
+    padding    : 0;
+    list-style : none;
+}
+
+.company-grid {
+    overflow     : hidden;
+    position     : relative;
+    background   : white;
+    padding      : 10px;
+    width        : 25%;
+    max-width    : 100%;
+    text-align   : center;
+    box-sizing   : border-box;
+    margin       : 0;
+    border-left  : 1px solid @dek-color-grey-light;
+    //transition : 0.2s ease-in-out;
+    display      : flex;
+    align-items  : center;
+
+    &:last-child {
+        background-color: transparent !important;
+    }
+
+    &:last-child>* {
+        //visibility: visible;
+        opacity   : 1;
+        margin-top: 45px;
+    }
+
+}
+
+.company-grid:nth-child(4n + 1) {
+    border: none;
+}
+
+.company-grid:nth-child(n + 5) {
+    border-top   : 1px solid @dek-color-grey-light;
+    border-bottom: none;
+}
+
+
+.company-grid>*:not(div) {
+    //visibility: hidden;
+    opacity: 0;
+    width  : 100%;
+}
+
+.company-grid p {
+    font-size    : 16px;
+    padding      : 15px 20px;
+    /*padding    : 38px 0 15px 0;*/
+    /*max-width  : 200px;*/
+    //margin     : auto;
+    min-height   : 170px;
+}
+
+.company-grid:hover {
+    background: transparent;
+}
+
+.company-grid:hover>* {
+    //visibility: visible;
+    opacity   : 1;
+    transition: 0.5s ease-in-out;
+}
+
+.company-grid:hover>div {
+    display: none;
+}
+
+.company-grid .logo {
+    position: absolute;
+    margin: 80px auto auto;
+    width   : auto;
+    height  : auto;
+    left    : 0;
+    top     : 0;
+    right   : 0;
+    bottom  : 0;
+    min-width: 50px;
+    padding-top: 0;
+}
+
+.company-grid-span {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.company-paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@media (max-width: 1200px) {
+    #companies {
+        padding: 50px 10px;
+    }
+    .company-grid-span {
+        margin-top: 50px;
+        font-size: 16px;
+    }
+    .company-grid .logo {
+        min-width: 80px;
+        margin-top: 120px;
+    }
+}
+
+@media (max-width: 900px) {
+    .company-grid p {
+        font-size: 14px;
+    }
+
+    .company-grid {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .company-grid p {
+        font-size: 16px;
+    }
+
+    .company-grid:last-child {
+        display: none;
+    }
+
+    #companies {
+        box-shadow: 0px -13px 60px -58px black;
+
+        .company-grid img.title {
+            display: block;
+        }
+    }
+
+    .company-wrap {
+        background: #fff;
+    }
+
+    .company-grid strong {
+        display: none;
+    }
+
+
+
+    #companies .column {
+        padding-bottom: 0;
+        padding-top   : 1em;
+    }
+
+    #companies h1 {
+        text-align: center;
+    }
+
+    .company-grid {
+        top         : auto;
+        left        : auto;
+        position    : relative;
+        width       : 50%;
+        display     : block;
+        margin-left : auto;
+        margin-right: auto;
+        height      : 300px;
+        padding     : 0;
+        border      : none;
+    }
+
+    .company-grid:nth-child(odd) {
+        border-top: 1px solid @dek-color-grey-light;
+        border-right: 1px solid @dek-color-grey-light;
+    }
+
+    .company-grid:nth-child(even) {
+        border-top: 1px solid @dek-color-grey-light;
+    }
+
+    .company-grid:nth-child(-n + 2) {
+        border-top: none;
+    }
+
+    .company-grid>p {
+        max-width: 300px;
+        font-size: 16px;
+        margin   : auto;
+    }
+
+    .company-grid-span {
+        padding-right: unset;
+    }
+
+
+    #companies .container {
+        margin-bottom: 0;
+    }
+
+    .company-grid.closed:hover>*:not(div) {
+        visibility: hidden;
+        width     : 100%;
+    }
+
+    .company-grid.closed:hover>div {
+        display: block;
+    }
+
+    .company-grid.closed:hover>*:not(div) {
+        visibility: hidden;
+        width     : 100%;
+    }
+
+    .company-grid.closed:hover>div {
+        display: block;
+    }
+}
+
+.submit-button {
+    font-weight     : bold;
+    background-color: @dek-color-red;
+    color           : #FFF;
+    font-size       : 16px;
+    border-radius   : 25px;
+    height          : 50px;
+    margin          : 30px auto -25px;
+    padding         : 5px 30px;
+    outline         : none;
+    display         : block;
+    position        : relative;
+}
+
+.submit-button:hover {
+    background-color: darken(@dek-color-red, 10%);
+}
+
+label.upload:before {
+    content      : '\002B';
+    background   : #e8313f;
+    width        : 20px;
+    height       : 20px;
+    display      : inline-block;
+    text-align   : center;
+    border-radius: 50%;
+    color        : #fff;
+    font-weight  : 800;
+    font-size    : 16px;
+    margin-right : 10px;
+    line-height  : 20px;
+}
+
+label.upload:hover:before {
+    background: @button-primary-hover-background;
+    color     : @button-primary-hover-color;
+}
+
+#why-us {
+    padding-bottom: 80px;
+    background-color: lightgray;
+}
+
+#why-us .container {
+    min-height: 630px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#why-us .container div:first-child {
+    left: 0
+}
+
+#why-us .container div:nth-child(2) {
+    top: 0;
+    left: 16%;
+    width: 300px;
+    height: 300px;
+}
+
+#why-us .container div:nth-child(3) {
+    bottom: 0;
+    left: 22%;
+    width: 200px;
+    height: 200px;
+}
+
+#why-us .container div:nth-child(4) {
+    left: 34%;
+}
+
+#why-us .container div:nth-child(5) {
+    left: 46%;
+    width: 300px;
+    height: 300px;
+}
+
+#why-us .container div:nth-child(6) {
+    top: 0;
+    left: 65%;
+    width: 200px;
+    height: 200px
+}
+
+#why-us .container div:nth-child(7) {
+    right: 0;
+}
+
+#why-us .card {
+    position: absolute;
+    width: 320px;
+    padding: 40px 40px;
+    box-shadow: 3px 5px 6px #00000029;
+    background-color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+#why-us .card h2 {
+    text-transform: uppercase;
+}
+
+#why-us .card p {
+    color: #888888;
+    line-height: 1.5;
+}
+
+#why-us .card-bg {
+    background-size: cover;
+    flex-shrink: 0;
+    position: absolute;
+}
+
+#opportunity {
+    padding-bottom: 50px;
+    background-color: lightgray;
+}
+
+#opportunity .container {
+    min-height: 630px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#opportunity .container div:first-child {
+    left: 0
+}
+
+#opportunity .container div:nth-child(2) {
+    top: 0;
+    left: 20%;
+    width: 300px;
+    height: 300px;
+}
+
+#opportunity .container div:nth-child(3) {
+    bottom: 0;
+    left: 18%;
+    width: 200px;
+    height: 200px;
+}
+
+#opportunity .container div:nth-child(4) {
+    left: 34%;
+    top: 45%;
+}
+
+#opportunity .container div:nth-child(5) {
+    top: 10%;
+    left: 46%;
+    width: 300px;
+    height: 300px;
+}
+
+#opportunity .container div:nth-child(6) {
+    top: 62%;
+    left: 65%;
+    width: 200px;
+    height: 200px
+}
+
+#opportunity .container div:nth-child(7) {
+    right: 0;
+    top: 10%;
+}
+
+#opportunity .card {
+    position: absolute;
+    width: 320px;
+    padding: 40px 40px;
+    box-shadow: 3px 5px 6px #00000029;
+    background-color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+#opportunity .card h2 {
+    text-transform: uppercase;
+}
+
+#opportunity .card p {
+    color: #888888;
+    line-height: 1.5;
+}
+
+#opportunity .card-bg {
+    background-size: cover;
+    flex-shrink: 0;
+    position: absolute;
+}
+
+.hero-image {
+    height: 530px;
+    background-position: right;
+    background-size: cover;
+}
+
+.hero-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: center;
+    color: black;
+}
+
+.hero-image-small {
+    height: 0;
+    background-position: unset;
+    background-size: cover;
+    visibility: hidden;
+}
+
+.hero-text-small {
+    padding: 120px 0 30px 50px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: center;
+    color: black;
+}
+
+.dek-talent {
+    background-color: #efefefee;
+    margin-top: 100px
+}
+
+.dek-talent .wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+}
+
+.dek-talent .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dek-talent .image {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.dek-talent-title {
+    color: #464646;
+    font-size: 26px;
+    margin-bottom: 30px
+}
+
+.dek-talent-desc {
+    max-width: 540px
+}
+
+.dek-talent-img {
+    max-height: 300px;
+    margin-left: 10px;
+}
+
+@media (max-width: 1250px) {
+    .hero-text {
+        padding: 0 0 190px 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-image {
+        visibility: hidden;
+        height: 0;
+    }
+    .hero-image-small {
+        visibility: visible;
+        height: auto;
+    }
+
+    .dek-talent {
+        background-color: #efefefee;
+        margin-top: 100px
+    }
+
+    .dek-talent .wrapper {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dek-talent .text {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .dek-talent .image {
+        margin: 0 auto;
+    }
+
+    .dek-talent-title {
+        color: #464646;
+        font-size: 26px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .dek-talent-desc {
+        max-width: 540px;
+        display: flex;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .dek-talent-button {
+        margin: 40px auto;
+    }
+
+    .dek-talent-img {
+        max-height: 300px;
+        display: flex;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .hero-image-small {
+        visibility: visible;
+    }
+    .hero-text-small {
+        padding: 100px 0 30px 30px;
+    }
+    .internship-button {
+        display: flex;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-heading {
+        font-size: 24px !important;
+    }
+
+    .hero-text-small {
+        padding-top: 100px;
+    }
+}
+
+.hero-heading {
+    text-align: left;
+    font-weight: bold;
+    font-size: 42px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.internship-button {
+    background-color: @dek-color-red;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.internship-button:hover {
+    background-color: darken(@dek-color-red, 10%);
+}
+
+#about h1 {
+    text-transform: unset;
+    color: black;
+}
+
+.why-us-heading {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 22px;
+}
+
+@media (max-width: 1199px) {
+    #why-us {
+        padding-bottom: unset;
+        background-color: unset;
+    }
+
+    #why-us-small {
+        padding: 80px 0;
+        background-color: #aaaaaa;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    #why-us-small .content {
+        flex-direction: row;
+    }
+
+    #opportunity-small {
+        padding: 80px 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    #opportunity-small .content {
+        flex-direction: row;
+    }
+}
+
+.internship-heading {
+    color: #666;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 22px;
+}
+
+.internship-box {
+    padding: 20px;
+    width: 50%;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 3px 5px 6px #00000029;
+}
+
+.internship-box h2::after {
+    border-bottom: 2px solid #e30013;
+    width: 60px;
+    content: "";
+    display: block;
+    margin: 5px auto 0;
+}
+
+@media (max-width: 960px) {
+    #why-us-small .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .internship-box {
+        width: 70%;
+    }
+
+    #opportunity-small .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#internship-form form {
+    background-color: white !important /*override Less*/;
+}
+}

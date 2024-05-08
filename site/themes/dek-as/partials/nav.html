@@ -1,0 +1,46 @@
+<div class="head-container" id="head">
+    {{ locales }}
+        {{ if !first }}
+            <a href="{{ url }}">
+                <div class="lang-switcher">
+                    {{ locale:key }} 
+                </div>
+            </a>
+        {{ /if }}
+    {{ /locales }}
+    <div class="container" id="nav-container">
+        <div class="content">
+            <div class="row">
+                <div class="column">
+                    <div class="nav-items">
+                        <div class='logo'>
+                            <a href="{{ link to="/" }}"></a>
+                        </div>
+                        <div id="js-menu-icon" class="menu-icon jsonly">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                        <ul id="js-uk-navbar-nav">
+                            {{ nav from="/" is_hidden:isnt="true" scope="tag" }}
+                            <li{{ if is_current or is_parent }} class="active"{{ /if }}>
+                                <a href="{{ url }}">{{ tag:nav_title or title }}
+                                </a>    
+                            </li>
+                            {{/nav}}
+                            <li class="lang-menu">
+                                {{ locales }}
+                                    {{ if !first }}
+                                        <a href="{{ url }}">
+                                            {{ locale:name }}
+                                        </a>
+                                    {{ /if }}
+                                {{ /locales }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

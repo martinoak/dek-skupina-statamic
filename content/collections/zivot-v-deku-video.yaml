@@ -1,0 +1,12 @@
+title: 'Život v DEK'
+template: print-and-media/mediadetail
+sites:
+  - default
+  - en
+  - sk
+structure:
+  max_depth: 1
+inject:
+  css-files: ''
+  columns:
+    - title

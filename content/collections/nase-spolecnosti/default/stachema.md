@@ -1,0 +1,14 @@
+name: Stachema
+type: 3-vyroba
+intro: 'Přední výrobce a dodavatel kompletního sortimentu stavební chemie a speciálních hmot.'
+logo: '-stachema-1662623764.png'
+logo_white: white_logo_stachema-1662623758.png
+foto: stachema_dark.jpg
+description: |-
+  <p>Společnost STACHEMA byla založena v roce 1991 na Slovensku, následně v roce 1992 v České republice a v současné době je jedním z předních výrobců a dodavatelů kompletního sortimentu stavební chemie, materiálů pro povrchové úpravy fasád, chemických přípravků a speciálních hmot.
+  </p>
+big_picture: 1000x563.jpg
+web_url: 'https://www.stachema.cz/'
+title: Stachema
+id: 44ed04a2-a396-4b39-9374-027b9adeb3e6
+blueprint: companies

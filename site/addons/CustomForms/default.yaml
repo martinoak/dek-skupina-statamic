@@ -1,0 +1,7 @@
+replace: true
+menu_icon: download
+menu_label: 'Custom forms'
+store: default
+hard_del: false
+csv_delimiter: ','
+csv_bom: BOM_UTF8

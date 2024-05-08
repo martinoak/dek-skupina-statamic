@@ -1,0 +1,15 @@
+fields:
+  maintenance_mode:
+    type: text
+    display: 'Maintanenace mode'
+    instructions: 'Text, který se zobrazí uživatelům při `maintenance mode`'
+  temp_path:
+    type: text
+    display: 'Cesta k temp adresáři'
+    instructions: 'Cesta k adresáři, kam se uloží dočasné soubory, ideálně někam do `/local/`.<br>(Cesta relativní k adresáři, kde je index.php)'
+    width: 50
+  readme_deploy:
+    type: text
+    display: 'Readme deploy'
+    instructions: 'Cesta k popisu deploymentu (relativní k adresáři, kde je index.php), soubor v markdown formátu`.<br>(Cesta relativní k adresáři, kde je index.php)'
+    width: 50

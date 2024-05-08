@@ -1,0 +1,178 @@
+//
+// Component: Base
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@base-link-text-decoration      : none;
+@base-link-hover-text-decoration: none;
+
+@base-heading-font-family   : @global-font-family;
+@base-heading-font-weight   : bold;
+@base-heading-color         : @global-color;
+@base-heading-text-transform: none;
+@base-heading-margin-top    : @global-medium-margin;
+@base-h1-font-size-m        : @global-2xlarge-font-size;
+@base-h1-font-size          : @base-h1-font-size-m * 0.85;
+@base-h1-line-height        : 1.2;
+@base-h2-font-size-m        : @global-xlarge-font-size;
+@base-h2-font-size          : @base-h2-font-size-m * 0.85;
+@base-h2-line-height        : 1.2;
+@base-h3-font-size          : @global-large-font-size;
+@base-h3-line-height        : 1.4;
+@base-h4-font-size          : @global-medium-font-size;
+@base-h4-line-height        : 1.4;
+@base-h5-font-size          : @global-font-size;
+@base-h5-line-height        : 1.4;
+@base-h6-font-size          : @global-small-font-size;
+@base-h6-line-height        : 1.4;
+
+//
+// New
+//
+
+@base-page-headline-margin-top   : 50px;
+@base-page-headline-margin-bottom: 50px;
+
+
+// Body
+// ========================================================================
+* {
+    font-family: @base-body-font-family;
+}
+
+p{
+    line-height: 27px;
+}
+
+.hook-base-body() {}
+
+
+// Links
+// ========================================================================
+
+.hook-base-link() {}
+
+.hook-base-link-hover() {
+    transition: all @global-transition-time ease;
+}
+
+
+// Text-level semantics
+// ========================================================================
+
+.hook-base-code() {}
+
+
+// Headings
+// ========================================================================
+
+.hook-base-heading() {}
+
+.hook-base-h1() {
+    text-transform: uppercase;
+}
+
+.hook-base-h2() {}
+
+.hook-base-h3() {}
+
+.hook-base-h4() {}
+
+.hook-base-h5() {}
+
+.hook-base-h6() {}
+
+
+// Horizontal rules
+// ========================================================================
+
+.hook-base-hr() {}
+
+
+// Blockquotes
+// ========================================================================
+
+.hook-base-blockquote() {}
+
+.hook-base-blockquote-footer() {}
+
+
+// Preformatted text
+// ========================================================================
+
+.hook-base-pre() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-base-misc() {
+    * {
+        padding   : 0;
+        margin    : 0;
+        box-sizing: border-box;
+    }
+
+    h1.page-name {
+        margin-top   : @base-page-headline-margin-top;
+        margin-bottom: @base-page-headline-margin-bottom  !important; // .uk-container > :last-child { margin-bottom: 0 } - tzn. samostatny nadpis v containeru prijde o margin-bottom
+        text-align   : center;
+        position     : relative;
+        width        : auto;
+        display      : block;
+    }
+
+    h1.page-name:after {
+        content     : '';
+        height      : 2px;
+        background  : @global-link-color;
+        width       : 80px;
+        margin-top  : 5px;
+        margin-left : auto;
+        margin-right: auto;
+        display     : block;
+    }
+
+    iframe.video {
+        /* 1 */
+        width     : 100%;
+        /* 2 */
+        height    : auto;
+        /* 3 */
+        box-sizing: border-box;
+    }
+}
+
+
+// Inverse
+// ========================================================================
+
+.hook-inverse-base-link() {}
+
+.hook-inverse-base-link-hover() {}
+
+.hook-inverse-base-code() {}
+
+.hook-inverse-base-heading() {}
+
+.hook-inverse-base-h1() {}
+
+.hook-inverse-base-h2() {}
+
+.hook-inverse-base-h3() {}
+
+.hook-inverse-base-h4() {}
+
+.hook-inverse-base-h5() {}
+
+.hook-inverse-base-h6() {}
+
+.hook-inverse-base-blockquote() {}
+
+.hook-inverse-base-blockquote-footer() {}
+
+.hook-inverse-base-hr() {}

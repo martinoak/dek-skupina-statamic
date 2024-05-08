@@ -1,0 +1,17 @@
+fields:
+  site_key:
+    type: text
+    display: 'Google reCAPTCHA site key'
+    width: 50
+  secret_key:
+    type: text
+    display: 'Google reCAPTCHA secret key'
+    width: 50
+  score_treshold:
+    type: text
+    display: 'Google reCAPTCHA score treshold'
+    width: 50
+  log_dir:
+    type: text
+    display: 'Log directory'
+    width: 50

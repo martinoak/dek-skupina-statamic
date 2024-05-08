@@ -1,0 +1,93 @@
+<style>
+    #kariera__faq{
+        background-color: #E30013;
+        border-radius: 25px;
+    }
+</style>
+<div class="container">
+	<h1 class="page-name">{{introduction-heading}}</h1>
+</div>
+
+{{ partial:careerfilters }}
+<div id='tips'>
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="column">
+                    <h3 style="font-size: 20pt">Často kladené otázky</h3>
+                </div>
+            </div>
+            <div class='row' id="content-page">
+                <div class='column' style="min-height: 50vh">
+                    {{collection:casto-kladene-otazky}}
+                    <div class='table-scroll'>
+                        <div class='table-scroll-head'>{{title}}</div>
+                        <div class='table-scroll-content redactor-style'>
+                            {{content}}
+                        </div>
+                    </div>
+                    {{/collection:casto-kladene-otazky}}
+                </div>
+            </div>
+        </div>
+    </div>‭
+</div>
+{{#
+    <div class="zivot-v-dek__grey">
+        <h3>Výhody práce u nás</h3>
+        <div class="uk-flex-center" uk-grid>
+            <div class="zivot-v-dek__vyhoda">
+                <div class="vyhoda-ikona i-stravenky"></div>
+                <div class="vyhoda--cervena">příspěvek na stravování</div>
+                <div>Elektronické stravenky<br>v hodnote 100Kč</div>
+            </div>
+            <div class="zivot-v-dek__vyhoda">
+                <div class="vyhoda-ikona i-kariera"></div>
+                <div class="vyhoda--cervena">příspěvek na stravování</div>
+                <div>Elektronické stravenky<br>v hodnote 100Kč</div>
+            </div>
+    
+            <div class="zivot-v-dek__vyhoda">
+                <div class="vyhoda-ikona i-dovolena"></div>
+                <div class="vyhoda--cervena">příspěvek na stravování</div>
+                <div>Elektronické stravenky<br>v hodnote 100Kč</div>
+            </div>
+            <div class="zivot-v-dek__vyhoda">
+                <div class="vyhoda-ikona i-spolecnost"></div>
+                <div class="vyhoda--cervena">příspěvek na stravování</div>
+                <div>Elektronické stravenky<br>v hodnote 100Kč</div>
+            </div>
+        </div>
+    
+    </div>    
+#}}
+<style>
+    @media(max-width:650px){
+        .footer .bottom__wrap{
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+<script>
+    $('.table-scroll').on('click',function()
+    {
+        var notThis = $('.table-scroll').not($(this));
+        notThis.find('.table-scroll-content').slideUp();
+        notThis.removeClass('scrolled');
+        $(this).toggleClass('scrolled');
+        $(this).find('.table-scroll-content').slideToggle();
+    });
+    function checkMediaQuery(mediaQuery) {
+        if (mediaQuery.matches) {
+            document.getElementById('emp-btn').children[0].innerHTML = 'Volné pozice';
+            document.getElementById('faq-btn').children[0].innerHTML = 'Dotazy';
+        } else {
+            document.getElementById('emp-btn').children[0].innerHTML = 'Volná pracovní místa';
+            document.getElementById('faq-btn').children[0].innerHTML = 'Časté dotazy';
+        }
+    }
+    var media = window.matchMedia("(max-width: 650px)");
+    checkMediaQuery(media);
+    media.addListener(checkMediaQuery);
+  /*  document.getElementById('content-page').getElementsByClassName('table-scroll')[0].classList.add('scrolled');*/
+</script>

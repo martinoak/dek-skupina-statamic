@@ -1,0 +1,6 @@
+roles:
+  - pr
+id: 32a95baa-9dca-470c-aa2c-98441ab5db00
+password_hash: $2y$10$wmDyQOvDuyq0FYQw7kn01eq3uR0iyKmch9P/XhEa17RSmWf08eCAi
+content: 'test user'
+name: 'Zimmermann Kája'

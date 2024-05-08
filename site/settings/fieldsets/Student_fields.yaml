@@ -1,0 +1,34 @@
+sections:
+  main:
+    display: ''
+    fields:
+      title:
+        display: Název
+        type: text
+        localizable: true
+        width: 66
+        instructions: 'Značka `<br>` zalomí text na další řádek.'
+      order_number:
+        type: text
+        width: 33
+        display: Pořadí
+        validate: required
+      field_img:
+        container: main
+        folder: internship
+        restrict: false
+        type: assets
+        instructions: 'ikona oboru'
+        display: 'Obrázek oboru'
+        width: 50
+        max_files: 1
+        validate: required
+      popis_oboru:
+        type: textarea
+        instructions: 'text, který se zobrazí po najetí myši na obor'
+        display: 'popis oboru'
+        width: 50
+        validate: required
+taxonomies: true
+title: Student_fields
+create_title: 'Nový obor'

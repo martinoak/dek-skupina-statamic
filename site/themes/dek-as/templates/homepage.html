@@ -1,0 +1,172 @@
+---
+en: 
+    zobrazit: 'SHOW'
+cz: 
+   zobrazit: 'ZOBRAZIT'
+sk: 
+   zobrazit: 'ZOBRAZIŤ'
+---
+
+<div class="homepage">
+
+    <div class="uk-position-relative uk-background-center-center uk-background-cover tiles-single" uk-height-max-large>
+        <div class="uk-position-cover uk-cover-container js-vid-hp-wrapper" data-load-video-if-visible>
+
+            {{ videa|shuffle|limit:1 }}
+                <video id="js-vid-hp" playsinline loop muted uk-cover poster="{{ obrazek2 }}">
+                    <source data-src="{{ video }}" type="video/mp4">
+                </video>
+            {{ /videa|shuffle|limit:1 }}
+
+        </div>
+        <div class="uk-position-cover mob-hp-image" style="background-image: url('{{obrazek}}');"></div>
+
+        <div class="uk-position-relative uk-container xuk-container-small uk-flex Xuk-flex-middle dek-hp-position-textblok" uk-height-viewport="offset-top: true">
+            <div class="uk-section uk-section-regular uk-width-1-1 uk-light">
+                <div class="uk-flex uk-text-center uk-flex-middle uk-flex-center">
+                    <div class="uk-width-1-1">
+
+                        <div class="hp-slider-texty">
+                                <div class="hp-slide-text" onclick="location.href='{{odkaz_1}}';">
+                                    <div class="hp-slider-big-text">{{nadpis-1}}</div>
+                                    <div class="hp-slider-small-text">{{text-1}}</div>
+                                    <a href="{{odkaz_1}}" class="btn btn--x" style="margin-left: 0;" >
+                                        {{{{locale}}.zobrazit}}
+                                    </a>
+                                </div>
+                            <div class="linka"></div>
+                            <div class="hp-slide-text" onclick="location.href='{{odkaz_2}}';">
+                                <div class="hp-slider-big-text">{{nadpis-2}}</div>
+                                <div class="hp-slider-small-text">{{text-2}}</div>
+                                <a href="{{odkaz_2}}" class="btn btn--x" style="margin-left: 0;" >
+                                    {{{{locale}}.zobrazit}}
+                                </a>
+                            </div><div class="linka"></div>
+                            <div class="hp-slide-text" onclick="location.href='{{odkaz_3}}';">
+                                <div class="hp-slider-big-text">{{nadpis-3}}</div>
+                                <div class="hp-slider-small-text">{{text-3}}</div>
+                                <a href="{{odkaz_3}}" class="btn btn--x" style="margin-left: 0;" >
+                                    {{{{locale}}.zobrazit}}
+                                </a>
+                            </div>
+                        
+                            <div class="mob-hp-slide-text">
+                                {{nadpis-mobil}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#statistics" class="gobottom"></a>
+    </div>
+
+    <div id="statistics">
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="column">
+                        <h1>{{main_addon:translateText :lang="locale" page="index" text="statistics"}}</h1>
+                    </div>
+                    <div class="column"></div>
+                    <div class="column hide-on-mobile">
+                        <h2 style="font-weight: normal; padding-top: 11px">{{ statistics_heading }}</h2>
+                        <div class="redactor-style">{{ statistics_content }}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class='parts'>
+                        {{collection:dek-v-cislech limit="4"}}
+                        <div class="column" uk-parallax="y: {{main_addon:getParallax :index='zero_index'}}; easing: 1; viewport: 1.4">
+                            <div class="card">
+                                <h2 data-value="{{value}}">{{value}}</h2>
+                                <p>{{ item }}</p>
+                            </div>
+                        </div>
+                        {{/collection:dek-v-cislech}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id='companies'>
+        <div class="show-on-mobile" style="margin-top: 1rem;">
+            <h2 style="font-weight: normal; padding-top: 11px">{{ statistics_heading }}</h2>
+            <div class="redactor-style" style="text-align: center;">{{ statistics_content }}</div>
+        </div>
+        <div class='container'>
+            <div class='content'>
+                <div class='row'>
+                    <div class='column'>
+                        <h1>{{main_addon:translate :lang="locale" page="companies" type="name"}}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <div class="company-wrap">
+                            {{ collection:nase-spolecnosti sort="order"}}
+                            <div class="company-grid">
+                                <span class="cross" style="top: 10px; right: 10px; width: 20px"
+                                    onclick="$(this).parent().addClass('closed');"></span>
+                                <nothoverview>
+                                    <img class="logo" src="{{logo}}" alt="{{name}}"><img class="foto" src="{{foto}}"
+                                        alt="{{name}}">
+                                    <img class="logo white" src="{{logo_white}}" alt="{{name}}">
+                                </nothoverview>
+                                <hoverview>
+                                    <img class="title" style="overflow: hidden;margin: auto; height: 110px" src="{{logo}}">
+                                    <strong>{{ name }}</strong>
+                                    {{ intro }}
+                                    <a href='{{url}}' class='btn red'>{{main_addon:translateText :lang="locale" page="index" text="companiesButton"}}</a>
+                                </hoverview>
+
+                            </div>
+                            {{ /collection:nase-spolecnosti }}
+                            <div class="company-grid">
+                                <hoverview>
+                                    <strong>{{company_last_heading}}</strong>
+                                    {{ company_last_tile }}
+                                </hoverview>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id='employment'>
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="column" style="flex-grow: 0.5">
+                        <h1>{{main_addon:translate :lang="locale" page="career" type="name"}}</h1>
+                    </div>
+                    <div class="column">
+                        <h2 style="font-weight: normal; padding-top: 11px">{{employment_title}}</h2>
+                        <div class="redactor-style">
+                            <p style="max-width: 300px">{{ employment_paragraph }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="employment_card" id="text">
+                    <h2 style="text-align: center;">{{main_addon:translate :lang="locale" page="career" type="name"}}
+                    </h2>
+                    <p>
+                        {{employment_card}}
+                    </p>
+                    <a href="{{main_addon:translate :lang="locale" page="volna-mista" type="url"}}" class="btn red">
+                        {{main_addon:translateText :lang="locale" page="index" text="careerButton"}}
+                    </a>
+                </div>
+                <div class="employment_card" uk-parallax="y:  70; easing:-2"></div>
+                <div class="employment_card" uk-parallax="y: -50; easing: 2"></div>
+                <div class="employment_card" uk-parallax="y: -70; easing: 2"></div>
+                <div class="employment_card" uk-parallax="y: -30; easing:-2"></div>
+            </div>
+
+        </div>
+        <a href="#header" class="gotop"></a>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+intro: 'A brand of structural wood that is intended for statically stressed building structures.'
+description: 'DEKWOOD s.r.o. specializes in the production of custom trusses, timber houses and other wooden structures using CNC machines. In recent years, the company has seen great success with its wooden structural system made of solid screwed wooden panels, DEKPANEL. DEKWOOD provides services including wood impregnation, consulting in the area of wooden structure static analysis and other business activities. Its broad range of wooden materials is distributed either through Stavebniny DEK branches or directly to customers. Its production plant is located in Helvíkovice u Žamberka and, since 2020, also in Březnice u Příbrami.'
+id: 8b099bde-8215-4338-b7bf-d453619aae3f
+origin: 2af768ce-c949-4afd-99a8-b2919666b9d8
+blueprint: companies

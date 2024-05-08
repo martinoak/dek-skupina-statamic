@@ -1,0 +1,272 @@
+sections:
+  hero:
+    display: 'Úvodní obrázek'
+    fields:
+      hero_img:
+        container: main
+        folder: internship
+        restrict: false
+        max_files: 1
+        type: assets
+        display: 'Obrázek na desktopu'
+        validate: required
+        width: 50
+      hero_img_small:
+        container: main
+        folder: internship
+        restrict: false
+        max_files: 1
+        type: assets
+        width: 50
+        display: 'Obrázek na menších zařízeních'
+        validate: required
+      hero_title:
+        type: text
+        display: Nadpis
+        validate: required
+        instructions: 'Značka `<br>` zalomí text na další řádek.'
+      hero_desc:
+        buttons:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - removeformat
+        style: sans
+        spellcheck: true
+        allow_source: true
+        allow_internal_links: true
+        link_noopener: false
+        link_noreferrer: false
+        target_blank: false
+        semantic_elements: false
+        restrict_assets: false
+        type: bard
+        display: Popis
+      hero_button:
+        type: text
+        display: 'Text v tlačítku'
+        validate: required
+        width: 50
+  o_deku:
+    display: 'O DEKu'
+    fields:
+      about_title:
+        type: text
+        display: Nadpis
+        validate: required
+      about_desc:
+        buttons:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - removeformat
+          - anchor
+        style: sans
+        spellcheck: true
+        allow_source: true
+        allow_internal_links: true
+        link_noopener: false
+        link_noreferrer: false
+        target_blank: false
+        semantic_elements: false
+        restrict_assets: false
+        type: bard
+        display: 'Popis sekce'
+      boxiky:
+        type: section
+        display: Boxíky
+      about_replicator_title:
+        type: text
+        instructions: 'Šedý text'
+        display: 'Nadpis u boxíků'
+      about_replicator:
+        sets:
+          text:
+            display: 'Nadpis s textem'
+            fields:
+              heading:
+                type: text
+                display: Nadpis
+                validate: required
+              desc:
+                buttons:
+                  - bold
+                  - italic
+                  - underline
+                  - strikethrough
+                  - removeformat
+                style: sans
+                spellcheck: true
+                allow_source: true
+                allow_internal_links: true
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: true
+                semantic_elements: false
+                restrict_assets: false
+                type: bard
+                display: Text
+              parallax:
+                type: toggle
+                width: 25
+                display: 'Parallax?'
+              y_value:
+                type: text
+                width: 33
+                display: 'Hodnota y'
+              easing:
+                type: text
+                width: 33
+                display: Easing
+          image:
+            display: Pozadí
+            fields:
+              image:
+                container: main
+                folder: internship
+                restrict: false
+                max_files: 1
+                type: assets
+                instructions: 'Rozměr musí být v poměru 1:1.'
+                display: Obrázek
+                validate: required
+              parallax:
+                type: toggle
+                width: 25
+                display: 'Parallax?'
+              y_value:
+                type: text
+                width: 33
+                display: 'Hodnota y'
+              easing:
+                type: text
+                width: 33
+                display: Easing
+        type: replicator
+        display: Boxíky
+        validate: 'min:7|max:7'
+      boxes_low:
+        type: section
+        instructions: 'Veškeré texty budou zachovány, je pouze potřeba vybrat pozadí:'
+        display: 'Boxíky na menších zařízeních'
+      about_tablet_img:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: 'Pozadí boxíků'
+        instructions: 'Pokud nebude vybrán žádný obrázek, zobrazí se na pozadí šedá barva.'
+  obory:
+    display: Obory
+    fields:
+      field_heading:
+        type: text
+        display: 'Šedý nadpis'
+        validate: required
+      boxiky:
+        type: section
+        instructions: 'Boxíky s obory se vykreslují dynamicky přes Collections/Studenti_obory'
+        display: Boxíky
+  nabidka:
+    display: Nabídka
+    fields:
+      offer_heading:
+        type: text
+        instructions: 'Šedý text'
+        display: 'Nadpis sekce'
+        validate: required
+      obory:
+        type: section
+        instructions: 'Obory jsou v Collections pod názvem Studenti_statistika.'
+        display: Obory
+      offer_desc:
+        buttons:
+          - h2
+          - h3
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - removeformat
+          - quote
+          - superscript
+          - subscript
+          - anchor
+        style: sans
+        spellcheck: true
+        allow_source: true
+        allow_internal_links: true
+        link_noopener: false
+        link_noreferrer: false
+        target_blank: false
+        semantic_elements: false
+        restrict_assets: false
+        type: bard
+        display: Popis
+      offer_button:
+        type: text
+        width: 50
+        display: 'Text tlačítka'
+        validate: required
+      offer_pdf:
+        container: main
+        folder: internship
+        restrict: false
+        max_files: 1
+        type: assets
+        width: 50
+        display: PDF
+  kontaktni_formular:
+    display: 'Kontaktní formulář'
+    fields:
+      coop_replicator:
+        sets:
+          option:
+            display: 'Druh spolupráce'
+            fields:
+              coop_type:
+                type: text
+                display: 'Typ spolupráce'
+        type: replicator
+        width: 50
+        display: Spolupráce
+        validate: 'min:1'
+  dektalent:
+    display: DEKTalent
+    fields:
+      dektalent_hide:
+        type: toggle
+        display: 'Schovat sekci'
+      dektalent_title:
+        type: text
+        width: 50
+        display: 'Nadpis sekce'
+        instructions: 'Značka `<br>` zalomí text na další řádek.'
+      dektalent_img:
+        container: main
+        folder: internship
+        restrict: true
+        max_files: 1
+        type: assets
+        instructions: 'Obrázek na pravé straně DEKTalent sekce'
+        width: 50
+        display: Obrázek
+      dektalent_desc:
+        type: textarea
+        display: Popis
+      dektalent_button:
+        type: text
+        display: 'Text na tlačítku'
+        instructions: 'Text bude vždy velkými písmeny.'
+        width: 50
+      dektalent_href:
+        type: text
+        instructions: 'Odkaz v absolutní URL, tedy https://...'
+        width: 50
+        display: 'Odkaz v tlačítku'
+        validate: 'regex:#https?:\/\/#'
+taxonomies: true
+title: 'Studentské stáže'

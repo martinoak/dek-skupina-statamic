@@ -1,0 +1,32 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: documents
+        field:
+          type: replicator
+          sets:
+            section:
+              display: Sekce
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Nadpis
+                -
+                  handle: files
+                  field:
+                    type: assets
+                    container: data
+                    folder: /
+                    restrict: false
+                    mode: list
+                    display: Dokumenty
+                    localizable: true
+              instructions: 'Nadpis sekce je nepovinný. Soubory lze pojmenovat kliknutím na tlačítko "Browse Assets" a v nově otevřeném okně přes tři tečky vpravo u souboru -> Edit -> Title.'
+          display: Dokumenty
+          localizable: true
+taxonomies: true
+title: Dokumenty

@@ -1,0 +1,5 @@
+intro: 'Značka konštrukčného dreva, ktoré je určené na staticky namáhané stavebné konštrukcie.'
+description: 'Spoločnosť DEKWOOD s.r.o. sa špecializuje na výrobu krovov na mieru, dreveníc a ďalších drevených konštrukcií na CNC stroji. V posledných rokoch žne úspechy s konštrukčným systémom drevostavieb z masívnych skrutkovaných drevených panelov DEKPANEL. K poskytovaným službám patrí impregnácia dreva, poradenstvo v oblasti statiky drevených konštrukcií a ďalšie obchodné činnosti. Široký sortiment materiálov z dreva je distribuovaný cez pobočky Stavebnín DEK alebo priamo k zákazníkom. Výrobný závod sídli v Helvíkoviciach u Žamberka a od roku 2020 tiež v Březnici pri Příbrami.'
+id: 6017a1fe-2423-49c3-9de7-704f094fbd89
+origin: 2af768ce-c949-4afd-99a8-b2919666b9d8
+blueprint: companies

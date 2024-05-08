@@ -1,0 +1,53 @@
+sections:
+  main:
+    display: 'Výroční zprávy'
+    fields:
+      date:
+        display: 'publish date'
+        type: date
+        allow_blank: false
+        allow_time: true
+        require_time: true
+        earliest_date: 'January 1, 1900'
+        width: 33
+      type:
+        options:
+          annual: 'Výroční zprávy'
+          about: 'Napsali o nás'
+          appreciation: Ocenění
+        inline: false
+        type: radio
+        instructions: 'Vyberte typ zprávy(Ocenění, výroční zprávy, napsali o nás)'
+        display: 'Typ Zprávy'
+        default: annual
+      intro:
+        type: textarea
+        instructions: |
+          Zpráva zobrazovaná ve výpisu `Tisk a Media`
+          - pro nedělitelné mezery vložte `&nbsp;`
+        localizable: true
+        display: 'Úvodní text'
+      image:
+        container: main
+        folder: media
+        restrict: false
+        type: assets
+        display: 'Obrázek ke zprávě'
+        instructions: 'Obrázky vkládejte alespoň 900px široké, jinak budou na některých zařízeních rozmazané'
+        mode: list
+        max_files: 1
+      before-image:
+        restrict_assets: false
+        type: redactor
+        instructions: 'obsah zobrazeny u detailu zpravy (pred obrazkem)'
+        localizable: true
+        display: 'obsah pred obrazkem'
+      content:
+        type: redactor
+        settings: Standard
+        instructions: 'Obsah zprávy zobrazován při detailu (po obrazku)'
+        localizable: true
+        display: Obsah
+        restrict_assets: false
+taxonomies: true
+title: news

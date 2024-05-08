@@ -1,0 +1,93 @@
+sections:
+  main:
+    display: ''
+    fields:
+      meta_description:
+        type: text
+        display: 'Meta Description'
+      name:
+        type: text
+        instructions: 'jméno společnosti'
+        width: 50
+        display: Název
+      type:
+        instructions: 'pro změnu pořadí je nutné přejít do Fieldsets->Companies->type->Extras a upravit čísla na jednotlivé hodnoty, poté se vrátit do tohoto pole a nastavit hodnotu, ve statamic není propojeno oběma směry.'
+        options:
+          2-obchod: Obchod
+          3-vyroba: Výroba
+          5-sluzby: Služby
+        type: select
+        display: type
+        width: 50
+      intro:
+        type: textarea
+        instructions: |
+          Úvodní krátký text o společnosti zobrazovaný na hlavní stránce.
+          - max 95 znaků
+        localizable: true
+        display: Popis
+        validate: 'max:95'
+      logo:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        instructions: 'Logo společnosti'
+        width: 50
+        display: logo
+        max_files: 1
+      logo_white:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        instructions: |
+          Logo bílé, zobrazující se přes fotku na HP v gridu při mobilní verzi
+          - šířka loga nastavena na 150px, výška automaticky dle rozměrů vloženého obrázku
+        width: 50
+        display: 'Logo bílé'
+      foto:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        instructions: 'obrázek společnosti pro mobilní verzi'
+        width: 50
+        display: Foto
+        max_files: 1
+      description:
+        type: redactor
+        instructions: 'Dlouhy text pro detail spolecnosti'
+        localizable: true
+        display: 'Dlouhy text'
+      company_video:
+        type: video
+        instructions: |
+          Video pro detail firmy
+          Video může být nahráno z youtube<br>
+          - stačí zkopírovat adresu videa z youtube
+          
+          
+          Video může být nahráno jako soubor
+          - video musí být nahráno ve složce média
+          - cesta je poté ve formátu /assets/cesta_k_souboru/název_souboru např `/assets/homepage/videos/dek.mp4`
+        display: Video
+      big_picture:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        instructions: 'Obrazek pro detail firmy'
+        display: Obrazek
+        max_files: 1
+      web_url:
+        type: text
+        instructions: 'https://example.cz/'
+        localizable: true
+        display: 'Stránky webu'
+      order:
+        type: integer
+        display: pořadí
+taxonomies: true
+title: Companies

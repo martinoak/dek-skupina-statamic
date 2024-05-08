@@ -1,0 +1,16 @@
+routes:
+  get@/:
+    as: customforms.index
+    uses: index
+  get@/submissions/{name}:
+    as: customforms.submissions
+    uses: submissions
+  get@/submissions/{name}/{id}:
+    as: customforms.submission
+    uses: submission
+  get@/submissions/{name}/export/{type}:
+    as: customforms.export
+    uses: export
+  get@/submissions/{name}/{id}/delete:
+    as: customforms.delete
+    uses: delete

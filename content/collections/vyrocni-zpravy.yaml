@@ -1,0 +1,21 @@
+title: 'Tisk a média'
+template: print-and-media/mediadetail
+sites:
+  - default
+  - en
+  - sk
+route:
+  cz: '/tisk-a-media/{slug}'
+  en: '/media/{slug}'
+  sk: '/tlac-a-media/{slug}'
+date: true
+date_behavior:
+  past: public
+  future: unlisted
+sort_dir: desc
+inject:
+  css-files: null
+  columns:
+    - title
+    - slug
+    - date

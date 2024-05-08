@@ -1,0 +1,76 @@
+.documents {
+    max-width : 980px;
+    width     : 100%;
+    margin    : 0 auto;
+    min-height: 45vh;
+
+    ul {
+        margin : 0;
+        padding: 0;
+    }
+
+    .down {
+        //background-color: green;
+        color          : @dek-color-red;
+        font-weight    : bold;
+        width          : 100%;
+        border-radius  : 20px;
+        position       : relative;
+        cursor         : pointer;
+        padding        : 9px 15px;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+
+        li {
+            margin-left: 1rem;
+        }
+
+
+
+        &::after {
+            content           : '';
+            mask              : url(../icons/download.svg) no-repeat 50% 50%;
+            width             : 30px;
+            height            : 30px;
+            margin-right      : 17px;
+            margin-left       : 34px;
+            display           : inline-block;
+            background-color  : #cccccc;
+            -webkit-mask-image: url(../icons/download.svg);
+            mask-image        : url(../icons/download.svg);
+        }
+
+
+        &:hover {
+            color           : #fff;
+            background-color: @dek-color-red;
+            border-radius   : 22px;
+
+            &::after {
+                display           : flex;
+                align-items       : center;
+                transform         : none;
+                content           : 'Zobrazit';
+                text-decoration   : underline;
+                font-weight       : normal;
+                right             : 15px;
+                color             : #fff;
+                font-size         : 16px;
+                background        : transparent;
+                width             : auto;
+                top               : 9px;
+                mask              : none;
+                -webkit-mask-image: none;
+            }
+        }
+    }
+
+    .down.sk {
+        &:hover {
+            &::after {
+                content: 'Zobraziť';
+            }
+        }
+    }
+}

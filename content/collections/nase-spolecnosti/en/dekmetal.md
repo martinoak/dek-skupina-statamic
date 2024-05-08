@@ -1,0 +1,5 @@
+intro: 'Production and supply of sheet metal roof and facade system a wide selection of visual element.'
+description: 'DEKMETAL s.r.o. specializes in the production and supply of sheet metal roof/facade systems including custom sheet metal products. It offers its partners professional designs of functional, sophisticated and aesthetic solutions, which strictly reflect the individual requirements of investors, architects and designers. DEKMETAL provides comprehensive services based on flexible delivery terms and technical support during the entire implementation period. Salesmen and technicians of DEKMETAL operating in the Czech Republic and Slovakia are able to respond very quickly to the requests of its customers. The production facility equipped with the most advanced technology is based in Dřísy near Stará Boleslav.'
+id: c43f3435-cfd2-47d6-a6e5-3234b15946f5
+origin: a9b7819c-ee84-495f-a6a2-e32701a69441
+blueprint: companies

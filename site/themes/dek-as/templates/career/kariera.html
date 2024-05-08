@@ -1,0 +1,254 @@
+---
+cz:
+   nadpis-volna-mista: 'Volná pracovní místa'
+   obor: 'Jaký obor hledáte?'
+   lokalita: 'Výběr lokality'
+   uvazek: 'Typ úvazku'
+   empty1: 'Vámi vybrané filtry neodpovídají žádným volným pracovním pozicím.'
+   empty2: 'Vyzkoušejte jinou kombinaci nebo zrušte výběr a podívejte se na výpis všech volných pracovních pozic.'
+   poc-vol-pozic: 'Počet volných pozic'
+sk:
+   nadpis-volna-mista: 'Voľné pracovné miesta'
+   obor: 'Aký odbor hľadáte?'
+   lokalita: 'Výber lokality'
+   uvazek: 'Typ úväzku'
+   empty1: 'Vami vybrané filtre nezodpovedajú žiadnym voľným pracovným pozíciám.'
+   empty2: 'Vyskúšajte inú kombináciu alebo zrušte výber a pozrite sa na výpis všetkých voľných pracovných pozícií.'
+   poc-vol-pozic: 'Počet voľných pozícií'
+---
+
+<style>
+    #kariera__lifeInDek{
+        border-radius: 25px;
+    }
+    @media(max-width:650px) {
+        .footer .bottom__wrap {
+            margin-bottom: 3rem;
+        }
+    }
+    
+</style>
+
+{{if locale == 'sk'}}
+    <style>
+        .holder[data-name="obor"] {
+            display: none;
+        }
+    </style>
+{{/if}}
+
+<script>
+    $('.table-scroll').on('click',function()
+    {
+        var notThis = $('.table-scroll').not($(this));
+        notThis.find('.table-scroll-content').slideUp();
+        notThis.removeClass('scrolled');
+        $(this).toggleClass('scrolled');
+        $(this).find('.table-scroll-content').slideToggle();
+    });
+    function checkMediaQuery(mediaQuery) {
+        if (mediaQuery.matches) {
+            //document.getElementById('emp-btn').children[0].innerHTML = 'Volné pozice';
+            //document.getElementById('faq-btn').children[0].innerHTML = 'Dotazy';
+        } else {
+            //document.getElementById('emp-btn').children[0].innerHTML = 'Volná pracovní místa';
+            //document.getElementById('faq-btn').children[0].innerHTML = 'Časté dotazy';
+        }
+    }
+    var media = window.matchMedia("(max-width: 650px)");
+    checkMediaQuery(media);
+    media.addListener(checkMediaQuery);
+  /*  document.getElementById('content-page').getElementsByClassName('table-scroll')[0].classList.add('scrolled');*/
+</script>
+
+
+
+
+<div class="container">
+    <h1 class="page-name">{{introduction-heading}}</h1>
+</div>
+
+{{ partial:careerfilters }}
+
+<div class="uk-container uk-container-small">
+    <div id="vacanies" class="container">
+        <div class="content">
+            <h2 class="uk-text-center">{{{{locale}}.nadpis-volna-mista}}</h2>
+
+            
+
+
+            {{employmentAddon:getPositionsList}}
+
+            <div id='employment'>
+                <filter-select null-value='Nevybráno' place-holder-short='Obor'     place-holder-default='{{{{locale}}.obor}}'      name='obor'     v-bind:items='{{division}}'></filter-select>
+                <filter-select null-value='Nevybráno' place-holder-short='Lokalita' place-holder-default='{{{{locale}}.lokalita}}'  name='lokalita' v-bind:items='{{locations}}'></filter-select>
+                <filter-select null-value='Nevybráno' place-holder-short='Úvazek'   place-holder-default='{{{{locale}}.uvazek}}'    name='uvazek'   v-bind:items='{{jobType}}'></filter-select>
+            </div>
+            <div id="employment-zero" style="display: none;">
+            <b>{{{{locale}}.empty1}}</b><br>
+            {{{{locale}}.empty2}}<br>
+            {{if locale == 'cz'}}
+                <a class="btn" href="/kariera/volna-pracovni-mista">
+                <div><span class="clear"></span> Zrušit filtrování</div>
+                </a>
+            {{else}}
+                <a class="btn sk" href="/sk/kariera/volna-pracovni-mista">
+                <div><span class="clear"></span> Zrušiť filtrovanie</div>
+                </a>
+            {{/if}}
+
+            </div>
+            <div id="table">
+                {{foreach:positions}}
+                
+                <h2 class="h2kariera" id="{{key | substr:2 | lower | underscored | slugify}}">{{key | substr:2 }}</h2>
+                {{value}}
+
+                {{if locale == 'cz'}}
+                    <a class="specialization {{division|slugify|first:4}}" href="/kariera/pozice?id={{id}}">
+                        <div class="employment-row" data-value="IT" data-lokalita="{{location}}" data-obor="{{division}}"
+                        data-uvazek="{{type}}">
+                        <span>{{title}}</span>
+                        <span class="location">{{mesto}}</span>
+                    </div>
+                </a>
+                {{elseif locale == 'sk'}}    
+                    <a class="specialization {{division|slugify|first:4}}" href="/sk/kariera/pozice?id={{id}}">
+                        <div class="employment-row employment-row-sk" data-value="IT" data-lokalita="{{location}}" data-obor="{{division}}"
+                        data-uvazek="{{type}}">
+                        <span>{{title}}</span>
+                        <span class="location">{{mesto}}</span>
+                    </div>
+                </a>
+                {{/if}}
+
+                
+                {{/value}}
+                {{/foreach:positions}}
+
+                {{if locale == 'cz'}}
+                <h2>Stavebniny DEK – Slovensko</h2>
+                <div class="employment-row employment-row--sk">
+                    Prohlédněte si <a class="specialization specialization--sk" href="/sk/kariera/volna-pracovni-mista">
+                            <span>volné pozice ve Stavebninách DEK – Slovensko</span>
+                        
+                        </a>
+                    </div>
+                {{elseif locale == 'sk'}}
+                <h2>Skupina DEK – Česká republika</h2>
+                <div class="employment-row employment-row--sk">
+                    Zobraziť  <a class="specialization specialization--sk" href="/kariera/volna-pracovni-mista">
+                            <span>voľné pracovné miesta v spoločnostiach Skupiny DEK </span>
+                        </a>
+                    </div>
+                {{/if}}
+                {{/employmentAddon:getPositionsList}}
+            </div>
+        </div>
+    </div>
+
+    <div class='career__additionalinfo'>
+        {{if locale == 'cz'}}
+        Pokud máte zájem pracovat v naší společnosti a žádná z aktuálně nabízených pozic Vás nezaujala, kontaktujte nás
+        přes
+        <a href="/kariera/dotaznik">dotazník pro uchazeče</a> nebo na <a href="mailto:kariera@dek.cz">kariera@dek.cz</a>
+        {{elseif locale == 'sk'}}
+        Pokiaľ máte záujem pracovať v našej spoločnosti a žiadna z aktuálne ponúkaných pozícií Vás nezaujala, kontaktujte nás cez 
+        <a href="/sk/kariera/dotaznik">dotazník pre uchádzačov</a> alebo na <a href="mailto:kariera@dek.sk">kariera@dek.sk</a>
+        {{/if}}
+    </div>
+
+
+    <div class="container" id="diagram-container">
+        <div class="content">
+            <div class="uk-child-width-expand@s uk-text-center" uk-grid id="diagram-row">
+                {{ collection:grafy }}
+                <div class="column">
+                    <div class="diagram-card">
+                        <div class="diagram-title">
+                            <div class="numeric-record">0</div>
+                            <div class="diagram-comment">
+                                <div class="heading"></div>
+                                <div class="sub"></div>
+                            </div>
+                        </div>
+                        <div class="diagram-content">
+                            <div id="diagram{{index}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ /collection:grafy }}
+                <div class="column">
+                    <div class="diagram-card">
+                        <div class="diagram-title">
+                            <div class="numeric-record">{{employmentAddon:getPositionsCount}}</div>
+                            <div class="diagram-comment">
+                                <div class="heading">{{{{locale}}.poc-vol-pozic}}</div>
+                                <div class="sub"></div>
+                            </div>
+                        </div>
+                        <div class="diagram-content">
+
+                            <div style="background-image: url({{vacanies_image}});
+                        background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 5px;
+    height: 180px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='diagram-tooltip'></div>
+    {{collection:grafy}}
+    <div class="diag-{{index}}">
+        <input type="hidden" class="heading" value='{{title}}' />
+        <input type="hidden" class="comment" value='{{subtitle}}' />
+        {{bars sort="axisX" limit="5"}}
+        <div class="bar">
+            <input type="hidden" class="axis-x" value="{{axisX}}">
+            <input type="hidden" class="axis-y" value="{{axisY}}">
+        </div>
+        {{/bars}}
+    </div>
+    <script>
+        barChart.init('.diag-{{index}}', 'diagram{{index}}');
+    </script>
+    {{/collection:grafy}}
+</div>
+<style>
+    @media(max-width:650px) {
+        .footer .bottom__wrap {
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+<script>
+    document.addEventListener('scroll', function () {
+        var positionY = document.getElementById('employment').getBoundingClientRect().top;
+        var maxPosition = document.getElementById('table').offsetHeight + document.getElementById('employment').offsetHeight;
+        if (positionY <= 439 && positionY >= maxPosition * -1) {
+            //document.getElementById('emp-btn').children[0].classList.add('red');
+        } else {
+            //document.getElementById('emp-btn').children[0].classList.remove('red');
+        }
+    });
+
+    x = new Vue({ el: '#employment' });
+    function checkMediaQuery(mediaQuery) {
+        if (mediaQuery.matches) {
+            //document.getElementById('emp-btn').children[0].innerHTML = 'Volné pozice';
+            //document.getElementById('faq-btn').children[0].innerHTML = 'Dotazy';
+        } else {
+            //document.getElementById('emp-btn').children[0].innerHTML = 'Volná pracovní místa';
+            //document.getElementById('faq-btn').children[0].innerHTML = 'Časté dotazy';
+        }
+    }
+    var media = window.matchMedia("(max-width: 650px)");
+    checkMediaQuery(media);
+    media.addListener(checkMediaQuery);
+</script>

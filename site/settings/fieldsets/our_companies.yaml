@@ -1,0 +1,27 @@
+sections:
+  '':
+    display: 'Naše společnosti'
+    fields:
+      meta_description:
+        type: text
+        display: 'Meta Description'
+      introduction:
+        type: redactor
+        instructions: 'úvodní text pro stránku naše společnosti'
+        localizable: true
+        display: úvod
+        restrict_assets: false
+      video:
+        type: video
+        instructions: |
+          Video pro stránku naše společnosti<br>
+          Video může být nahráno z youtube
+          - stačí zkopírovat adresu videa z youtube
+          
+          
+          Video může být nahráno jako soubor
+          - video musí být nahráno ve složce média
+          - cesta je poté ve formátu /assets/cesta_k_souboru/název_souboru např `/assets/homepage/videos/dek.mp4`
+        display: Video
+taxonomies: true
+title: 'Our Companies'

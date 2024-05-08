@@ -1,0 +1,183 @@
+.section-kontakt {
+    .kontakt_base {
+        display        : flex;
+        justify-content: space-between;
+    }
+
+    .kontakt_base {
+        max-width: 980px;
+        margin   : 0 auto;
+    }
+
+    .kontakt_mapa {
+        display        : flex;
+        justify-content: center;
+        margin         : 4rem;
+    }
+
+    .novy-riadok {
+        display: none;
+    }
+
+    .dotaznik_pro_uchazece h1 {
+        font-size : 32px;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+
+
+    form#contact-form-kont {
+        display        : flex;
+        justify-content: center;
+        background     : #f9f9f9;
+        flex-direction : column;
+        padding        : 3rem 3rem 5rem 3rem;
+        margin-bottom  : -5rem;
+
+        .required>label:after {
+            content: " *";
+            color  : @dek-color-red;
+        }
+    }
+
+    .dotaznik_pro_uchazece {
+        background: #fff;
+    }
+
+    .btn.red {
+        cursor          : pointer;
+        border          : none;
+        font-size       : 13px;
+        border-radius   : 17px;
+        height          : 33px;
+        display         : block;
+        line-height     : 2.8;
+        text-align      : center;
+        padding         : 0 26px;
+        text-transform  : uppercase;
+        min-width       : 120px;
+        width           : 200px;
+        margin-left     : auto;
+        margin-right    : auto;
+        margin-top      : 20px;
+        background-color: @dek-color-red;
+        color           : #FFF;
+        font-size       : 16px;
+        border-radius   : 25px;
+        width           : 156px;
+        height          : 50px;
+        margin-top      : 30px;
+        margin-bottom   : -25px;
+        padding         : 0;
+        outline         : none;
+    }
+
+    .btn.red:hover {
+        background-color: @button-primary-hover-background;
+        color           : @button-primary-hover-color;
+    }
+
+
+
+    .dotaznik_pro_uchazece .checkmark {
+        position  : absolute;
+        background: #fff;
+        border    : 1px solid #c3c3c3;
+        width     : 16px;
+        height    : 16px;
+        top       : 0px;
+        left      : -20px;
+        cursor    : pointer;
+    }
+
+    .zak-centrum {
+        margin-right: 7rem;
+    }
+
+    .social {
+        width          : 2rem;
+        height         : 2rem;
+        background-size: 100%;
+        margin-right   : 5px;
+    }
+
+    .i-instagram {
+        background-image: url('../icons/instagram.svg');
+    }
+
+    .i-facebook {
+        background-image: url('../icons/facebook.svg');
+    }
+
+    .i-youtube {
+        background-image: url('../icons/youtube.svg');
+    }
+
+    @media(max-width: 1030px) {
+        .kontakt_mapa {
+            margin: 1rem;
+        }
+
+        .kontakt_base {
+            margin: 1rem;
+        }
+    }
+
+    @media(max-width: 900px) {
+        .kontakt_base {
+            flex-direction: column;
+            padding-left  : 1rem;
+            margin        : 0;
+        }
+
+        .zak-centrum {
+            margin-top: 1rem;
+        }
+
+        .novy-riadok {
+            display: inherit;
+        }
+
+        .kontakt_mapa {
+            margin: 1rem;
+        }
+
+        form#contact-form {
+            padding: 1rem 1rem 3rem 1rem;
+        }
+    }
+
+    #error-name,
+    #error-email,
+    #error-phone,
+    #error-message,
+    #error-agree {
+        color     : @dek-color-red;
+        visibility: hidden;
+        font-size : 12px;
+    }
+
+    .big-map {
+        width        : 100%;
+        padding      : 1rem;
+        margin-bottom: 2rem;
+
+    }
+
+    .map7654 {
+        height   : 259px !important;
+        max-width: 980px;
+        margin   : 0 auto;
+    }
+
+    .smap img {
+        max-width: none !important;
+    }
+}
+
+.contact-media{
+    h1{
+        text-align: center;
+    }
+}

@@ -1,0 +1,16 @@
+sections:
+  main:
+    display: Main
+    fields:
+      video:
+        sets:
+          set_1:
+            display: 'Set 1'
+            fields:
+              video:
+                type: video
+                display: Video
+        type: replicator
+        display: Video
+taxonomies: true
+title: HP_Videos

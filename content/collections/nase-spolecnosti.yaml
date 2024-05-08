@@ -1,0 +1,19 @@
+title: 'HP_Naše společnosti'
+template: our-companies/company
+sites:
+  - default
+  - en
+  - sk
+route:
+  cz: '/nase-spolecnosti/{slug}'
+  en: '/our-companies/{slug}'
+  sk: '/nase-spolocnosti/{slug}'
+structure:
+  max_depth: 1
+inject:
+  css-files:
+    - pages/detail
+  columns:
+    - title
+    - slug
+    - order

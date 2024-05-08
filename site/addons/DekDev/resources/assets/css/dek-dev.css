@@ -1,0 +1,114 @@
+#dekdev-deploy-message {
+	position:fixed;
+	z-index:100000;
+	font-size: 16px;
+}
+
+#dekdev-deploy-message.message-popup {
+	max-width:90%;
+	width:800px;
+	top:100px;
+	left:50%;
+	margin-left:-400px;
+}
+
+#dekdev-deploy-message.message-line {
+	width:100%;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
+#dekdev-deploy-message.message-popup div[onclick] {
+	cursor: pointer;
+}
+
+#dekdev-deploy-message.message-popup .danger {
+	border: 1px solid #e75650;
+	border-radius: 4px;
+}
+
+#dekdev-deploy-message .danger .head {
+	background-color: #e75650;
+	color: #fff;
+	padding: 10px 20px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#dekdev-deploy-message.message-line .danger .head,
+#dekdev-deploy-message.message-line .danger .body {
+	display: block;
+	padding: 10px 20px;
+	background-color: #e75650;
+	color: #fff;
+	font-size: 16px;
+}
+
+#dekdev-deploy-message.message-line .danger .head {
+ 	float: left;
+}
+
+#dekdev-deploy-message.message-popup .danger .body {
+	color: #c53030;
+	background-color: #fff5f5;
+	padding: 20px;
+}
+
+#deploy-maintenance-wrapper div {
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background-color:#fff;
+	opacity:0.7;
+	z-index:10000;
+}
+
+#deploy-maintenance-wrapper div p {
+	display:inline-block;
+	width:600px;
+	margin-left:-300px;
+	height:200px;
+	margin-top:-100px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	text-align:center;
+	line-height:200px;
+	vertical-align:middle;
+	font-size:45px;
+}
+
+/*** GIT pseudo CLI ***/
+
+pre.cli {
+	background-color:#000;
+	color:#fefefe;
+}
+
+blue {
+	color: #00a8ff;
+}
+green {
+	color: #0f0;
+}
+red {
+	color: #f00;
+}
+yellow {
+	color: #ff0;
+}
+cyan {
+	color: #0ff;
+}
+magenta {
+	color: #f0f;
+}
+white {
+	color: #fff;
+}
+grey {
+	color: #cdcdcd;
+}

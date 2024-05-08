@@ -1,0 +1,6 @@
+title: Ekonomie
+order_number: '4'
+field_img: internship/ekonomie.svg
+popis_oboru: 'ekonomika výroby, pojištění, produktový management, výstavba, ekologie aj.'
+id: 5c4dbc04-dd96-4c1e-8e70-200262f8e0ff
+blueprint: Student_fields

@@ -1,0 +1,4 @@
+maintenance_mode: Maintenance
+temp_path: 'local/temp/dekDev'
+readme_deploy: 'readme-deploy.md'
+log_path: 'local/storage/logs'

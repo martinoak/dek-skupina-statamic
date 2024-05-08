@@ -1,0 +1,129 @@
+          #diagram-row .column {
+                /*border: 1px solid black;*/
+                padding: 0;
+                height: 250px;
+            }
+.diagram-tooltip
+{
+    background: #131313;
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    color: #fff;
+    font-size: 0.7em;
+    line-height: 1.8;
+    padding: 3px;
+    z-index: 20;
+    text-align: center;
+    display: none;
+}
+.diagram-card.empty .dots{
+    padding-top: 8px;
+}
+.diagram-card.empty .diagram-content{
+    overflow: hidden;
+}
+.diagram-card img{
+    display: block;
+    height: 100%;
+    max-width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    /*max-width: 290px;
+    min-height: 100%;*/
+    margin: auto;
+}
+.diagram-card.empty .diagram-comment{
+    border: none;
+}
+.diagram-card.empty .diagram-content:before{
+    content:'';
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    height: 10px;
+    width: 100%;
+    left: calc(50% - 145px);
+    background: #fff;
+    max-width: 300px;
+}
+.diagram-card.empty .heading{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.diagram-tooltip:after
+{
+    content: '';
+    display: block;
+    position: absolute;
+    left: calc(50% - 7px);
+    border-top: 7px solid black;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+
+            #diagram-row{
+                max-width: 980px;
+                margin: auto;
+            }
+            .diagram-card{
+                border: 1px solid #e1e1e1;
+                width: 95%;
+                height: 100%;
+            }
+            #diagram-row .column:nth-child(2n) .diagram-card{
+                margin: auto;
+            }
+            #diagram-row .column:nth-child(3n) .diagram-card{
+                margin-left: auto;
+            }
+            .diagram-title{
+                display: flex;
+                height: 50px;
+                flex-wrap: wrap;
+            }
+            .numeric-record{
+                flex-grow: 0.3;
+                text-align: center;
+                font-size: 2rem;
+                padding-top: 12px;
+            }
+            .diagram-content{
+                height: calc(100% - 40px);
+            }
+            .diagram-content > div{
+                height: 100%;
+            }
+            .diagram-comment{
+                flex-grow: 1;
+                padding-top: 7px;
+                margin-right: 7px;
+                text-align: right;
+                border-bottom: 1px solid #707070;
+            }
+            .heading{
+                font-weight: 600;
+            }
+            .sub{
+                color: #707070;
+            }
+            @media(max-width: 900px){
+                .diagram-card{
+                    width: 100%;
+                }
+                #diagram-row .column{
+                    margin: none;
+                }
+                .numeric-record{
+                    font-size: 1.4rem;
+                }
+                #diagram-container{
+                    padding: 0;
+                }
+            }
+            @media(max-width: 750px){
+                #diagram-row{
+                    display: block;
+                    max-width: 300px !important;
+                }
+            }

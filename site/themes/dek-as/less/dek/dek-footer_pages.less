@@ -1,0 +1,131 @@
+.section-podminky-pouziti,
+.section-ochrana-osobnich-udaju,
+.section-soubory-cookies,
+.section-cookies,
+.section-personal-protection,
+.section-conditions-of-use {
+    section#content {
+        max-width: 980px;
+        margin   : 0 auto;
+    }
+
+    .content {
+        padding-left : 30px;
+        padding-right: 30px;
+    }
+
+    .redactor-style ul>li {
+        padding-left : 35px;
+        margin-bottom: 5px;
+    }
+
+    ul {
+        list-style   : none;
+        margin-bottom: 20px;
+        padding-left : 0;
+    }
+
+    .redactor-style ul>li:before {
+        content      : '';
+        display      : inline-block;
+        height       : 5px;
+        width        : 5px;
+        border-radius: 50%;
+        margin-bottom: 4px;
+        background   : @dek-color-red;
+        margin-left  : -20px;
+        margin-right : 15px;
+    }
+
+    li ul {
+        padding-top: 10px;
+    }
+}
+
+
+.section-mapa-stranek,
+.section-web-map {
+    ul {
+        list-style   : none;
+        margin-bottom: 20px;
+    }
+
+    .map {
+        max-width      : 750px;
+        margin         : 0 auto;
+        justify-content: space-between;
+
+        li {
+            font-size    : 1.2em;
+            margin-bottom: 20px;
+        }
+
+        li:not(.heading):before {
+            content     : url(../icons/arrows.svg);
+            width       : 20px;
+            height      : 20px;
+            display     : inline-block;
+            margin-right: 17px;
+            margin-left : 34px;
+        }
+
+        .column {
+            width: 100%;
+        }
+
+        li.heading {
+            background-color: @dek-color-red;
+            border-radius   : 25px;
+            height          : 50px;
+            font-weight     : bold;
+            color           : #fff !important;
+            display         : flex;
+            justify-content : center;
+            flex-direction  : column;
+            padding-left    : 30px;
+        }
+
+        li.heading a {
+            color: #fff;
+        }
+
+        li.heading a:hover {
+            text-decoration: none;
+        }
+
+        a {
+            display: inline-block;
+            color  : @dek-color-grey-dark;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    li.heading:not(.nohover):hover {
+        background-color: #bc0000;
+    }
+
+    .row.map {
+        display        : flex;
+        max-width      : 750px;
+        margin         : 0 auto;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width:650px) {
+
+    .section-mapa-stranek,
+    .section-web-map {
+        .row.map {
+            flex-direction: column;
+        }
+
+        ul {
+            padding-left : 30px;
+            padding-right: 30px;
+        }
+    }
+}

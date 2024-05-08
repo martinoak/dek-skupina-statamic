@@ -1,0 +1,25 @@
+sections:
+  main:
+    display: Main
+    fields:
+      meta_description:
+        type: text
+        display: 'Meta Description'
+      company_name:
+        type: text
+        localizable: true
+        display: 'Company Name'
+      company_adresse:
+        type: textarea
+        display: 'Company Adresse'
+        localizable: true
+      zak_centrum:
+        type: text
+        display: 'Zak Centrum'
+        localizable: true
+      zak_centrum_tel:
+        type: text
+        display: 'Zak Centrum Tel'
+        localizable: true
+taxonomies: true
+title: Contact

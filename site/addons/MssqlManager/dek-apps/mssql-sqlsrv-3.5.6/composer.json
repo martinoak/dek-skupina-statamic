@@ -1,0 +1,24 @@
+{
+    "name": "dek-apps/mssql-sqlsrv",
+    "require": {
+        "php": ">=7.2",
+        "ext-sqlsrv": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "defuse/php-encryption": "^2.2"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DekApps\\MssqlProcedure\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}

@@ -1,0 +1,270 @@
+---
+cz: 
+   detail-form-button: 'ODESLAT'
+   detail-jmeno: 'Jméno a příjmení'
+   detail-jmeno-error: '*Zadejte jméno a příjmení'
+   detail-zpet: 'Zpět na výpis pozic'
+   detail-prac-napln: 'Pracovní náplň'
+   detail-pozadujeme: 'Požadujeme'
+   detail-nabizime: 'Nabízíme'
+   detail-pracoviste: 'Pracoviště'
+   detail-nahrsubor: 'Nahrát soubory – životopis, motivační dopis, další přílohy (max&nbsp;10MB)'
+   agree: 'Souhlasím se'
+   agree_link: 'zpracováním osobních údajů'
+   agree-error: '*Potvrďte souhlas'
+   email-error: '*Zadejte e-mail ve správném tvaru'
+   message: 'Text dotazu'
+   message-error: '*Toto pole nesmí být prázdné'
+   title-form: 'MÁM ZÁJEM O&nbsp;POZICI'
+   form-mess: 'zpráva'
+   form-button: 'ODESLAT'
+   skupina-dek: 'Skupina DEK'
+   name: 'Jméno a příjmení'
+   telefon: 'Telefon'
+   telefon-error: '*Vyplňte vaše telefonní číslo'
+   name-error: '*Zadejte jméno a příjmení'
+   detail-souborpovinny: '*Soubor je povinný'
+   detail-pridatsoubor: 'Přidat další soubor'
+   detail-zdroj: 'Vyplnit zdroj, kde jste se o pracovní nabídce dozvěděli'
+   detail-vybrat: 'Vybrat'
+   detail-udeluji-souhlas: 'Uděluji souhlas se'
+   detail-zpracovani-os-udaju: 'zpracováním osobních údajů'
+   detail-zpracovani-os-udaju-err: '*Pro odeslání formuláře musíte souhlasit se zpracováním osobních údajů'
+sk:  
+   detail-form-button: 'ODOSLAŤ'
+   detail-jmeno: 'Meno a priezvisko'
+   detail-jmeno-error: '*Zadajte meno a priezvisko'
+   detail-zpet: 'Späť na zoznam pozícií'
+   detail-prac-napln: 'Náplň práce'
+   detail-pozadujeme: 'Požadujeme'
+   detail-nabizime: 'Ponúkame'
+   detail-pracoviste: 'Pracovisko'
+   detail-nahrsubor: 'Nahrajte súbory - životopis, motivačný list, iné prílohy (max&nbsp;10MB)'
+   agree: 'Súhlasím so'
+   agree_link: 'spracovaním osobných údajov'
+   agree-error: '*Potvrďte súhlas'
+   email-error: "*Zadajte e-mail v správnom formáte"
+   message: 'Text otázky'
+   message-error: '*Toto pole nesmie byť prázdne'
+   title-form: 'MÁM ZÁUJEM O POZÍCIU'
+   form-mess: 'zpráva'
+   form-button: 'ODOSLAŤ'
+   skupina-dek: 'Skupina DEK'
+   name: 'Meno a priezvisko'
+   telefon: 'Telefón'
+   telefon-error: '*Vyplňte svoje telefónne číslo'
+   name-error: '*Zadajte meno a priezvisko'
+   detail-souborpovinny: '*Súbor je povinný'
+   detail-pridatsoubor: 'Pridať ďalší súbor'
+   detail-zdroj: 'Vyplňte zdroj, z ktorého ste sa dozvedeli o pracovnej ponuke'
+   detail-vybrat: 'Vyberte'
+   detail-udeluji-souhlas: 'Súhlasím so'
+   detail-zpracovani-os-udaju: 'spracovaním osobných údajov'
+   detail-zpracovani-os-udaju-err: '*Ak chcete odoslať formulár, musíte súhlasiť so spracovaním osobných údajov'
+---
+
+<div class="uk-container uk-text-right w-career__back" style="margin-top: 1rem;">
+    <a href="{{main_addon:translate :lang="locale" page="volna-mista" type="url"}}?detail=1" class="career__back">{{{{locale}}.detail-zpet}}</a>
+</div>
+
+<div class="container">
+    <h1 class="page-name">{{title}}</h1>
+</div>
+
+{{EmploymentAddon:getDescription id=get:id as="key, value"}}
+
+{{ if !(position) }}
+    {{ redirect to="/kariera/volna-pracovni-mista" }}
+{{ /if }}
+
+<div class="uk-container uk-container-small career__popispozice">
+    {{ EmploymentAddon:getImage id=get:id }}
+    <div {{ if type !== 0 }} class="career__popispozice1" {{/if}}>
+        <h2>
+            {{if hdr != ""}}
+            {{hdr}}<br>
+            {{/if}}
+            <span id='js-nazev-pozice'>{{position}}</span>
+        </h2>
+            <a href="#vypln-form" class="career_vypln-form">{{{{locale}}.title-form}}</a>
+        <p>
+            {{inz_pat}}
+        </p>
+        <strong>{{{{locale}}.detail-prac-napln}}</strong>
+        <ul class='career__list'>
+            {{proccess}}
+            <li>{{value}}</li>
+            {{/proccess}}
+        </ul>
+        <strong>{{{{locale}}.detail-pozadujeme}} </strong>
+        <ul class='career__list'>
+            {{requirments}}
+            <li>{{value}}</li>
+            {{/requirments}}
+        </ul>
+        <strong>{{{{locale}}.detail-nabizime}}</strong>
+        <ul class='career__list'>
+            {{offers}}
+            <li>{{value}}</li>
+            {{/offers}}
+        </ul>
+        <strong>{{{{locale}}.detail-pracoviste}}</strong>
+        <ul class='career__list'>
+            <li>{{location}}</li>
+        </ul>
+        <p>
+            {{spodek}}
+        </p>
+    </div>
+{{ if type != 0 }}
+    <div class="career__popispozice2">
+        {{ if type == 1 }}
+        <img src="data:image/png;base64, {{ result }}">
+        {{ elseif type == 2 }}
+        <iframe class="video" data-video-ratio="1.779" src="{{ result }}?rel=0&showinfo=0&iv_load_policy=3&controls=0"></iframe>
+        {{ /if }}
+    </div>
+{{ /if }}
+    {{ /EmploymentAddon:getImage }}
+</div>
+{{/EmploymentAddon:getDescription}}
+
+{{ form:set is='dotaznik_pro_uchazece' }}
+{{ form:create in='dotaznik_pro_uchazece' files='true' attr='id:candidate|onsubmit:return validateFormCarrer(this.id)' }}
+
+<div class='uk-container uk-container-small dotaznik_pro_uchazece'>
+    <input type='hidden' readonly='true' name='vr_id' value='{{ get:id }}'>
+    <input type='hidden' readonly='true' name='lang' value='{{ locale }}'>
+    <h1 id='vypln-form'>{{{{locale}}.title-form}} </h1>
+
+    {{ if errors }}
+        <ul class='form-errors'>
+        {{ errors }}
+            <li>{{ value }}</li>
+        {{ /errors }}
+        </ul>
+    {{ /if }}
+
+    <div class='required'>
+        <label for='name'>{{{{locale}}.detail-jmeno}}</label>
+        <input class='required' id='name' type='text' name='name' value='{{old:name}}'>
+        <span class='error-message'>{{{{locale}}.detail-jmeno-error}}</span>
+    </div>
+
+    <div class='dotaznik_oneline'>
+        <div class='required'>
+            <label for='email'> E-mail</label>
+            <input class='required' id='email' name='e-mail' placeholder='...' type='text' value='{{old:e-mail}}'>
+            <span class='error-message'>{{{{locale}}.email-error}} </span>
+        </div>
+        <div class='required'>
+            <label for='phone'>{{{{locale}}.telefon}} </label>
+            <input class='required' id='phone' name='phone' type='text' value='{{old:phone}}'>
+            <span class='error-message'>{{{{locale}}.telefon-error}}</span>
+        </div>
+    </div>
+
+    <div class='required'>
+        <label for='upload'>{{{{locale}}.detail-nahrsubor}}</label>
+
+        <div id='files'></div>
+        <div id='js-fakeinput'>
+            <div class='fakeinput'>
+                <span></span>
+                <input id='upload' type='file' name='files[]' class='required'>
+            </div>
+        </div>
+        {{ if error:files }}<span class='error-message visible'>*{{ error:files }}</span><br>
+        {{ else }}<span class='error-message'>{{{{locale}}.detail-souborpovinny}}</span><br>
+        {{ /if }}
+        <label for='upload' class='upload required-disable'>{{{{locale}}.detail-pridatsoubor}}
+            </label>
+        <span>&nbsp;</span>
+    </div>
+
+    <div style='margin-top: 1rem;'>
+        <!--   style='position:relative' -->
+        <label>{{{{locale}}.detail-zdroj}}</label>
+        <select class='uk-select' name='advertisement' id='advertisement'>
+            <option selected='true' disabled='disabled' hidden='hidden' value='disabled'>{{{{locale}}.detail-vybrat}} </option>
+            {{ employment_addon:get_advertisements }}
+                <option value='{{ value }}' {{ if old:advertisement == (value)}}selected{{ /if }}>{{ value }}</option>
+            {{ /employment_addon:get_advertisements }}
+        </select>
+
+        <div id='select-arrow'></div>
+        <span>&nbsp;</span>
+    </div>
+
+    <div>
+        <label for='note'>Poznámka</label>
+        <textarea id='note' placeholder='...' name='note' value='{{old:note}}' rows='5'>{{ old:note }}</textarea>
+        <span>&nbsp;</span>
+    </div>
+
+    <div class='required'>
+        <label id='agree'>
+            <input type='checkbox' class='required' name='agree' {{ if old:agree == 'on' }}checked{{ /if }}>
+            <span>{{{{locale}}.detail-udeluji-souhlas}}<a href="{{main_addon:translate type='url' :lang='locale' page='protection'}}">
+                {{{{locale}}.detail-zpracovani-os-udaju}}</a>
+
+            </span>
+        </label><br>
+        <span class='error-message'>{{{{locale}}.detail-zpracovani-os-udaju-err}}
+            </span>
+    </div>
+
+    <button type='submit' class='btn red'>{{{{locale}}.detail-form-button}}</button>
+</div>
+
+{{ if errors }}
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {	
+            UIkit.notification('Formulář obsahuje chyby!', {status: 'danger'});
+            scrollToElement('form#candidate');
+        });
+    </script>
+{{ /if }}
+
+{{/form:create}}
+    {{ if {form:success} }}
+        {{ form:submission }}
+            <script>
+                document.addEventListener('DOMContentLoaded', function(event) {	
+                    UIkit.notification('Formulář byl úspěšně odeslán.', {status: 'success'});
+                    var nazevPozice = document.getElementById('js-nazev-pozice').innerText;
+                    dataLayer.push({'event': 'send-form', 'eventCategory': 'Kariera-detail', 'eventAction': nazevPozice, 'eventLabel': '{{ advertisement }}'});
+                    scrollToElement('form#candidate');
+                });
+            </script>
+        {{ /form:submission }}
+    {{ /if }}
+{{ /form:set }}
+
+<div class='uk-container uk-container-small career__additionalinfo'>
+    {{ if locale == 'cz'}}
+    Pokud máte zájem pracovat v naší společnosti a žádná z aktuálně nabízených pozic Vás nezaujala, kontaktujte nás přes
+    <a href="dotaznik">dotazník pro uchazeče</a> nebo na <a href="mailto:kariera@dek.cz">kariera@dek.cz</a>
+    {{ /if }}
+    
+    {{ if locale == 'sk'}}
+    Ak máte záujem o prácu v našej spoločnosti a žiadna z aktuálne ponúkaných pozícií vás nezaujala, kontaktujte nás prostredníctvom 
+    <a href="dotaznik">dotazníka pre uchádzačov</a> alebo na adrese <a href="mailto:kariera@dek.sk">kariera@dek.sk</a>.
+    {{ /if }}
+</div>
+
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="column">
+                <iframe height="550"
+                    src="https://www.youtube.com/embed/aici6T3KgXY?rel=0&amp;showinfo=0&amp;iv_load_policy=3&amp;controls=0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{theme:js src="employmentform" cache_burst="true"}}"></script>
+
+<script>
+    dekReCaptcha.createInput("dotaznik_pro_uchazece", "candidate");
+</script>

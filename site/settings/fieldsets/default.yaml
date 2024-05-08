@@ -1,0 +1,20 @@
+title: Default
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        type: text
+        width: 66
+        localizable: true
+      slug:
+        type: text
+        width: 33
+      meta_description:
+        type: text
+        display: 'Meta Description'
+      content:
+        type: markdown
+        display: Content
+        localizable: true
+taxonomies: true

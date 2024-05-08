@@ -1,0 +1,5 @@
+roles:
+  - admin
+id: 95d70d52-a410-45c8-8e50-ddc7d9830608
+password_hash: $2y$10$pneM37.HlTQKUeHXFn6f5uMksSQAaI8lBgoZdgjcPXtKFR6nzxj3y
+name: 'Jan Lucker'

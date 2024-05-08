@@ -1,0 +1,61 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: meta_description
+        field:
+          type: text
+          display: 'Meta Description'
+      -
+        handle: title
+        field:
+          type: text
+          display: Nazev
+          localizable: true
+      -
+        handle: introduction-heading
+        field:
+          type: text
+          display: Podnadpis
+          localizable: true
+      -
+        handle: video
+        field:
+          type: video
+          localizable: true
+          display: Video
+          instructions: |-
+            Video může být nahráno z youtube
+            - stačí zkopírovat adresu videa z youtube
+
+
+            Video může být nahráno jako soubor
+            - video musí být nahráno ve složce média
+            - cesta je poté ve formátu /assets/cesta_k_souboru/název_souboru např `/assets/homepage/videos/dek.mp4`
+      -
+        handle: o_nas
+        field:
+          type: bard
+          display: 'O nas'
+          localizable: true
+          restrict_assets: false
+          save_html: true
+          buttons:
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - html
+            - image
+            - quote
+            - codeblock
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+            - anchor
+taxonomies: true
+title: About

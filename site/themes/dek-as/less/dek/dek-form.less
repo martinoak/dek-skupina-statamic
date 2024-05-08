@@ -1,0 +1,26 @@
+// Variables
+@form-error-color: #E30013;
+
+.error-message {
+    color     : @form-error-color;
+    visibility: hidden;
+    font-size : 12px;
+}
+
+.error-message.visible {
+    visibility: visible;
+}
+
+select {
+    background-color: #fff;
+}
+
+form ul.form-errors {
+    padding-left: 0;
+    list-style  : none;
+    color       : @form-error-color;
+}
+
+.uk-notification-close {
+    top: inherit !important;
+}

@@ -1,0 +1,166 @@
+#diagram-container .row {
+    display  : flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+#diagram-container .row>* {
+    position     : relative;
+    padding-right: 20px;
+    padding-left : 20px;
+    width        : 100%;
+    max-width    : 100%;
+}
+
+#diagram-container .column {
+    padding    : 1.55em 0;
+    flex       : 1 0 0;
+    flex-grow  : 1;
+    flex-shrink: 0;
+    flex-basis : 0px;
+    font-size  : 16px;
+}
+
+#diagram-container #diagram-row .column {
+    /*border: 1px solid black;*/
+    padding: 0;
+    height : 250px;
+}
+
+.section-o-nas .diagram-tooltip {
+    background : #131313;
+    width      : 50px;
+    height     : 25px;
+    position   : absolute;
+    color      : #fff;
+    font-size  : 0.7em;
+    line-height: 1.8;
+    padding    : 3px;
+    z-index    : 20;
+    text-align : center;
+    display    : none;
+}
+
+.section-o-nas a.uk-button.uk-button-primary.uk-button-small {
+    margin-bottom: 2rem;
+    margin-top   : 1rem;
+}
+
+#diagram-container .diagram-card.empty .dots {
+    padding-top: 8px;
+    padding-right: 45px;
+}
+
+#diagram-container .diagram-card.empty .diagram-content {
+    overflow: hidden;
+}
+
+#diagram-container .diagram-card img {
+    display    : block;
+    height     : 100%;
+    max-width  : calc(100% - 20px);
+    height     : calc(100% - 20px);
+    /*max-width: 290px;
+    min-height : 100%;*/
+    margin     : auto;
+}
+
+#diagram-container .diagram-card.empty .diagram-comment {
+    border: none;
+}
+
+#diagram-container .diagram-card.empty .heading {
+    text-align  : left;
+    padding-left: 10px;
+}
+
+.diagram-tooltip:after {
+    content     : '';
+    display     : block;
+    position    : absolute;
+    left        : calc(50% - 7px);
+    border-top  : 7px solid black;
+    border-left : 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+
+#diagram-container #diagram-row {
+    max-width: 980px;
+    margin   : auto;
+}
+
+#diagram-container .diagram-card {
+    border: 1px solid #e1e1e1;
+    width : 95%;
+    height: 100%;
+}
+
+#diagram-container #diagram-row .column:nth-child(2n) .diagram-card {
+    margin: auto;
+}
+
+#diagram-container #diagram-row .column:nth-child(3n) .diagram-card {
+    margin-left: auto;
+}
+
+#diagram-container .diagram-title {
+    display  : flex;
+    height   : 50px;
+    flex-wrap: wrap;
+}
+
+#diagram-container .numeric-record {
+    flex-grow  : 0.3;
+    text-align : center;
+    font-size  : 2rem;
+    padding-top: 12px;
+}
+
+#diagram-container .diagram-content {
+    height: calc(100% - 40px);
+}
+
+#diagram-container .diagram-content>div {
+    height: 100%;
+}
+
+#diagram-container .diagram-comment {
+    flex-grow    : 1;
+    padding-top  : 7px;
+    margin-right : 7px;
+    text-align   : right;
+    border-bottom: 1px solid #707070;
+}
+
+#diagram-container .heading {
+    font-weight: 600;
+}
+
+#diagram-container .sub {
+    color: #707070;
+}
+
+@media(max-width: 900px) {
+    #diagram-container .diagram-card {
+        width: 100%;
+    }
+
+    #diagram-container #diagram-row .column {
+        margin: none;
+    }
+
+    #diagram-container .numeric-record {
+        font-size: 1.4rem;
+    }
+
+    #diagram-container #diagram-container {
+        padding: 0;
+    }
+}
+
+@media(max-width: 750px) {
+    #diagram-container #diagram-row {
+        display  : block;
+        max-width: 300px !important;
+    }
+}

@@ -1,0 +1,5 @@
+driver: local
+auto_index: "{env:SETTINGS_SEARCH_AUTO_INDEX}"
+default_index: default
+searchable:
+  - title

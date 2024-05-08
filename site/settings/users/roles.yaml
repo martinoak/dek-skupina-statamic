@@ -1,0 +1,59 @@
+d32e14fb-08c9-44c2-aaf8-21200852bafd:
+  title: Admin
+  slug: admin
+  permissions:
+    - super
+277d1d57-8dbc-4154-93ee-993211169793:
+  title: editor
+  slug: editor
+  permissions:
+    - 'cp:access'
+    - 'content:view_drafts_on_frontend'
+    - resolve_duplicates
+    - 'pages:view'
+    - 'pages:edit'
+    - 'collections:hp-karusely:view'
+    - 'collections:hp-karusely:edit'
+    - 'collections:nase-spolecnosti:view'
+    - 'collections:nase-spolecnosti:edit'
+    - 'collections:nase-spolecnosti:create'
+    - 'collections:dek-v-cislech:view'
+    - 'collections:dek-v-cislech:edit'
+    - 'collections:historie:view'
+    - 'collections:historie:edit'
+    - 'collections:historie:create'
+    - 'collections:historie:delete'
+    - 'collections:obrat-spolecnosti:view'
+    - 'collections:obrat-spolecnosti:edit'
+    - 'collections:obrat-spolecnosti:create'
+    - 'collections:obrat-spolecnosti:delete'
+    - 'collections:pocet-zamestnancu:view'
+    - 'collections:pocet-zamestnancu:edit'
+    - 'collections:pocet-zamestnancu:create'
+    - 'collections:pocet-zamestnancu:delete'
+    - 'collections:vyrocni-zpravy:view'
+    - 'collections:vyrocni-zpravy:edit'
+    - 'collections:vyrocni-zpravy:create'
+    - 'collections:vyrocni-zpravy:delete'
+    - 'collections:casto-kladene-otazky:view'
+    - 'collections:casto-kladene-otazky:edit'
+    - 'collections:casto-kladene-otazky:create'
+    - 'collections:casto-kladene-otazky:delete'
+    - 'assets:main:view'
+    - 'assets:main:edit'
+    - 'assets:main:create'
+    - 'assets:main:delete'
+    - forms
+406f0b7e-3217-4148-943e-e3a859e76fbf:
+  title: PR
+  slug: pr
+  permissions:
+    - 'cp:access'
+    - 'collections:vyrocni-zpravy:view'
+    - 'collections:vyrocni-zpravy:edit'
+    - 'collections:vyrocni-zpravy:create'
+    - 'collections:vyrocni-zpravy:delete'
+    - 'collections:casto-kladene-otazky:view'
+    - 'collections:casto-kladene-otazky:edit'
+    - 'collections:casto-kladene-otazky:create'
+    - 'collections:casto-kladene-otazky:delete'

@@ -1,0 +1,22 @@
+routes:
+  /:
+    as: dekdev.index
+    uses: index
+  online-users:
+    as: dekdev.online-users
+    uses: onlineUsers
+  edit:
+    uses: edit
+    as: dekdev.edit
+  post@update:
+    uses: update
+    as: dekdev.update
+  git:
+    uses: git
+    as: dekdev.git
+  maintenance:
+    uses: maintenance
+    as: dekdev.maintenance
+  logs:
+    uses: logs
+    as: dekdev.logs

@@ -1,0 +1,9 @@
+title: 'Tisk a média'
+fieldset: news
+order: date
+template: print-and-media/mediadetail
+css-files: null
+columns:
+  - title
+  - slug
+  - date

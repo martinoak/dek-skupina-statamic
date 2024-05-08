@@ -1,0 +1,50 @@
+sections:
+  '':
+    display: 'Naše společnosti'
+    fields:
+      -
+        handle: meta_description
+        field:
+          type: text
+          display: 'Meta Description'
+      -
+        handle: introduction
+        field:
+          type: bard
+          instructions: 'úvodní text pro stránku naše společnosti'
+          localizable: true
+          display: úvod
+          restrict_assets: false
+          save_html: true
+          buttons:
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - html
+            - image
+            - quote
+            - codeblock
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+            - anchor
+      -
+        handle: video
+        field:
+          type: video
+          instructions: |-
+            Video pro stránku naše společnosti<br>
+            Video může být nahráno z youtube
+            - stačí zkopírovat adresu videa z youtube
+
+
+            Video může být nahráno jako soubor
+            - video musí být nahráno ve složce média
+            - cesta je poté ve formátu /assets/cesta_k_souboru/název_souboru např `/assets/homepage/videos/dek.mp4`
+          display: Video
+taxonomies: true
+title: 'Our Companies'

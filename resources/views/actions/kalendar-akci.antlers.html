@@ -1,0 +1,552 @@
+
+<div class="container">
+    <h1 class="page-name">{{title}}</h1>
+</div>
+
+
+<div class="uk-container uk-container-small uk-text-center uk-margin-bottom uk-margin-remove-bottom@s ">
+    {{subtext}}
+</div>
+
+<div id="filters-container">
+    <ul class="uk-subnav uk-subnav-pill uk-flex-center" data-uk-margin="">
+        <li class="{{ main_addon:is_url_active page="kalendar-akci" :lang="locale" class="uk-active" }}">
+            <a class="btn" id="kariera__lifeInDek" href="{{main_addon:translate type='url' :lang="locale" page="kalendar-akci"}}">
+                {{nadchazejici}}
+            </a>
+        </li>
+        <li class="{{ main_addon:is_url_active page="archiv-akci" :lang="locale" class="uk-active" }}">
+            <a href="{{ main_addon:translate type='url' :lang="locale" page="archiv-akci" }}?sort=d_desc" class="btn ">
+                {{archiv}}
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="uk-container calendar__hack-width" >
+    <!-- filtre -->
+    <script>
+        var filterdate = [];
+        var sectors = [];
+        var companies = [];
+        var typeOfactions = [];
+        var online = [];
+        var layout = [];
+        var sort = [];
+    </script>
+    <div id="employment">
+        
+        <!-- OBDOBI START -->
+        <!-- skyt na mobile -->
+        <div data-name="dates" class="holder hide-on-mobile " id="js-filterdate"
+        
+        >
+            <div class="selected-value">
+                <span class="carr-sellector calendar__date--big">
+                    <span class="xnull-value"></span></span>
+                <span class="carr-sellector--list" hidden="true"><span class="carr-sellector--name"></span><span class="clear"></span></span>
+            </div> 
+            <div class="list" hidden>
+                {{actionAddon:getFiltersForActions}}
+                {{if setArchive == 0}}
+                    {{dates}}
+                            <div data-value="{{date}}" class="item"><!----> <span class="nameFilerSelect" id="js-cal-{{date}}">{{name}}</span></div>
+                            <script>
+                                filterdate['jscal-{{date}}'] = '{{name}}';
+                            </script>
+                    {{/dates}}
+                {{else}}
+                    {{datesArchive}}
+                        <div data-value="{{date}}" class="item"><!----> <span class="nameFilerSelect" id="js-cal-{{date}}">{{name}}</span></div>
+                        <script>
+                            filterdate['jscal-{{date}}'] = '{{name}}';
+                        </script>
+                    {{/datesArchive}}
+                {{/if}}
+                {{/actionAddon:getFiltersForActions}}
+            </div>
+        </div>
+        <!-- OBDOBI END -->
+
+        <!-- OBOR START -->
+        <div data-name="sectors" class="holder" id="js-sectors">
+            <div class="selected-value">
+                <span class="carr-sellector">{{obor}}<span class="null-value"></span></span>
+                <span class="carr-sellector--list" hidden="true"><span class="carr-sellector--name"></span><span class="clear"></span></span>
+            </div> 
+            <div class="list" hidden>
+                {{actionAddon:getFiltersForActions}}
+                    {{if setArchive == 0}}
+                        {{sectors}}
+                            <div data-value="{{option}}" class="item"><!----> <span class="nameFilerSelect" id="js-cal-{{option}}">{{case}}</span></div>
+                            <script>
+                                sectors['jscal-{{option}}'] = '{{case}}';
+                            </script>
+                        {{/sectors}}                    
+                    {{else}}
+                        {{sectorsArchive}}
+                            <div data-value="{{option}}" class="item"><!----> <span class="nameFilerSelect" id="js-cal-{{option}}">{{case}}</span></div>
+                            <script>
+                                sectors['jscal-{{option}}'] = '{{case}}';
+                            </script>
+                        {{/sectorsArchive}}
+                    {{/if}}
+                {{/actionAddon:getFiltersForActions}}
+            </div>
+        </div>
+        <!-- OBOR END -->
+
+        <!-- FIRMY START -->
+        <div data-name="companies" class="holder" id="js-companies">
+            <div class="selected-value">
+                <span class="carr-sellector">{{company}}<span class="null-value"></span></span>
+                <span class="carr-sellector--list" hidden="true"><span class="carr-sellector--name"></span><span class="clear"></span></span>
+            </div> 
+            <div class="list" hidden>
+                {{actionAddon:getFiltersForActions}}
+                    {{if setArchive == 0}}
+                        {{companies}}
+                            <div data-value="{{option}}" class="item"><!----> <span class="nameFilerSelect" id="js-cal-{{option}}">{{case}}</span></div>
+                            <script>
+                                companies['jscal-{{option}}'] = '{{case}}';
+                            </script>
+                        {{/companies}}                    
+                    {{else}}
+                        {{companiesArchive}}
+                            <div data-value="{{option}}" class="item"><!----> <span class="nameFilerSelect" id="js-cal-{{option}}">{{case}}</span></div>
+                            <script>
+                                companies['jscal-{{option}}'] = '{{case}}';
+                            </script>
+                        {{/companiesArchive}}
+                    {{/if}}
+                {{/actionAddon:getFiltersForActions}}
+            </div>
+        </div>
+        <!-- FIRMY END -->
+
+
+        <!-- TYPAKCE START -->
+        <div data-name="typakce" class="holder" id="js-typakce">
+            <div class="selected-value">
+                <span class="carr-sellector">{{typAkce}}<span class="null-value"></span></span>
+                <span class="carr-sellector--list" hidden="true"><span class="carr-sellector--name"></span><span class="clear"></span></span>
+            </div>
+            <div class="list" hidden>
+                {{actionAddon:getFiltersForActions}}
+                    {{actionTypes}}
+                        <div data-value="{{option}}" class="item"><!----> <span class="nameFilerSelect" id="js-cal-{{option}}">{{case}}</span></div>
+                        <script>
+                            typeOfactions['jscal-{{option}}'] = '{{case}}';
+                        </script>
+                    {{/actionTypes}}
+                {{/actionAddon:getFiltersForActions}}
+            </div>        
+        </div> 
+        <!-- TYPAKCE END -->
+
+        <!-- FORMA START -->
+        <div data-name="online" class="holder" id="js-online">
+            <div class="selected-value">
+                <span class="carr-sellector">{{forma}}<span class="null-value"></span></span>
+                <span class="carr-sellector--list" hidden="true"><span class="carr-sellector--name"></span><span class="clear"></span></span>
+            </div> 
+            <div class="list" hidden>
+                {{actionAddon:getFiltersForActions}}
+                    {{online}}
+                        <div data-value="{{option}}" class="item"><!----> <span class="nameFilerSelect" id="js-cal-{{option}}">{{case}}</span></div>
+                        <script>
+                            online['jscal-{{option}}'] = '{{case}}';
+                        </script>
+                    {{/online}}
+                {{/actionAddon:getFiltersForActions}}
+            </div>    
+        </div>
+        <!-- FORMA END -->
+        
+    </div>
+    <!-- filtre -->
+</div>
+
+<div class="uk-container uk-margin-top calendar__hack-width" >
+
+    <div class="uk-flex calendar__wrap-nadpis">
+        {{if setArchive == 0}}
+        <h2 class="uk-width-expand">{{podNadpis}}</h2>
+        {{else}}
+        <h2 class="uk-width-expand">Archiv</h2>
+        {{/if}}
+
+
+        {{if setArchive == 0}}
+        <!-- ZOBRAZENI START -->
+        <div data-name="layout" class="holder holder--small hid-mob" id="js-layout">
+            <div class="selected-value uk-flex">
+                {{zobrazeni}}: 
+                <span class="carr-sellector--list" ><span class="carr-sellector--name"></span><span class="null-value"></span></span>
+            </div> 
+            <div class="list" hidden>
+                {{actionAddon:getFiltersForActions}}
+                    {{layout}}
+                        <div data-value="{{option}}" class="item"><!----> <span class="nameFilerSelect" id="js-cal-{{option}}">{{case}}</span></div>
+                        <script>
+                            layout['jscal-{{option}}'] = '{{case}}';
+                        </script>
+                    {{/layout}}
+                {{/actionAddon:getFiltersForActions}}
+            </div>    
+        </div>
+        <!-- ZOBRAZENI END -->
+        {{/if}}
+
+        
+        
+        <!-- SORT START -->
+        <div data-name="sort" class="holder holder--small" id="js-sort">
+            <div class="selected-value uk-flex">
+                {{razeni}}: 
+                <span class="carr-sellector--list" ><span class="carr-sellector--name"></span><span class="null-value"></span></span>
+            </div> 
+            <div class="list" hidden>
+                {{if setArchive == 0}}
+                    {{actionAddon:getFiltersForActions}}
+                        {{sort}}
+                        <div data-value="{{option}}" class="item"><!----> <span class="nameFilerSelect" id="js-cal-{{option}}">{{case}}</span></div>
+                            <script>
+                                sort['jscal-{{option}}'] = '{{case}}';
+                            </script>
+                        {{/sort}}
+                    {{/actionAddon:getFiltersForActions}}
+                {{else}}
+                    {{actionAddon:getFiltersForActions}}
+                        {{sort}}
+                            <div data-value="{{option}}" class="item js-h-{{option}}"><!----> <span class="nameFilerSelect" id="js-cal-{{option}}">{{case}}</span></div>
+                            <script>
+                                sort['jscal-{{option}}'] = '{{case}}';
+                            </script>
+                        {{/sort}}
+                    {{/actionAddon:getFiltersForActions}}
+                {{/if}}
+            </div>    
+        </div>
+        <!-- SORT END -->
+        
+    </div>
+
+        <script>
+            document.querySelectorAll('#js-sort .list .item').forEach(item => {
+                item.addEventListener('click', event => {
+                    let url = new URL(window.location.href);
+                    let sort = item.getAttribute('data-value');
+                    item.parentNode.toggleAttribute('hidden');
+                    url.searchParams.set('sort', sort);
+                    window.history.replaceState(null, null, `${url}`);
+                    let urlParams = new URLSearchParams(window.location.search);
+                    getDataAndReload(urlParams.toString());
+                    rewriteFilters();
+                })
+            });
+
+            document.querySelectorAll('#js-sort .clear').forEach(item => {
+                item.addEventListener('click', event => {
+
+                    let url = new URL(window.location.href);
+                    let sort = item.getAttribute('data-value');
+                    url.searchParams.delete('sort');
+                    item.parentNode.toggleAttribute('hidden');
+                    window.history.replaceState(null, null, `${url}`);
+                    let urlParams = new URLSearchParams(window.location.search);
+                    getDataAndReload(urlParams.toString());
+                    rewriteFilters();
+
+                })
+            });
+        </script>  
+
+
+</div>
+
+<div class="uk-container calendar__hack-width">
+
+<div id="js-actions-list" class="actions-list-grid uk-child-width-1-4@m uk-child-width-1-2@s uk-grid uk-grid-column-small uk-grid-row-large uk-grid-match" ></div>
+{{if setArchive == 1}}
+    <button id="js-showNext" onclick="showNext()" class="btn" style="display: block;margin: 2rem auto 0 auto;">{{nextButton}}</button>   
+
+<script>
+    function showNext() {
+        document.querySelectorAll('.dek-action--archive-hidden').forEach((item, index) => {
+            if (index < 16) {
+                item.classList.remove('dek-action--archive-hidden');
+            }
+            //spocitaj kolko je prvkov s classou dek-action--archive-hidden a ak ich zostalo 0 tak skry tlacidlo
+            let hidden = document.querySelectorAll('.dek-action--archive-hidden');
+            if (hidden.length == 0) {
+                document.getElementById('js-showNext').style.display = 'none';
+            }
+        });
+    }
+
+    function hideShowNext() {
+        let hidden = document.querySelectorAll('.dek-action--archive-hidden');
+
+        if (hidden.length > 0) {
+            document.getElementById('js-showNext').style.display = 'block';
+        } else {
+            document.getElementById('js-showNext').style.display = 'none';
+        }
+    }
+
+    setInterval(hideShowNext, 1000);
+
+</script>
+{{/if}}
+<div id="js-actions-empty">
+    <p>
+        <strong>{{prazdnyTucne}}</strong><br>{{prazdnyNormalni}}
+    </p>
+    <!-- X ZRUŠIT FILTROVÁNÍ -->
+    <button id="js-clear-filters" class="btn" onclick="clearFilters()"><span class="clear"></span>{{praznyTlacitko}}</button>
+</div>
+
+
+<script>
+    var api = "{{ env:API_URL }}";
+    var apiurl = api + '/actions?archive={{setArchive}}&';
+
+    //ak kliknem na polozku v liste tak vlozim data-value do url ako parameter type a prepisem url (#js-filterdate)
+
+function addClickListener(selector, attribute) {
+  document.querySelectorAll(selector + ' .list .item').forEach(item => {
+    item.addEventListener('click', event => {
+      let url = new URL(window.location.href);
+      let value = item.getAttribute('data-value');
+      url.searchParams.set(attribute, value);
+      item.parentNode.toggleAttribute('hidden');
+      window.history.replaceState(null, null, `${url}`);
+      let urlParams = new URLSearchParams(window.location.search);
+      getDataAndReload(urlParams.toString());
+      rewriteFilters();
+    });
+  });
+}
+
+addClickListener('#js-filterdate', 'date');
+addClickListener('#js-typakce', 'type');
+addClickListener('#js-online', 'online');
+addClickListener('#js-sectors', 'sector');
+addClickListener('#js-companies', 'company');
+
+document.querySelectorAll('#js-layout .list .item').forEach(item => {
+  item.addEventListener('click', event => {
+    let url = new URL(window.location.href);
+    let layout = item.getAttribute('data-value');
+    item.parentNode.toggleAttribute('hidden');
+    url.searchParams.set('layout', layout);
+    window.history.replaceState(null, null, `${url}`);
+    let urlParams = new URLSearchParams(window.location.search);
+    getDataAndReload(urlParams.toString());
+    rewriteFilters();
+    chaneViewOfLayout();
+  });
+});
+
+function addClearClickListener(selector, attribute) {
+  document.querySelectorAll(selector + ' .clear').forEach(item => {
+    item.addEventListener('click', event => {
+      let url = new URL(window.location.href);
+      let value = item.getAttribute('data-value');
+      url.searchParams.delete(attribute);
+      item.parentNode.toggleAttribute('hidden');
+      window.history.replaceState(null, null, `${url}`);
+      let urlParams = new URLSearchParams(window.location.search);
+      getDataAndReload(urlParams.toString());
+      rewriteFilters();
+    });
+  });
+}
+
+addClearClickListener('#js-filterdate', 'date');
+addClearClickListener('#js-typakce', 'type');
+addClearClickListener('#js-online', 'online');
+addClearClickListener('#js-sectors', 'sector')
+addClearClickListener('#js-companies', 'company');
+
+document.querySelectorAll('#js-layout .clear').forEach(item => {
+  item.addEventListener('click', event => {
+    let url = new URL(window.location.href);
+    let layout = item.getAttribute('data-value');
+    url.searchParams.delete('layout');
+    item.parentNode.toggleAttribute('hidden');
+    window.history.replaceState(null, null, `${url}`);
+    let urlParams = new URLSearchParams(window.location.search);
+    getDataAndReload(urlParams.toString());
+    rewriteFilters();
+    chaneViewOfLayout();
+  });
+});
+
+    
+    function getDataAndReload($params = ''){
+        //console.log(apiurl+$params);
+        fetch(apiurl+$params)
+            .then(response => response.json())
+            .then(
+                data => {
+
+                    if(data.length == 0){
+                        //skry js-actions-list a zobraz js-actions-empty
+                        document.querySelector('#js-actions-list').setAttribute('hidden', true);
+                        document.querySelector('#js-actions-empty').removeAttribute('hidden');
+                    }else{
+                        //skry js-actions-empty a zobraz js-actions-list
+                        document.querySelector('#js-actions-empty').setAttribute('hidden', true);
+                        document.querySelector('#js-actions-list').removeAttribute('hidden');
+                    }
+
+                    //vymaz vsetky bloky vo vnutry js-actions-list
+                    document.querySelector('#js-actions-list').innerHTML = '';
+    
+                    data.forEach((item, index) => {
+                        //ak je description dlhsi ako 135 znakov tak ho skrat
+                        if(item.description.length > 135) item.description = item.description.substring(0, 135) + '…';
+
+                        setTimeout(() => {
+                            document.querySelector('#js-actions-list').innerHTML += `
+                            <div class="popopuuyiuyiy {{if setArchive == 1 }} ${index > 15 ? 'dek-action--archive-hidden':''} {{/if}}">
+                                <div class="uk-card uk-card-default uk-card-body dek-action {{if setArchive == 1}}dek-action--archive {{/if}} {{if setArchive == 0}}dek-action--nonarchive {{/if}} dek-active-${item.active}" onclick="fAccordion(${item.id})" >
+                                    <div class="logo_wrap"><logo class="${item.company}"></logo></div>
+                                    <div class="calendar__wrap">
+                                <div style="" class="calendar__wrap-blok">
+                                    
+                                    <nadpis class="calendar__name">${item.name}</nadpis>
+                                    <div class="calendar__address ${item.online == 1 ?'calendar__address--online' : ''} ">${item.online == 1 ?'Online' : item.address}</div>
+                                    <datumcas class="calendar__date">${item.date_from.date.toLocaleString().slice(8, 10)}. ${item.date_from.date.toLocaleString().slice(5, 7)}. ${item.date_from.date.toLocaleString().slice(0, 4)}
+                                        <span class="calendar__time_from">${item.time_from != null ? item.time_from : ''  }</span>
+                                    </datumcas>
+                                    <cena class="calendar__price ">${item.price_type == 'free' ? 'Zdarma' : item.amount + ' Kč'}</cena>
+                                </div>
+                                <div id="akcia--${item.id}" class="akcia-container">
+                                    <obrazok class="calendar__image {{if setArchive == 0 }}uk-visible@s{{/if}}" style="background-image: url(${item.image});"></obrazok>
+                                    <div class="calendar__description calendar__description--hidden" >
+                                        ${item.description} ${item.url ? '<a href="'+item.url+'" target="_blank">Zobrazit více</a>' : ''}  
+                                    </div>
+                                </div>
+                            </div>
+                                </div>
+                            </div>
+                            `;
+                        }, 0 * index);
+                    })
+                }
+            );
+    }
+
+function fAccordion(id) {
+    if(document.querySelector('#js-actions-list').classList.contains('actions-list-row')){
+        document.querySelectorAll('.calendar__description:not(.calendar__description--hidden)').forEach(item => {
+            if(item.parentNode.id != 'akcia--'+id){
+                item.classList.add('calendar__description--hidden');
+            }            
+        });
+        if(document.querySelector('#akcia--'+id+' .calendar__description').classList.contains('calendar__description--hidden')){
+            document.querySelector('#akcia--'+id+' .calendar__description').classList.remove('calendar__description--hidden');
+        }else{
+            document.querySelector('#akcia--'+id+' .calendar__description').classList.add('calendar__description--hidden');
+        }
+    }
+}
+
+    
+function rewriteFilters() {
+  const filterConfig = [
+    {
+      selector: '#js-filterdate',
+      param: 'date',
+      attribute: 'carr-sellector--name',
+      options: filterdate
+    },
+    {
+      selector: '#js-sectors',
+      param: 'sector',
+      attribute: 'carr-sellector--name',
+      options: sectors
+    },
+    {
+        selector: '#js-companies',
+        param: 'company',
+        attribute: 'carr-sellector--name',
+        options: companies
+    },
+    {
+      selector: '#js-typakce',
+      param: 'type',
+      attribute: 'carr-sellector--name',
+      options: typeOfactions
+    },
+    {
+      selector: '#js-online',
+      param: 'online',
+      attribute: 'carr-sellector--name',
+      options: { 1: 'Online', 0: 'Prezenční' }
+    },
+    {
+      selector: '#js-layout',
+      param: 'layout',
+      attribute: 'carr-sellector--name',
+      options: layout
+    },
+    {
+      selector: '#js-sort',
+      param: 'sort',
+      attribute: 'carr-sellector--name',
+      options: sort
+    }
+  ];
+
+  filterConfig.forEach(config => {
+    const { selector, param, attribute, options } = config;
+    const urlParam = new URL(window.location.href).searchParams.get(param);
+
+    document.querySelectorAll(`${selector} .carr-sellector`).forEach(item => {
+      item.toggleAttribute('hidden', window.location.href.indexOf(param) > -1);
+    });
+
+    document.querySelectorAll(`${selector} .carr-sellector--list`).forEach(item => {
+      if(param == 'online' || param == 'layout' || param == 'sort'){
+        if (param == 'online') {
+            item.toggleAttribute('hidden', window.location.href.indexOf(param) === -1);
+            item.querySelector(`.${attribute}`).innerHTML = options[urlParam];
+        }else{
+        if (urlParam && options['jscal-'+urlParam]) {
+            item.querySelector(`.${attribute}`).innerHTML = options['jscal-'+urlParam];
+          }
+        }
+
+        if(param == 'layout'){
+            if (urlParam && options['jscal-'+urlParam]) {
+                item.querySelector(`.${attribute}`).innerHTML = options['jscal-'+urlParam];
+            }else{
+                item.querySelector(`.${attribute}`).innerHTML = options[Object.keys(options)[0]];
+            }
+        }
+
+        if(param == 'sort'){
+            if (urlParam && options['jscal-'+urlParam]) {
+                item.querySelector(`.${attribute}`).innerHTML = options['jscal-'+urlParam];
+            }else{
+                item.querySelector(`.${attribute}`).innerHTML = options[Object.keys(options)[0]];
+            }
+        }
+      }
+      else{
+        item.toggleAttribute('hidden', window.location.href.indexOf(param) === -1);
+        item.querySelector(`.${attribute}`).innerHTML = options['jscal-'+urlParam];
+      }
+    });
+  });
+}
+
+
+</script>
+<script src="{{ theme:js src="dek-calendar.js"  }}"></script>
+
+</div>

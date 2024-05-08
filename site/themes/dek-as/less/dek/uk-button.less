@@ -1,0 +1,198 @@
+//
+// Component: Button
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@button-line-height:                            37px;
+@button-small-line-height:                      35px;
+@button-large-line-height:                      40px;;
+
+@button-font-size:                              16px;
+@button-small-font-size:                        14px;
+@button-large-font-size:                        18px;
+
+@button-padding-horizontal:                     30px;
+@button-small-padding-horizontal:               28px;
+@button-large-padding-horizontal:               34px;
+
+@button-default-background:                     transparent;
+@button-default-color:                          @global-color;
+@button-default-hover-background:               @global-muted-background;
+@button-default-hover-color:                    @global-color;
+@button-default-active-background:              @global-primary-background;
+@button-default-active-color:                   @global-inverse-color;
+
+@button-primary-background:                     @global-primary-background;
+@button-primary-color:                          @global-inverse-color;
+@button-primary-hover-background:               darken(@button-primary-background, 5%);
+@button-primary-hover-color:                    @global-inverse-color;
+@button-primary-active-background:              darken(@button-primary-background, 10%);
+@button-primary-active-color:                   @global-inverse-color;
+
+@button-secondary-background:                   @global-secondary-background;
+@button-secondary-color:                        @global-inverse-color;
+@button-secondary-hover-background:             darken(@button-secondary-background, 5%);
+@button-secondary-hover-color:                  @global-inverse-color;
+@button-secondary-active-background:            darken(@button-secondary-background, 10%);
+@button-secondary-active-color:                 @global-inverse-color;
+
+// danger == primary (cerveny button)
+@button-danger-background:                      @button-primary-background;
+@button-danger-color:                           @button-primary-color;
+@button-danger-hover-background:                @button-primary-hover-background;
+@button-danger-hover-color:                     @button-primary-hover-color;
+@button-danger-active-background:               @button-primary-active-background;
+@button-danger-active-color:                    @button-primary-active-color;
+
+@button-disabled-background:                    @global-muted-background;
+@button-disabled-color:                         @global-muted-color;
+
+@button-text-line-height:                       @global-line-height;
+@button-text-color:                             @global-muted-color;
+@button-text-hover-color:                       @global-color;
+@button-text-disabled-color:                    @global-muted-color;
+
+@button-link-line-height:                       @global-line-height;
+@button-link-color:                             @base-link-color;
+@button-link-hover-color:                       @base-link-hover-color;
+@button-link-hover-text-decoration:             @base-link-hover-text-decoration;
+@button-link-disabled-color:                    @global-muted-color;
+
+//
+// New
+//
+
+@button-transform:                              uppercase;
+@button-border-width:                           @global-border-width;
+
+@button-default-border:                         @global-border;
+@button-default-hover-border:                   darken(@global-border, 20%);
+@button-default-active-border:                  darken(@global-border, 30%);
+
+@button-disabled-border:                        @global-border;
+
+//@button-text-border-width:                      @global-border-width;
+//@button-text-border:                            @button-text-hover-color;
+
+@button-link-text-decoration:                   @base-link-text-decoration;
+
+
+// Component
+// ========================================================================
+
+.hook-button() {
+    text-transform: @button-transform;
+    border-radius: calc(@button-line-height / 2);
+    border: @button-border-width solid transparent;
+    transition: @global-transition-time ease-in-out;
+    transition-property: color, background-color;
+}
+
+.hook-button-hover() {}
+
+.hook-button-focus() {}
+
+.hook-button-active() {}
+
+
+// Style modifiers
+// ========================================================================
+
+.hook-button-default() { border: @button-border-width solid @button-default-border; }
+
+.hook-button-default-hover() { border-color: @button-default-hover-border; }
+
+.hook-button-default-active() { border-color: @button-default-active-border; }
+
+//
+// Primary
+//
+
+.hook-button-primary() { border: @button-border-width solid transparent; }
+
+.hook-button-primary-hover() {}
+
+.hook-button-primary-active() {}
+
+//
+// Secondary
+//
+
+.hook-button-secondary() { border: @button-border-width solid transparent; }
+
+.hook-button-secondary-hover() {}
+
+.hook-button-secondary-active() {}
+
+//
+// Danger
+//
+
+.hook-button-danger() { border: @button-border-width solid transparent; }
+
+.hook-button-danger-hover() {}
+
+.hook-button-danger-active() {}
+
+
+// Disabled
+// ========================================================================
+
+.hook-button-disabled() { border-color: @button-disabled-border; }
+
+
+// Size modifiers
+// ========================================================================
+
+.hook-button-small() {
+    border-radius: @button-small-line-height / 2;
+}
+
+.hook-button-large() {
+    border-radius: @button-large-line-height / 2;
+}
+
+
+// Text modifier
+// ========================================================================
+
+.hook-button-text() {}
+
+.hook-button-text-hover() {}
+
+.hook-button-text-disabled() {}
+
+
+// Link modifier
+// ========================================================================
+
+.hook-button-link() {
+    text-decoration: @button-link-text-decoration;
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-button-misc() {
+    .uk-button-group .uk-button:not(:first-child):not(:last-child) {
+        border-radius: 0;
+    }
+    .uk-button-group .uk-button:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .uk-button-group .uk-button:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+
+// Inverse
+// ========================================================================
+

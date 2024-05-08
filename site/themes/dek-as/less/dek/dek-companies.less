@@ -1,0 +1,397 @@
+#companies .companies-head {
+    text-align               : center;
+    font-size                : 1.1em;
+    font-weight              : 100;
+    margin-bottom            : 15px;
+    font-weight              : bold;
+    color                    : #707070;
+    text-transform           : uppercase;
+    margin-top               : 0;
+    margin-bottom            : 0;
+    padding                  : 15px 0;
+    /*border-top-left-radius :10px;*/
+    /*border-top-right-radius:10px;*/
+    background               : @dek-color-red;
+    color                    : #fff;
+}
+
+#companies .company {
+    position        : relative;
+    background-color: #FFF;
+    text-align      : center;
+    height          : 250px;
+    border-bottom   : 1px solid @dek-color-grey-light;
+    border-right    : 1px solid @dek-color-grey-light;
+    border-left     : 1px solid @dek-color-grey-light;
+    padding         : 5px;
+    //transition: all @global-transition-time ease-in-out;
+}
+
+#companies .uk-grid>div .companies-head,
+#companies .uk-grid>div .company {
+    width       : 90%;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+#companies .uk-grid>div:first-child .companies-head,
+#companies .uk-grid>div:first-child .company {
+    width       : 95%;
+    margin-left : 0;
+    margin-right: auto;
+}
+
+#companies uk-grid>div:last-child .companies-head,
+#companies uk-grid>div:last-child .company {
+    width       : 95%;
+    margin-left : auto;
+    margin-right: 0;
+}
+
+#companies .company h2 {
+    padding-top   : 20px;
+    padding-bottom: 0;
+    margin        : 0;
+}
+
+#companies .company h2.company-long-name {
+    font-size: 1.4rem;
+}
+
+
+#companies .company img {
+    position  : absolute;
+    margin    : auto;
+    width     : auto;
+    height    : auto;
+    left      : 0;
+    top       : 0;
+    right     : 0;
+    bottom    : 0;
+    max-height: 100%;
+    max-width : 100%;
+}
+
+#companies .company>p {
+    padding: 10px;
+    margin : 0;
+}
+
+#companies .company>div {
+    position: relative;
+    height  : 100%;
+    width   : 100%;
+}
+
+#companies .company>*:not(div) {
+    display: none;
+}
+
+#companies .company>.uk-button {
+    //width   : 174px;
+    //position: absolute;
+    bottom    : 15px;
+    //left    : calc(50% - 80px);
+}
+
+#companies .company:hover {
+    background  : #fff;
+    //box-shadow: 0px 0px 7px #707070;
+    box-shadow  : 0px 0px 10px #00000029;
+    z-index     : 1;
+    border      : none;
+    transform   : scale(1.0);
+
+}
+
+#companies .company:hover>div {
+    display       : none;
+    //opacity: 0;
+    //transition  : 0.5s ease-in-out;
+}
+
+#companies .company:hover>h2,
+#companies .company:hover>p {
+    display: block;
+}
+
+#companies .company:hover>.uk-button {
+    display: inline-block;
+}
+
+@media (max-width: 900px) {
+
+    #companies .company,
+    #companies .companies-head {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 720px) {
+    #companies .company h2 {
+        padding-top: 30px;
+    }
+
+    #companies .company>p {
+        padding: 15px;
+    }
+
+    #companies .company>.uk-button {
+        bottom: 30px;
+    }
+}
+
+
+// Stylovani hoveru
+/*#companies .company
+{
+    background: #fff;
+    box-shadow: 0px 0px 7px #707070;
+    z-index: 1;
+    border: none;
+    transform: scale(1.0);
+}
+#companies .company > div
+{
+    display: none;
+}
+#companies .company > h2,
+#companies .company > p
+{
+    display: block;
+}
+#companies .company > .uk-button
+{
+    display: inline-block;
+}*/
+
+@media(max-width:650px) {
+    #companies {
+        margin-top: -2rem;
+    }
+
+    #companies .companies-head {
+        margin-top: 2rem;
+    }
+}
+
+.section-nase-spolecnosti,
+.section-nase-spolocnosti,
+.section-our-companies {
+
+
+    @media (max-width: 1040px) {
+        .media-detail-navigation {
+            order        : 3;
+            margin-bottom: -5px;
+        }
+
+        .media-detail {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .media-detail-navigation {
+            order        : 3;
+            margin-bottom: 0;
+        }
+    }
+
+    .btn.red {
+        background-color: @dek-color-red;
+        color           : #FFF;
+    }
+
+    .btn {
+        cursor        : pointer;
+        border        : none;
+        font-size     : 13px;
+        border-radius : 17px;
+        height        : 33px;
+        display       : block;
+        line-height   : 2.7;
+        text-align    : center;
+        width         : 120px;
+        text-transform: uppercase;
+        margin-left   : auto;
+        margin-right  : auto;
+        margin-top    : 20px;
+    }
+
+
+    a.arrow {
+        display         : block;
+        background-color: @dek-color-red;
+        width           : 30px;
+        height          : 30px;
+        cursor          : pointer;
+        border-radius   : 50%;
+        padding         : 0;
+    }
+
+    a.arrow:hover {
+        background-color: #BC0000;
+    }
+
+    #next {
+        right    : calc(50% - 470px);
+        transform: rotate(-90deg);
+    }
+
+    .icon,
+    a.arrow {
+        position     : absolute;
+        z-index      : 1;
+        top          : -20px;
+        height       : 40px;
+        width        : 40px;
+        background   : #EB0000;
+        border-radius: 50%;
+        cursor       : pointer;
+        padding-right: 20px;
+        padding-left : 20px;
+    }
+
+
+    div#navigationX {
+        position     : relative;
+        padding-right: 20px;
+        padding-left : 20px;
+        width        : 100%;
+        max-width    : 100%;
+    }
+
+    a.arrow:before {
+        left: 7px;
+        top : 7px;
+    }
+
+    .arrow::before {
+        content : url(../icons/arrow.svg);
+        width   : 25px;
+        height  : 25px;
+        display : block;
+        position: absolute;
+        top     : 2px;
+        z-index : 100;
+        left    : 2px;
+    }
+
+    iframe,
+    video:not(.tile-video) {
+        background  : black;
+        cursor      : pointer;
+        display     : block;
+        margin-left : auto;
+        margin-right: auto;
+        width       : 100%;
+        max-width   : 980px;
+        max-height  : 480px;
+        border      : none;
+    }
+
+    .videowrapper {
+        float         : none;
+        clear         : both;
+        width         : 100%;
+        position      : relative;
+        padding-bottom: 56.25%;
+        padding-top   : 25px;
+        height        : 0;
+    }
+
+    .videowrapper iframe {
+        position: absolute;
+        top     : 0;
+        left    : 0;
+        width   : 100%;
+        height  : 100%;
+    }
+
+
+    section#content {
+        margin-bottom: -44px;
+    }
+
+    img {
+        width    : auto;
+        max-width: 100%;
+    }
+
+
+    @media(max-width: 1040px) {
+        #detail .container {
+            display        : flex;
+            justify-content: space-between;
+            margin-left    : auto;
+            margin-right   : auto;
+            margin-bottom  : 40px;
+            position       : relative;
+            max-width      : 1300px;
+        }
+
+        .content {
+            margin: 0 auto;
+        }
+
+        #detail {
+            padding-bottom  : 0px;
+            margin-bottom   : -5px;
+            background-color: #fff;
+        }
+
+        .icon,
+        a.arrow {
+            top: 0;
+        }
+
+        div#navigationX {
+            position  : absolute;
+            top       : 100%;
+            left      : 0;
+            height    : 40px;
+            z-index   : 5;
+            background: #eb0000;
+        }
+
+        #close {
+            right: calc(50% - 20px);
+        }
+
+        #next {
+            right: 70px;
+        }
+
+        #back {
+            left: 70px;
+        }
+
+    }
+
+    @media(max-width: 650px) {
+        div#navigationX {
+            position: fixed;
+            top     : auto;
+            bottom  : 0;
+        }
+
+        #detail .redactor-style p {
+            padding: 10px !important;
+        }
+    }
+
+    @media(max-width: 300px) {
+        #next {
+            right: 20px;
+        }
+
+        #back {
+            left: 20px;
+        }
+    }
+
+    a.icon svg {
+        margin-left: -15px;
+    }
+}

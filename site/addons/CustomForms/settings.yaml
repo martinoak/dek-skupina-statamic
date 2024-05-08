@@ -1,0 +1,66 @@
+fields:
+  datetime_format:
+    type: text
+    display: 'Datetime format'
+    instructions: 'The PHP date format string. Default is global **Date format** (see Settings - System)'
+    width: 50
+  replace:
+    type: toggle
+    display: 'Replace native Forms'
+    instructions: 'Native Forms section in left menu will be hidden'
+    width: 50
+  menu_icon:
+    type: suggest
+    options:
+      - paper-plane
+      - download
+      - text-document
+      - text-document-inverted
+      - text
+    max_items: 1
+    create: true
+    display: 'Menu icon'
+    instructions: 'Custom icon in left menu. Whatever from [entypo](http://entypo.com) icons'
+    width: 50
+  menu_label:
+    type: text
+    display: 'Menu label'
+    instructions: 'Custom label in left menu'
+    width: 50
+  callbacks:
+    type: yaml
+    display: 'Callbacks'
+    instructions: "Calls another [API's](https://docs.statamic.com/addons/classes/api) method"
+    rows: 15
+  store:
+    type: select
+    display: 'Database storage'
+    instructions: "Default is according to formset's settings - store only if flat files storage is enabled"
+    options:
+      default: "According to formset's settings"
+      1: Enabled
+      0: Disabled
+  hard_del:
+    type: toggle
+    display: 'Hard delete'
+    instructions: 'In database: hard DELETE or UPDATE `active = 0`'
+  csv_delimiter:
+    type: select
+    display: 'CSV export delimiter'
+    options:
+      ',': 'Comma ( , )'
+      ';': 'Semicolon ( ; )'
+    width: 50
+  csv_bom:
+    type: select
+    display: 'CSV export BOM'
+    options:
+      BOM_UTF8: 'UTF8 BOM'
+      BOM_UTF16_BE: 'UTF-16 BOM with Big-Endian'
+      BOM_UTF16_LE: 'UTF-16 BOM with Little-Endian'
+      BOM_UTF32_BE: 'UTF-32 BOM with Big-Endian'
+      BOM_UTF32_LE: 'UTF-32 BOM with Little-Endian'
+    width: 50
+  recaptcha_enabled:
+    type: toggle
+    display: 'Google reCaptcha'

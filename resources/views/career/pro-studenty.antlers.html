@@ -1,0 +1,317 @@
+---
+cz:
+    title-form: 'MÁM ZÁJEM O&nbsp;SPOLUPRÁCI'
+    detail-jmeno: 'Jméno a příjmení'
+    detail-jmeno-error: '*Zadejte jméno a příjmení'
+    email-error: '*Zadejte e-mail ve správném tvaru'
+    telefon: 'Telefon'
+    telefon-error: '*Vyplňte vaše telefonní číslo'
+    detail-form-button: 'ODESLAT'
+    detail-vybrat: 'Vybrat'
+    detail-obor: 'Vyberte obor, který vás zajímá'
+    detail-coop: 'Druh spolupráce'
+    detail-nahrsubor: 'Nahrát soubory – životopis, motivační dopis, další přílohy (max.&nbsp;10MB)'
+    message: 'Text dotazu'
+    message-error: '*Toto pole nesmí být prázdné'
+    form-button: 'ODESLAT'
+    detail-pridatsoubor: 'Přidat další soubor'
+    detail-udeluji-souhlas: 'Uděluji souhlas se'
+    detail-zpracovani-os-udaju: 'zpracováním osobních údajů'
+    detail-zpracovani-os-udaju-err: '*Pro odeslání formuláře musíte souhlasit se zpracováním osobních údajů'
+sk:
+    title-form: 'MÁM ZÁUJEM O&nbsp;SPOLUPRÁCI'
+    detail-jmeno: 'Meno a priezvisko'
+    detail-jmeno-error: '*Zadajte meno a priezvisko'
+    email-error: '*Zadajte e-mail v správnom tvare'
+    telefon: 'Telefón'
+    telefon-error: '*Vyplňte vaše telefónne číslo'
+    detail-form-button: 'ODOSLAŤ'
+    detail-vybrat: 'Vybrať'
+    detail-obor: 'Vyberte obor, ktorý vás zaujíma'
+    detail-coop: 'Druh spolupráce'
+    detail-nahrsubor: 'Nahrať súbory – životopis, motivačný list, ďalšie prílohy (max.&nbsp;10MB)'
+    detail-souborpovinny: '*Súbor je povinný'
+    message: 'Text dotazu'
+    message-error: '*Toto pole nesmie byť prázdne'
+    form-button: 'ODOSLAŤ'
+    detail-pridatsoubor: 'Pridať ďalší súbor'
+    detail-udeluji-souhlas: 'Udelím súhlas so'
+    detail-zpracovani-os-udaju: 'spracovaním osobných údajov'
+    detail-zpracovani-os-udaju-err: '*Pre odoslanie formulára musíte súhlasiť so spracovaním osobných údajov'
+---
+
+<div class="container">
+    <h1 class="page-name">{{introduction-heading}}</h1>
+</div>
+{{ partial:careerfilters }}
+<section class="uk-grid-collapse" uk-grid uk-height-match="target: .hero-heading">
+    <div class="uk-width-1-1 hero-image" style="background-image: url({{hero_img}})">
+        <div class="uk-container hero-text">
+            <div class="uk-width-1-2">
+                <h2 class="hero-heading">{{ hero_title }}</h2>
+                {{ hero_desc }}
+                <a href="#statistics">
+                    <button class="uk-button internship-button">
+                        {{ hero_button }}
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="uk-width-1-1 hero-image-small" style="background-image: url({{hero_img_small}})">
+        <div class="uk-container" style="padding-top: 100px">
+            <div class="uk-width-1-1 uk-width-1-2@s">
+                <h3 class="hero-heading">{{ hero_title }}</h3>
+                {{ hero_desc }}
+            </div>
+            <a href="#statistics">
+                <button class="uk-button internship-button">
+                    {{ hero_button }}
+                </button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="uk-margin-medium-bottom">
+    <div class="uk-container uk-text-center">
+        <h1 class="page-name">{{ about_title }}</h1>
+        {{ about_desc }}
+    </div>
+</section>
+
+<section id="why-us">
+    <div class="uk-container uk-visible@l">
+        <h2 class="why-us-heading">{{ about_replicator_title }}</h2>
+        <div class="container">
+            {{ about_replicator }}
+                {{ if type === 'text' }}
+                    <div class="card" {{if parallax }} uk-parallax="y: {{y_value}}; easing:{{easing}}"{{ /if }}>
+                        <h2>{{ heading }}</h2>
+                        {{ desc }}
+                    </div>
+                {{ elseif type === 'image' }}
+                    <div class="card-bg" {{if parallax }} uk-parallax="y: {{y_value}}; easing:{{easing}}"{{ /if }} style="background-image: url({{image}})"></div>
+                {{ /if }}
+            {{ /about_replicator }}
+        </div>
+    </div>
+    <div class="uk-container uk-hidden@l" id="why-us-small" style="background-image: url({{ about_tablet_img }})">
+        <div class="uk-flex content">
+            {{ about_replicator }}
+                {{ if type === 'text' }}
+                    <div class="internship-box">
+                        <h2 class="uk-text-center">{{ heading }}</h2>
+                        {{ desc }}
+                    </div>
+                {{ /if }}
+            {{ /about_replicator }}
+        </div>
+    </div>
+</section>
+
+<section id="fields">
+    <div id='companies'>
+        <div class='uk-container'>
+            <h2 class="internship-heading" style="padding: unset">{{ field_heading }}</h2>
+            <div class='content'>
+                <div class="row">
+                    <div class="column">
+                        <div class="company-wrap">
+                            {{ collection from="student-fields" sort="order_number"}}
+                            <div class="company-grid">
+                                <div class="uk-flex uk-flex-column">
+                                    <span class="company-grid-span">
+                                        {{ title }}
+                                    </span>
+                                    <img class="logo" alt="Logo oboru" src="{{ field_img }}">
+                                </div>
+                                <p class="company-paragraph">
+                                    {{ popis_oboru }}
+                                </p>
+                            </div>
+                            {{ /collection}}
+                            <div></div> <!-- tento div tu musi byt pro zachovani borderu u oboru-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="internship">
+    <div id="statistics">
+        <div class="uk-container">
+            <h2 class="internship-heading">{{ offer_heading }}</h2>
+            <div class="container">
+                <div class="content">
+                    <div class="row">
+                        <div class="parts" style="padding: unset;column-gap: 30px">
+                            {{ collection from="student-statistics" sort="order"}}
+                                <div class="column">
+                                    <div class="card">
+                                        <h2 data-value="{{ value }}">{{ value }}</h2>
+                                        <p class="uk-text-uppercase">{{ item }}</p>
+                                    </div>
+                                </div>
+                            {{ /collection }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-container uk-text-center uk-width-3-4">
+                {{offer_desc}}
+            </div>
+            <div class="uk-flex uk-flex-center">
+                <a href="{{ offer_pdf }}" target="_blank">
+                    <button class="uk-button uk-text-bold submit-button">{{ offer_button }}</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="signup-form">
+    <div class="uk-container" id="internship-form">
+        {{ form:set is='studentske_staze' }}
+            {{ form:create in='studentske_staze' files='true' attr='id:intern|onsubmit:return validateInternshipForm(this.id)' }}
+            <div class='uk-container uk-container-small dotaznik_pro_uchazece'>
+                <input type='hidden' name='lang' value='{{locale}}'>
+                <h1 id='vypln-form' style="text-align: center;margin: 105px 0 40px">{{{{locale}}.title-form}}</h1>
+
+                <div class='required'>
+                    <label for='name'>{{{{locale}}.detail-jmeno}}</label>
+                    <input class='required' id='name' type='text' name='name' value='{{old:name}}'>
+                    <span class='error-message'>{{{{locale}}.detail-jmeno-error}}</span>
+                </div>
+
+                <div class='dotaznik_oneline'>
+                    <div class='required'>
+                        <label for='email'> E-mail</label>
+                        <input class='required' id='email' name='e-mail' placeholder='...' type='text'
+                               value='{{old:e-mail}}'>
+                        <span class='error-message'>{{{{locale}}.email-error}} </span>
+                    </div>
+                    <div class='required'>
+                        <label for='phone'>{{{{locale}}.telefon}} </label>
+                        <input class='required' id='phone' name='phone' type='text' value='{{old:phone}}'>
+                        <span class='error-message'>{{{{locale}}.telefon-error}}</span>
+                    </div>
+                </div>
+
+                <div class='dotaznik_oneline' style="margin-bottom: 1rem">
+                    <div class="notrequired">
+                        <label for="obor">{{{{locale}}.detail-obor}}</label>
+                        <select class='uk-select' name='obor' id='obor'>
+                            <option value='none' hidden selected>{{{{locale}}.detail-vybrat}}</option>
+                            {{ collection from="student-fields" sort="order_number"}}
+                            <option value="{{title}}">{{ title }}</option>
+                            {{ /collection}}
+                        </select>
+                    </div>
+                    <div class="notrequired">
+                        <label for="coop">{{{{locale}}.detail-coop}}</label>
+                        <select class='uk-select' name='coop' id='coop'>
+                            <option value='none' hidden selected>{{{{locale}}.detail-vybrat}}</option>
+                            {{ coop_replicator }}
+                                <option value='{{coop_type}}'>{{coop_type}}</option>
+                            {{ /coop_replicator }}
+                        </select>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 1rem">
+                    <label for='upload'>{{{{locale}}.detail-nahrsubor}}</label>
+
+                    <div id='files'></div>
+                    <div id='js-fakeinput'>
+                        <div class='fakeinput'>
+                            <span></span>
+                            <input id='upload' type='file' name='files[]' style="color: black">
+                        </div>
+                    </div>
+                    {{ if error:files }}
+                        <span class='error-message visible'>*{{ error:files }}</span><br>
+                    {{ else }}
+                        <span class='error-message'></span><br>
+                    {{ /if }}
+                    <label for='upload' class='upload required-disable'>{{{{locale}}.detail-pridatsoubor}}
+                    </label>
+                    <span>&nbsp;</span>
+                </div>
+
+                <div>
+                    <label for='note'>Poznámka</label>
+                    <textarea id='note' placeholder='...' name='note' value='{{old:note}}'
+                              rows='5'>{{ old:note }}</textarea>
+                    <span>&nbsp;</span>
+                </div>
+
+                <div class='required'>
+                    <label id='agree'>
+                        <input type='checkbox' class='required' name='agree' {{if old:agree==='on'}}checked{{/if}}>
+                        <span>
+                            {{{{locale}}.detail-udeluji-souhlas}}
+                            <a href="{{main_addon:translate type='url' :lang='locale' page='protection'}}">
+                                {{{{locale}}.detail-zpracovani-os-udaju}}
+                            </a>
+                        </span>
+                    </label>
+                    <br>
+                    <span class='error-message'>{{{{locale}}.detail-zpracovani-os-udaju-err}}</span>
+                </div>
+
+                <button type='submit' class='uk-button submit-button'>{{{{locale}}.detail-form-button}}</button>
+            </div>
+
+            {{ if errors }}
+                <script>
+                    document.addEventListener('DOMContentLoaded', function(event) {
+                        UIkit.notification('Formulář obsahuje chyby!', {status: 'danger'});
+                        scrollToElement('form#intern');
+                    });
+                </script>
+            {{ /if }}
+
+            {{/form:create}}
+            {{ if {form:success} }}
+                {{ form:submission }}
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function (event) {
+                            UIkit.notification('Formulář byl úspěšně odeslán.', {status: 'success'});
+                            scrollToElement('form#intern');
+                        });
+                    </script>
+                {{ /form:submission }}
+            {{ /if }}
+        {{ /form:set }}
+    </div>
+</section>
+
+{{ if !dektalent_hide }}
+<section class="dek-talent">
+    <div class="uk-container wrapper">
+        <div class="text">
+            <div>
+                <h3 class="dek-talent-title">{{ dektalent_title }}</h3>
+                <p class="dek-talent-desc">{{ dektalent_desc }}</p>
+            </div>
+            <a href="{{ dektalent_href }}" class="dek-talent-button uk-margin-auto-right" target="_blank">
+                <button class="uk-button internship-button">
+                    {{ dektalent_button }}
+                </button>
+            </a>
+        </div>
+        <div class="image">
+            <img src="{{ dektalent_img }}" class="dek-talent-img" alt="DEKTalent">
+        </div>
+    </div>
+</section>
+{{ /if }}
+
+<script src="{{ theme:js src='employmentform' cache_burst='true' }}"></script>
+
+<script>
+    dekReCaptcha.createInput("studentske_staze", "intern");
+</script>

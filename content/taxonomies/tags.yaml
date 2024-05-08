@@ -1,0 +1,6 @@
+title: Tags
+template: blog/taxonomy
+sites:
+  - default
+  - en
+  - sk

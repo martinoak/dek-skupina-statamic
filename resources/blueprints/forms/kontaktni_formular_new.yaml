@@ -1,0 +1,38 @@
+title: Kontakt
+fields:
+  -
+    handle: e-mail
+    field:
+      type: text
+      display: E-mail
+      validate: required
+  -
+    handle: zprava
+    field:
+      type: text
+      display: Zpráva
+      validate: required
+  -
+    handle: agree
+    field:
+      type: text
+      display: agree
+      validate: required
+  -
+    handle: telefon
+    field:
+      type: text
+      display: telefon
+      validate: required
+  -
+    handle: name
+    field:
+      type: text
+      display: 'Jméno a příjmení'
+      validate: required
+  -
+    handle: lang
+    field:
+      type: text
+      display: Lang
+      listable: false

@@ -1,0 +1,37 @@
+#index:
+#    statistics_heading:
+#        en: DEK statistics
+#        cz: Skupina DEK v číslech
+#    companies_heading:
+#        en: Our companies
+#        cz: Naše společnosti
+#    career_heading:
+#        en: Career
+#        cz: Kariéra
+#    career_content:
+#        en: english text....
+#        cz: 
+index:
+    companiesButton:
+        cz: Detail
+        en: Detail
+    careerButton:
+        cz: Volné pozice
+        sk: VOĽNÉ POZÍCIE
+        en: Vacancies
+    statistics:
+        cz: Skupina DEK v&nbsp;číslech
+        sk: Skupina DEK v&nbsp;číslach
+        en: Statistics of DEK group
+    tilesButton: 
+        cz: více o firmě
+        en: more details
+    tilesTabletButton:
+        cz: více
+        sk: viac
+        en: more
+about:
+    history:
+        cz: HISTORIE SKUPINY DEK
+        sk: HISTÓRIA SKUPINY DEK
+        en: HISTORY OF DEK a.s.

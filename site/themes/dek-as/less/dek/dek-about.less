@@ -1,0 +1,362 @@
+.about-us .video {
+    margin-bottom: @global-medium-gutter;
+}
+
+#history {
+    padding         : 15px 0 5rem 0;
+    background-color: @dek-color-grey-light;
+    margin-bottom   : -5rem;
+
+    & .container {
+        max-width: 1200px;
+    }
+
+    & .row {
+        display  : flex;
+        flex-grow: 1;
+        flex-wrap: wrap;
+    }
+
+    & .row>* {
+        position     : relative;
+        padding-right: 20px;
+        padding-left : 20px;
+        width        : 100%;
+        max-width    : 100%;
+    }
+
+    & .column {
+        padding    : 1.55em 0;
+        flex       : 1 0 0;
+        flex-grow  : 1;
+        flex-shrink: 0;
+        flex-basis : 0px;
+        font-size  : 16px;
+    }
+
+    & .column>p {
+        line-height  : 1.3;
+        margin-bottom: 1.55em;
+        overflow-wrap: break-word;
+        font-weight  : normal;
+        padding      : 10px;
+    }
+
+    & h1 {
+        margin-bottom: 50px;
+        font-size    : 32px;
+    }
+
+    & .branch .column {
+        border-top-width   : 0;
+        transition-property: border-top-width;
+        transition-duration: 0.7s;
+    }
+
+    & .branch .column>span {
+        transition-property: opacity;
+        transition-duration: .7s;
+        opacity            : 0;
+    }
+
+    & .branch .column>*:not(span) {
+        transition-property: opacity;
+        transition-duration: 3s;
+        opacity            : 0;
+    }
+
+    & .branch.view .column,
+    & .branch.view .column>* {
+        opacity: 1;
+    }
+
+    & .branch.view .column,
+    & .branch.view .column {
+        border-top-width: 1px;
+    }
+
+    & .tree .column.left.filled {
+        border-right: 2px solid #707070;
+        width       : 50%;
+    }
+
+    & .tree .column.right.filled {
+        border-left: 2px solid #707070;
+        width      : 50%;
+    }
+
+    & .tree .column.filled {
+        border-top: 1px solid #b7b7b7;
+    }
+
+    & .tree {
+        .column.filled {
+            &:before {
+                display      : block;
+                position     : absolute;
+                content      : '';
+                border       : 2px solid #b7b7b7;
+                background   : #fff;
+                border-radius: 50%;
+                width        : 10px;
+                height       : 10px;
+                left         : -8px;
+                top          : -7px;
+                z-index      : 1;
+            }
+        }
+
+    }
+
+    & .tree .row.branch.view:first-child,
+    & .tree .row.branch.view:last-child {
+        .column.filled {
+            &:before {
+                background: @dek-color-grey-dark;
+            }
+        }
+    }
+
+    & .tree .row.branch.view:last-child {
+        .column.filled {
+            border-right: none;
+            border-left : none;
+        }
+    }
+
+
+
+
+
+
+
+
+
+    & .tree .column.left.filled:before {
+        left : auto;
+        right: -8px;
+    }
+
+    & .tree .last .filled:before,
+    & .tree .first .filled:before {
+        background  : @dek-color-grey-dark;
+        border-color: @dek-color-grey-dark;
+    }
+
+    & .tree .last.branch>.column,
+    & .tree .last.branch {
+        border-left : none;
+        border-right: none;
+    }
+
+    & .tree .column:nth-child(even) span.year {
+        left: 50px;
+    }
+
+    & .tree .column:nth-child(odd) span.year {
+        right: 50px;
+    }
+
+    & .tree .column p {
+        margin-top : -20px;
+        line-height: 1.5;
+        ;
+    }
+
+    & .tree .column:nth-child(odd) p {
+        padding-right: calc(100px + 1rem + 80px);
+    }
+
+    & .tree .column:nth-child(even) p {
+        padding-left: calc(100px + 1rem + 80px);
+    }
+
+    & .tree span.year {
+        width             : 100px;
+        height            : 100px;
+        border-radius     : 50%;
+        background-color  : #fff;
+        //border          : 1px solid #b7b7b7;
+        display           : block;
+        position          : absolute;
+        line-height       : 3;
+        font-size         : 33px;
+        font-weight       : lighter;
+        color             : @dek-color-grey-dark;
+        letter-spacing    : 0px;
+        text-align        : center;
+        top               : -50px;
+        box-shadow        : 0px 3px 6px #00000029;
+    }
+
+    & .tree img {
+        border      : 5px solid #fff;
+        //box-shadow: 2px 3px 2px #b7b7b7;
+        box-shadow  : 0px 3px 6px #00000029;
+        display     : block;
+        max-width   : calc(80% - 80px);
+        width       : 100%;
+    }
+
+    & .tree .column:nth-child(odd) img {
+        margin-right: calc(20% + 70px);
+        margin-left : 10px;
+    }
+
+    & .tree .column:nth-child(even) img {
+        margin-left : calc(20% + 70px);
+        margin-right: 10px;
+    }
+
+    & .branch>.column:not(.filled) {
+        padding: 0;
+    }
+
+    #y1993 {
+        border: none;
+    }
+}
+
+@media(max-width: 900px) {
+    #history {
+
+        & .tree .column:nth-child(odd) img,
+        & .tree .column:nth-child(even) img {
+            max-width: 90%;
+            margin   : 0 10px;
+        }
+
+        & .tree .column:nth-child(odd) img {
+            margin-right: 7%;
+        }
+
+        & .tree .column:nth-child(even) img {
+            margin-left: 7%;
+        }
+
+        & .tree .column:nth-child(even) span.year {
+            left: 30px;
+        }
+
+        & .tree .column:nth-child(odd) span.year {
+            right: 30px;
+        }
+
+        & .tree .column:nth-child(even) p {
+            padding-left: calc(80px + 30px + 1rem);
+        }
+
+        & .tree .column:nth-child(odd) p {
+            padding-right: calc(80px + 30px + 1rem);
+        }
+
+        & .tree span.year {
+            width      : 80px;
+            height     : 80px;
+            font-size  : 29px;
+            top        : -40px;
+            line-height: 2.6;
+        }
+    }
+}
+
+@media(max-width: 680px) {
+    #history {
+        & .tree .column img {
+            margin-left  : 7% !important;
+            max-width    : 90% !important;
+            margin-right : 0 !important;
+            margin-bottom: 30px !important;
+        }
+
+        & .branch {
+            display    : block;
+            margin-left: 20px !important;
+        }
+
+        & .branch {
+            border-left: 2px solid #707070;
+        }
+
+        & .tree .column:nth-child(odd) span.year,
+        & .tree .column:nth-child(even) span.year {
+            left : 30px;
+            right: auto;
+        }
+
+        & .tree .column.left.filled:before,
+        & .tree .column.filled:before {
+            right: auto;
+            left : -8px;
+        }
+
+        & .tree .column.left.filled,
+        & .tree .column.right.filled {
+            border-left : none;
+            border-right: none;
+            width       : 100%;
+        }
+
+        & .tree .column:nth-child(odd) p,
+        & .tree .column:nth-child(even) p {
+            padding-left : 120px;
+            padding-right: 10px;
+        }
+
+        & .tree .column:nth-child(even) span.year {
+            left: 20px;
+        }
+
+        & .tree .column:nth-child(odd) span.year {
+            right: 20px;
+        }
+    }
+}
+
+.row.branch {
+    position  : relative;
+    margin-top: 1px;
+    ;
+}
+
+.ie-historie,
+.ie-historie-mobil {
+    display: none;
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+
+    #history {
+
+        .tree,
+        .row {
+            display: none;
+        }
+
+        @media (min-width: 1260px) {
+            .ie-historie {
+                display: block;
+            }
+
+            .content {
+                width : 1260px;
+                height: 2350px;
+            }
+        }
+
+        @media (max-width: 1259px) {
+            .ie-historie-mobil {
+                display: block;
+            }
+
+            .content {
+                height: 3334px;
+            }
+        }
+
+
+    }
+
+
+}

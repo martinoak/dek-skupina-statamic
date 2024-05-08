@@ -1,0 +1,190 @@
+#history
+{
+    padding: 15px 0 ;
+    background-color: #d8d8d8;
+}
+#history .container
+{
+    max-width: 1200px;
+}
+#history h1
+{
+    margin-bottom: 50px;
+}
+#history .branch .column
+{
+    border-top-width: 0;
+    transition-property: border-top-width;
+    transition-duration: 0.7s;
+    /*opacity: 0;*/
+}
+
+#history .branch .column > span{
+    transition-property: opacity;
+    transition-duration: .7s;
+    opacity: 0;
+}
+#history .branch .column >  *:not(span){
+    transition-property: opacity;
+    transition-duration: 3s;
+    opacity: 0;
+}
+#history .branch.view .column,#history .branch.view .column > *{
+    opacity: 1;
+    
+}
+#history .branch.view .column,#history .branch.view .column{
+    border-top-width: 1px;
+}
+.tree .column.left.filled
+{
+    border-right: 2px solid #707070;
+}
+.tree .column.right.filled
+{
+    border-left: 2px solid #707070;
+}
+.tree .column.filled {
+    border-top: 1px solid #b7b7b7;
+}
+.tree .column.filled:before
+{
+    display: block;
+    position: absolute;
+    content: '';
+    border: 2px solid #b7b7b7;
+    background: #fff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    left: -8px;
+    top: -7px;
+    z-index: 1;
+}
+.tree .column.left.filled:before
+{
+    left:auto;
+    right: -8px;
+}
+
+.tree .last .filled:before, .tree .first .filled:before
+{
+    background: #464646;
+    border-color: #464646;
+}
+.tree .last.branch > .column,.tree .last.branch
+{
+    border-left: none;
+    border-right: none;
+}
+.tree .column:nth-child(even) span.year
+{
+    left: 20%;
+}
+.tree .column:nth-child(odd) span.year
+{
+    right:20%;
+}
+.tree .column p
+{
+    margin-top: -20px;
+}
+.tree .column:nth-child(odd) p
+{
+    padding-right: calc(20% + 80px);
+}
+.tree .column:nth-child(even) p
+{
+    padding-left: calc(20% + 80px);
+}
+.tree span.year
+{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #b7b7b7;
+    display: block;
+    position: absolute;
+    line-height: 3.7;
+    font-size: 19px;
+    text-align: center;
+    top: -35px;
+    box-shadow: 2px 3px 2px #b7b7b7;
+}
+.tree img
+{
+    border: 4px solid #fff;
+    box-shadow: 2px 3px 2px #b7b7b7;
+    display: block;
+    max-width: calc(80% - 80px);
+    width: 100%;
+}
+.tree .column:nth-child(odd) img
+{
+    margin-right: calc(20% + 70px);
+    margin-left: 10px;
+}
+.tree .column:nth-child(even) img
+{
+    margin-left: calc(20% + 70px);
+    margin-right: 10px;
+}
+.branch > .column:not(.filled) {
+    padding: 0;
+}
+@media(max-width: 900px)
+{
+    .tree .column:nth-child(odd) img,.tree .column:nth-child(even) img
+    {
+        max-width: 90%;
+        margin: 0 10px;
+    }
+    .tree .column:nth-child(odd) img
+    {
+        margin-right: 7%;
+    }
+    .tree .column:nth-child(even) img
+    {
+        margin-left: 7%;
+    }
+}
+@media(max-width: 650px)
+{
+    .tree .column img
+    {
+        margin-left: 7% !important;
+        max-width: 90% !important;
+        margin-right: 0 !important;
+        margin-bottom: 30px !important;
+    }
+    .branch
+    {
+        display: block;
+        margin-left: 20px !important;
+        
+    }
+    .branch{
+        border-left: 2px solid #707070;
+    }
+    .tree .column:nth-child(odd) span.year,.tree .column:nth-child(even) span.year
+    {
+        left: 30px;
+        right:auto;
+    }
+    .tree .column.left.filled:before,.tree .column.filled:before
+    {
+        right: auto;
+        left: -8px;
+    }
+    .tree .column.left.filled,.tree .column.right.filled
+    {
+        border-left: none;
+        border-right: none;
+    }
+    .tree .column:nth-child(odd) p,.tree .column:nth-child(even) p
+    {
+        padding-left: 120px;
+        padding-right: 10px;
+    }
+}

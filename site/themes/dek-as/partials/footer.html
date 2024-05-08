@@ -1,0 +1,116 @@
+---
+en: 
+    agree: ' I give my consent to the processing my personal data'
+    agree-error:  'Before submitting form, you must to agree with processing your data'
+    email-error: 'Type correct email'
+cz: 
+   agree: 'Uděluji souhlas se zpracováním osobních údajů'
+   agree-error: 'Pro odeslání formuláře musíte souhlasit se zpracováním osobních údajů'
+   email-error: "Zadejte email ve správném tvaru"
+---
+<div id='footer'>
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li>
+                            <a href="{{main_addon:translate :lang="locale" page="index" type="url"}}" class='logo'></a>
+                            <br style='margin-bottom:11px'>
+                            ©2020&nbsp;DEK&nbsp;a.s.
+                        </li>
+                        <li>
+                            Tiskařská&nbsp;10/257, Budova&nbsp;TTC
+                            <br>
+                            108&nbsp;00 Praha&nbsp;10&nbsp;-&nbsp;Malešice<br>
+                            Zákaznické centrum 
+                            <div id="phone">
+                                <a href="tel:+420510000100"><img src="/assets/phone.png" height='10'>&nbsp;<b>510&nbsp;000&nbsp;100</b></a>
+                                <div class="more-info" id="footer-info">i
+                                    <div class="tooltip">
+                                        Naši operátoři jsou vám k dispozici v pracovních dnech od&nbsp;7:00&nbsp;do&nbsp;17:00 a v sobotu od&nbsp;7:00&nbsp;do&nbsp;11:30.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li>{{{{locale}}.title}}</li>
+                        <li class="strong">Skupina DEK</li>
+                        {{nav from="/"  is_hidden:isnt="true" title:isnt="kariéra" title:isnt="employment"}}
+                        <li><a href="{{ url }}">{{ tag:nav_title or title }}</a></li>
+                        {{if count ==2}}
+                        <li><a href="{{main_addon:translate type="url" :lang="locale" page="history"}}">{{main_addon:translate type="name" :lang="locale" page="history"}}</a></li>
+                        {{/if}}
+                        {{/nav}}
+                        {{if locale !="en"}}
+                        <li><a href="{{main_addon:translate type="url" :lang="locale" page="news-ann"}}">{{main_addon:translate type="name" :lang="locale" page="news-ann"}}</a></li>
+                        {{/if}}
+                    </ul>
+                </div>
+                <div class="column">
+                    {{ if locale != "en" }}
+                    <ul>
+                        <li class="strong">Kariéra</li>
+                        <li><a href="/kariera#vacanies">Volná pracovní místa</a></li>
+                        <li><a href="/benefity">Benefity</a></li>
+                        <li><a href="/kariera/casto-kladene-otazky">Rady pro uchazeče</a></li>
+                    </ul>
+                    {{ /if }}
+                </div>
+                <div class="column" id='form'>
+                    {{ form:create in="kontaktni_formular"attr="id:footer-form|onsubmit:return validateForm(this.id)"}}
+                    <table>
+                        <td colspan="2"><strong>Napište nám</strong></td>
+                        <tr>
+                            <td colspan="2">
+                                <input type='text' name="e-mail" placeholder='e-mail' />
+                                <div id="error-email" class="error">
+                                    {{{{locale}}.email-error}}
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <textarea placeholder='zpráva' name="zprava"></textarea>
+                                <div id="error-message" class="error">
+                                    *Toto pole nesmí být prázdné
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type='checkbox' name="agree" style="height: 35px;width: 20px;float: left;"> 
+                                    <div class="checkmark"></div>
+                                    <span style="color: #D8D8D8;">{{{{locale}}.agree}}</span>
+                                </label>
+                                <br>
+                                <div id="error-agree" class="error">
+                                    *Musíte souhlasit
+                                </div>
+                            </td>
+                            <td style="padding-left: 10px"><input type='submit' value='ODESLAT' class='btn'></td>
+                        </tr>
+                    </table>
+                    {{/form:create}}
+                </div>
+            </div>
+    </div>
+    </div>
+    <div class="footer-stripe">
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <a href="{{main_addon:translate type='url' :lang="locale" page="protection"}}">{{main_addon:translate type='name' :lang="locale" page="protection"}}</a>
+                    <a href="{{main_addon:translate type='url' :lang="locale" page="cookies"}}">{{main_addon:translate type='name' :lang="locale" page="cookies"}}</a>
+                    <a href="{{main_addon:translate type='url' :lang="locale" page="condition"}}">{{main_addon:translate type='name' :lang="locale" page="condition"}}</a>
+                    <a href="{{main_addon:translate type='url' :lang="locale" page="map"}}">{{main_addon:translate type='name' :lang="locale" page="map"}}</a>
+                    <div class="column" style="flex-grow: 1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

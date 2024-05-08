@@ -1,0 +1,6 @@
+title: Logistika
+order_number: '5'
+field_img: internship/logistika.svg
+popis_oboru: 'řízení zásob, autodoprava, administrativa, skladování aj.'
+id: 6622f2bb-9f5c-4e23-82e7-3cb1f5c1b62a
+blueprint: Student_fields

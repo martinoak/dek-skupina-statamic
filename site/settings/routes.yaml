@@ -1,0 +1,20 @@
+routes:
+  /career/{subpage}:
+    redirect: career/
+  /search: search
+  /users: user/index
+  '/users/{username}': user/profile
+  /account: user/account
+  /login: auth/login
+  /register: auth/register
+  /forgot-password: auth/password-forgot
+  /reset-password: auth/password-reset
+collections:
+  nase-spolecnosti:
+    cz: '/nase-spolecnosti/{slug}'
+    en: '/our-companies/{slug}'
+    sk: '/nase-spolocnosti/{slug}'
+  vyrocni-zpravy:
+    cz: '/tisk-a-media/{slug}'
+    en: '/media/{slug}'
+    sk: '/tlac-a-media/{slug}'

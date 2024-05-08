@@ -1,0 +1,9 @@
+roles:
+  - 277d1d57-8dbc-4154-93ee-993211169793
+email: admin@dek-cz.com
+first_name: Admin
+last_name: admin
+locale: cz
+super: true
+id: 1be9ca69-a6a9-408b-827a-ded0462de438
+password_hash: $2y$10$XpxiRQfO40D9aXfHQWb4VujqIg98kzW0bA1MVrvknKapsoSlITYTm

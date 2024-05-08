@@ -1,0 +1,98 @@
+sections:
+  main:
+    display: 'Výroční zprávy'
+    fields:
+      -
+        handle: date
+        field:
+          type: date
+          display: 'publish date'
+          allow_blank: false
+          earliest_date: 'January 1, 1900'
+          width: 33
+          time_enabled: true
+          time_required: true
+      -
+        handle: type
+        field:
+          type: radio
+          options:
+            annual: 'Výroční zprávy'
+            about: 'Napsali o nás'
+            appreciation: Ocenění
+          inline: false
+          instructions: 'Vyberte typ zprávy(Ocenění, výroční zprávy, napsali o nás)'
+          display: 'Typ Zprávy'
+          default: annual
+      -
+        handle: intro
+        field:
+          type: textarea
+          instructions: |-
+            Zpráva zobrazovaná ve výpisu `Tisk a Media`
+            - pro nedělitelné mezery vložte `&nbsp;`
+          localizable: true
+          display: 'Úvodní text'
+      -
+        handle: image
+        field:
+          type: assets
+          container: main
+          folder: media
+          restrict: false
+          display: 'Obrázek ke zprávě'
+          instructions: 'Obrázky vkládejte alespoň 900px široké, jinak budou na některých zařízeních rozmazané'
+          mode: list
+          max_files: 1
+      -
+        handle: before-image
+        field:
+          type: bard
+          restrict_assets: false
+          instructions: 'obsah zobrazeny u detailu zpravy (pred obrazkem)'
+          localizable: true
+          display: 'obsah pred obrazkem'
+          save_html: true
+          buttons:
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - html
+            - image
+            - quote
+            - codeblock
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+            - anchor
+      -
+        handle: content
+        field:
+          type: bard
+          instructions: 'Obsah zprávy zobrazován při detailu (po obrazku)'
+          localizable: true
+          display: Obsah
+          restrict_assets: false
+          save_html: true
+          buttons:
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - html
+            - image
+            - quote
+            - codeblock
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+            - anchor
+taxonomies: true
+title: news

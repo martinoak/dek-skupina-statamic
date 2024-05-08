@@ -1,0 +1,16 @@
+name: DEKMETAL
+type: 3-vyroba
+intro: 'Výroba a dodávka plechových střešních a fasádních systémů, široký výběr pohledových prvků.'
+logo: '-dekmetal.svg'
+logo_white: dekmetal_white_velke.png
+foto: dekmetal-1623310906.jpg
+description: |-
+  Společnost DEKMETAL s.r.o. se zabývá výrobou a dodávkami plechových střešních a fasádních systémů včetně zakázkové výroby z plechu. Svým partnerům nabízí profesionální návrhy funkčních, technicky propracovaných a estetických řešení odpovídajících individuálním požadavkům investorů, architektů a projektantů.
+  DEKMETAL poskytuje komplexní servis založený na pružných dodacích podmínkách a technické podpoře po celý průběh realizace. Obchodníci a technici společnosti DEKMETAL působí v České republice i na Slovensku a dokáží tak velice rychle reagovat na požadavky realizačních firem či stavby. Výrobní závod vybavený nejmodernějšími technologiemi sídlí v obci Dřísy nedaleko Staré Boleslavi.
+company_video: 'https://youtu.be/JwBzPdI1VzQ'
+big_picture: companies/foto/dekmetal_foto.jpg
+web_url: 'https://dekmetal.cz/'
+title: DEKMETAL
+id: a9b7819c-ee84-495f-a6a2-e32701a69441
+uikit: true
+blueprint: companies

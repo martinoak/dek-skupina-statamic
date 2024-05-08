@@ -1,0 +1,22 @@
+title: 'Kontakt - footer'
+store: true
+fields:
+  e-mail:
+    display: E-mail
+    validate: email|required
+  zprava:
+    display: Zpráva
+    validate: required
+  agree:
+    display: agree
+    validate: required
+  telefon:
+    display: telefon
+  meno:
+    display: meno
+  lang:
+    display: Lang
+columns:
+  - e-mail
+  - zprava
+  - agree

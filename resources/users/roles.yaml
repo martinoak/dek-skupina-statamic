@@ -1,0 +1,70 @@
+admin:
+  title: Admin
+  slug: admin
+  permissions:
+    - super
+editor:
+  title: editor
+  slug: editor
+  permissions:
+    - 'access cp'
+    - 'content:view_drafts_on_frontend'
+    - 'resolve duplicate ids'
+    - 'view pages entries'
+    - 'edit pages entries'
+    - 'collections:hp-karusely:view'
+    - 'collections:hp-karusely:edit'
+    - 'collections:nase-spolecnosti:view'
+    - 'collections:nase-spolecnosti:edit'
+    - 'collections:nase-spolecnosti:create'
+    - 'collections:dek-v-cislech:view'
+    - 'collections:dek-v-cislech:edit'
+    - 'view historie entries'
+    - 'edit historie entries'
+    - 'reorder historie entries'
+    - 'create historie entries'
+    - 'publish historie entries'
+    - 'delete historie entries'
+    - 'collections:obrat-spolecnosti:view'
+    - 'collections:obrat-spolecnosti:edit'
+    - 'collections:obrat-spolecnosti:create'
+    - 'collections:obrat-spolecnosti:delete'
+    - 'collections:pocet-zamestnancu:view'
+    - 'collections:pocet-zamestnancu:edit'
+    - 'collections:pocet-zamestnancu:create'
+    - 'collections:pocet-zamestnancu:delete'
+    - 'collections:vyrocni-zpravy:view'
+    - 'collections:vyrocni-zpravy:edit'
+    - 'collections:vyrocni-zpravy:create'
+    - 'collections:vyrocni-zpravy:delete'
+    - 'collections:casto-kladene-otazky:view'
+    - 'collections:casto-kladene-otazky:edit'
+    - 'collections:casto-kladene-otazky:create'
+    - 'collections:casto-kladene-otazky:delete'
+    - 'view main assets'
+    - 'edit main assets'
+    - 'move main assets'
+    - 'rename main assets'
+    - 'upload main assets'
+    - 'delete main assets'
+    - 'view dotaznik_pro_uchazece form submissions'
+    - 'delete dotaznik_pro_uchazece form submissions'
+    - 'view kontaktni_formular form submissions'
+    - 'delete kontaktni_formular form submissions'
+    - 'view kontaktni_formular_new form submissions'
+    - 'delete kontaktni_formular_new form submissions'
+    - 'view studentske_staze form submissions'
+    - 'delete studentske_staze form submissions'
+pr:
+  title: PR
+  slug: pr
+  permissions:
+    - 'access cp'
+    - 'collections:vyrocni-zpravy:view'
+    - 'collections:vyrocni-zpravy:edit'
+    - 'collections:vyrocni-zpravy:create'
+    - 'collections:vyrocni-zpravy:delete'
+    - 'collections:casto-kladene-otazky:view'
+    - 'collections:casto-kladene-otazky:edit'
+    - 'collections:casto-kladene-otazky:create'
+    - 'collections:casto-kladene-otazky:delete'

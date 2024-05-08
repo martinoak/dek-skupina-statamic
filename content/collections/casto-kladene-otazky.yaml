@@ -1,0 +1,7 @@
+title: 'Často kladené otázky'
+sites:
+  - default
+  - en
+  - sk
+structure:
+  max_depth: 1

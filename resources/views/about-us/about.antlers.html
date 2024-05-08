@@ -1,0 +1,146 @@
+---
+img: 02_historie_samotna_seda.png
+img_mobil: 02_historie_samotna_mobil_seda.png
+---
+<div class="uk-container uk-container-small about-us">
+    <h1 class="page-name">{{title}}</h1>
+
+    {{ if video | is_embeddable }}
+    <!-- Youtube and Video -->
+    <iframe class="video" data-video-ratio="1.779"
+        src="{{ video | embed_url }}?rel=0&showinfo=0&iv_load_policy=3&controls=0"></iframe>
+    {{ else }}
+    <!-- Other HTML5 video types -->
+    <video class="video" data-video-ratio="1.779" src="{{ video | embed_url }}" controls></video>
+    {{ /if }}
+
+    <div class="redactor-style">
+        <h2>{{ introduction-heading }}</h2>
+        {{ o_nas }}
+        <p>
+            <a href='{{ main_addon:translate :lang="locale" type="url" page="companies" }}'
+                class="uk-button uk-button-primary uk-button-small">
+                {{ main_addon:translate :lang="locale" type="name" page="companies" }}
+            </a>
+        </p>
+    </div>
+</div>
+<div class="uk-container uk-container-small uk-margin-large-bottom" id="diagram-container">
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid id="diagram-row">
+
+        {{ collection:grafy }}
+        <div class="column">
+            <div class="diagram-card">
+                <div class="diagram-title">
+                    <div class="numeric-record">0</div>
+                    <div class="diagram-comment">
+                        <div class="heading"></div>
+                        <div class="sub"></div>
+                    </div>
+                </div>
+                <div class="diagram-content">
+                    <div id="diagram{{index}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ /collection:grafy }}
+        <div class="column">
+            <div class="diagram-card empty">
+                <div class="diagram-title">
+                    <div class="diagram-comment">
+                        <div class="heading">{{ main_addon:translate type='name' :lang="locale" page="news-ann" }}</div>
+                        <div class="sub"></div>
+                    </div>
+                    <a href="{{main_addon:translate type="url" :lang="locale" page="news-ann"}}">
+                        <div class="dots">
+                            <div></div>
+                        </div>
+                    </a>
+                </div>
+                <a href="{{main_addon:translate type="url" :lang="locale" page="news-ann"}}">
+                    <div class="diagram-content">
+                        {{collection:vyrocni-zpravy limit="1"}}
+                        <img src="{{image}}">
+                        {{/collection:vyrocni-zpravy}}
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class='diagram-tooltip'></div>
+{{collection:grafy}}
+<div class="diag-{{index}}">
+    <input type="hidden" class="heading" value='{{title}}' />
+    <input type="hidden" class="comment" value='{{subtitle}}' />
+    {{bars sort="axisX" limit="5"}}
+    <div class="bar">
+        <input type="hidden" class="axis-x" value="{{axisX}}">
+        <input type="hidden" class="axis-y" value="{{axisY}}">
+    </div>
+    {{/bars}}
+</div>
+<script>
+    barChart.init('.diag-{{index}}', 'diagram{{index}}');
+</script>
+{{/collection:grafy}}
+
+
+<div id="history">
+    <div class="container uk-container">
+        <div class="content">
+            <div class="row">
+                <div class="column">
+                    <h1 style="text-align:center">{{main_addon:translateText :lang="locale" page="about" text="history"}}</h1>
+                </div>
+            </div>
+            <div class="tree">
+                {{collection:historie sort="year:desc"}}
+                    <div id="y{{year}}" class="row branch" direction="{{direction}}">
+                        {{if direction == 'left'}}
+                        <div class="column left filled"><span class="year">{{year}}</span>
+                            <p>{{obsah}}</p>
+                            {{asset:obrazek}}<img src="{{url}}">{{/asset:obrazek}}                            
+                            </div>
+                            <div class="column right"></div>
+                            {{else}}
+                            <div class="column left"></div>
+                            <div class="column right filled"><span class="year">{{year}}</span>
+                                <p>{{obsah}}</p>
+                                {{asset:obrazek}}<img src="{{url}}">{{/asset:obrazek}}                            
+                                </div>
+                            {{/if}}
+                        </div>
+                {{/collection:historie}}                
+            </div>
+            <div class="ie-historie">{{ theme:img src={img} tag="true" }}</div>
+            <div class="ie-historie-mobil">{{ theme:img src={img_mobil} tag="true" }}</div>
+        </div>
+    </div>
+</div>
+
+
+<script src="{{ theme:js src="historydiagram.js" cache_bust="true" }}"></script>
+
+<script>
+    window.addEventListener('scroll', function (e) {
+    var branch = $('.branch:not(.view)').first();
+    if (branch.length === 1) {
+        if (isElementInViewport(branch)) {
+            branch.addClass('view');
+        }
+    }
+
+});
+
+function isElementInViewport(rect) {
+    //    const rect = 
+    const windowHeight = (2 * (document.documentElement.clientHeight / 3) + window.scrollY);
+    const vertInView = (rect.offset().top - rect.height() <= (windowHeight));
+    return (vertInView);
+}
+</script>
+</div>
+</div>

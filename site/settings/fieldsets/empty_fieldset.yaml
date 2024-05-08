@@ -1,0 +1,9 @@
+sections:
+  main:
+    display: Main
+    fields:
+      meta_description:
+        type: text
+        display: 'Meta Description'
+taxonomies: true
+title: 'empty fieldset'

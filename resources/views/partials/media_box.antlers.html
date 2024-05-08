@@ -1,0 +1,24 @@
+{{ if zero_index === 1 }}
+<div class="media-box-placeholder matched"></div>
+{{ /if }}
+                    
+<a href="{{ NewsAddon:setAnchorHref url=url }}" class="media-box{{ if zero_index == 0 }} matched{{ /if }}  {{ if zero_index > 9 }} media-box-hidden{{ /if }}">
+    <div class="message{{ if zero_index == 0 }} message-double{{ /if }}">
+        <div class="message-preview">
+            {{ if zero_index == 0 }}
+                {{assets:image}}
+                    <img src='{{ glide:image width="900" height="290" fit="crop_focal" absolute="true" }}'>
+                {{/assets:image}}
+            {{ else }}
+                {{assets:image}}
+                    <img src='{{ glide:image width="900" fit="crop_focal" absolute="true" }}'>
+                {{/assets:image}}
+            {{ /if }}
+        </div>
+        <div class="message-content">
+            <strong>{{title}}</strong>
+            <p>{{intro}}</p>
+            <div class="dots"><div></div></div>
+        </div>
+    </div>
+</a>

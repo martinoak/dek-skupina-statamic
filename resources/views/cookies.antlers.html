@@ -1,0 +1,33 @@
+<style>
+    .vue-cookies-bar { display: none; }
+</style>
+
+<script src="/site/themes/dek-as/js/cookies/VueCookiesBarNoLib.umd.min.js?v=1642422635" defer onload="typeof mountVueCookiesBar === 'function' && mountVueCookiesBar()"></script>
+<script src="/site/themes/dek-as/js/cookies/VueCookiesFormNoLib.umd.min.js?v=1642422635" defer onload="typeof mountVueCookiesForm === 'function' && mountVueCookiesForm()"></script>
+<script>
+    function mountVueCookiesForm() {
+        var mount = VueCookiesFormNoLib.default;
+        mount({
+            target: '#vue-cookies-form',
+            buttonDisallowAll: 'uk-button v-coo-button',
+            buttonAllowChecked: 'uk-button v-coo-button-dark',
+            buttonAllowAll: 'uk-button uk-button-danger',
+            lang: '{{ locale }}',
+        });
+    }
+</script>
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="column">
+                <h1 class="page-name">{{title}}</h1>
+            </div>
+        </div>
+        <div class="row redactor-style">
+            <div class="column">
+                <div id="vue-cookies-form"></div>
+                {{content}}
+            </div>
+        </div>
+    </div>
+</div>

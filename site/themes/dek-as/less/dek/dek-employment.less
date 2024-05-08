@@ -1,0 +1,1292 @@
+/*
+    Created on : 24.7.2020, 13:05:02
+    Author     : markuska peter
+*/
+.section-kalendar-akci,
+.section-calendar-of-events,
+.section-kalendar-akcii,
+.section-kariera,
+.section-career {
+  div#introduction {
+    display: flex;
+    max-width: 980px;
+    margin: 2rem auto;
+  }
+
+  .career_vypln-form {
+    background: #ccc;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 20px 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+  }
+
+  .career__popispozice {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+  }
+
+  .career__popispozice1 {
+    width: 50%;
+
+    @media (max-width: @breakpoint-small-max) {
+      width: 100%;
+    }
+  }
+
+  .career__popispozice2 {
+    width: calc(50% - 1rem);
+    margin-left: 1rem;
+
+    @media (max-width: @breakpoint-small-max) {
+      display: none;
+    }
+  }
+
+  .gobottom {
+    height: 40px;
+    width: 40px;
+    background: #eb0000;
+    bottom: 0;
+    right: 1rem;
+    position: absolute;
+    border-radius: 50px;
+  }
+
+  .gobottom:after {
+    content: url(../icons/arrow.svg);
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    top: 2px;
+    z-index: 100;
+    left: 2px;
+    left: 7px;
+    top: 7px;
+  }
+
+  .butk.red {
+    background-color: @dek-color-red;
+    color: #fff;
+  }
+
+  .butk {
+    cursor: pointer;
+    border: none;
+    display: block;
+    line-height: 2.7;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 230px;
+    border-radius: 40px;
+    height: 40px;
+  }
+
+  .required > label:after {
+    content: " *";
+    color: @dek-color-red;
+  }
+
+  .required-disable::after {
+    content: inherit !important;
+  }
+
+  @media (max-width: @breakpoint-small-max) {
+    .content h2 {
+      margin-top: 1rem;
+    }
+
+    a.btn.red {
+      background-color: @dek-color-red;
+      //color           : #FFF;
+      //padding: 0 10px;
+    }
+  }
+
+  @media (max-width: @breakpoint-xsmall-max) {
+    .hide-on-mobile {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: @breakpoint-xsmall-max) {
+    .show-on-mobile {
+      display: none !important;
+    }
+  }
+
+  .zivot-v-dek__grey {
+    background: #f6f6f6;
+    margin-left: 0;
+    margin-bottom: -3rem;
+
+    .uk-flex-center {
+      margin-left: 0;
+    }
+
+    .zivot-v-dek__vyhoda {
+      background: #fff;
+      border-radius: 30rem;
+      height: 200px;
+      width: 200px;
+      margin: 1rem;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      color: #505050;
+
+      @ikonaVelkost: 60px;
+
+      .vyhoda-ikona {
+        width: @ikonaVelkost;
+        height: @ikonaVelkost;
+        margin: 0.8rem;
+        margin-top: 1.5rem;
+      }
+
+      .i-stravenky {
+        background-image: url("../icons/stravenky.svg");
+      }
+
+      .i-kariera {
+        background-image: url("../icons/kariera.svg");
+      }
+
+      .i-dovolena {
+        background-image: url("../icons/dovolena.svg");
+      }
+
+      .i-spolecnost {
+        background-image: url("../icons/spolecnost.svg");
+      }
+    }
+
+    h3 {
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .vyhoda--cervena {
+      color: @dek-color-red;
+      font-weight: bold;
+    }
+  }
+
+  .employment-row {
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    padding: 9px 15px;
+
+    & > span:not(.location) {
+      color: @dek-color-red;
+      font-weight: bold;
+      display: inline-block;
+      max-width: calc(100% - 15px);
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 2px;
+      height: 15px;
+      background: #cccccc;
+      transform: rotate(135deg);
+      top: 4px;
+      right: 20px;
+    }
+
+    &:after {
+      top: 14px;
+      transform: rotate(225deg);
+    }
+
+    & > span,
+    & > span:before {
+      color: @dek-color-grey-dark;
+      font-weight: normal;
+      transition: 0.2s ease-in-out;
+      transition-property: color, background-color;
+    }
+
+    & > span.location:before {
+      display: inline-block;
+      content: "/";
+      margin: 0 10px;
+    }
+
+    &:hover,
+    &:hover > span,
+    &:hover > span:before {
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: @dek-color-red;
+    }
+
+    &:hover:before {
+      transform: none;
+      content: "Detail pozice";
+      text-decoration: underline;
+      font-weight: normal;
+      right: 15px;
+      color: #fff;
+      font-size: 16px;
+      background: transparent;
+      width: auto;
+      top: 9px;
+
+      @media (max-width: @breakpoint-small-max) {
+        content: "";
+      }
+    }
+
+    &:hover:after {
+      display: none;
+    }
+  }
+
+  .employment-row-sk {
+    &:hover:before {
+      content: "Detail pozície";
+
+      @media (max-width: @breakpoint-small-max) {
+        content: "";
+      }
+    }
+  }
+
+  #table a.specialization:before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-image: url("../icons/Administrativa.svg");
+    margin-top: 5px;
+  }
+
+  #table a.specialization {
+    &.itis:before {
+      background-image: url("../icons/It.svg");
+    }
+
+    &.admi:before {
+      background-image: url("../icons/Administrativa.svg");
+    }
+
+    &.fina:before {
+      background-image: url("../icons/Finance.svg");
+    }
+
+    &.it-is:before {
+      background-image: url("../icons/It.svg");
+    }
+
+    &.jine:before {
+      background-image: url("../icons/Jine.svg");
+    }
+
+    &.logi:before {
+      background-image: url("../icons/Logistika.svg");
+    }
+
+    &.mark:before {
+      background-image: url("../icons/Marketing.svg");
+    }
+
+    &.obch:before {
+      background-image: url("../icons/Obchod.svg");
+    }
+
+    &.pers:before {
+      background-image: url("../icons/Personalistika.svg");
+    }
+
+    &.tech:before {
+      background-image: url("../icons/Technicke.svg");
+    }
+
+    &.vyro:before {
+      background-image: url("../icons/Vyroba.svg");
+    }
+
+    &.veda:before {
+      background-image: url("../icons/Vyzkum.svg");
+    }
+
+    &.proj:before {
+      background-image: url("../icons/Projektovani.svg");
+    }
+
+    &.mana:before {
+      background-image: url("../icons/Manazerske.svg");
+    }
+
+    &.vyst:before {
+      background-image: url("../icons/Vystavba.svg");
+    }
+  }
+
+  //.marketing-a-pr
+
+  #table a.specialization--sk::before {
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
+
+  a.specialization.specialization--sk {
+    font-weight: 600;
+    color: @dek-color-red;
+  }
+
+  .employment-row--sk {
+    padding-left: 0;
+  }
+
+  .employment-row--sk:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .employment-row {
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 2px;
+      height: 15px;
+      background: #cccccc;
+      transform: rotate(135deg);
+      top: 4px;
+      right: 20px;
+    }
+
+    &:after {
+      top: 14px;
+      transform: rotate(225deg);
+    }
+  }
+
+  #table h2 {
+    margin: 30px 0px 15px 0px;
+    font-size: 16pt;
+  }
+
+  #table {
+    border-bottom: 1px solid @dek-color-grey-light;
+    padding-bottom: 20px;
+  }
+
+  #table a.specialization > .employment-row {
+    padding-left: 30px;
+    transition: 0.2s ease-in-out;
+    transition-property: color, background-color;
+  }
+
+  .item[data-value] > span:first-child:before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-left: -5px;
+    margin-right: 10px;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+  }
+
+  .item[data-value="NevybrÃ¡no"] > span:first-child:before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+  }
+
+  .nameFilerSelect {
+    &.administrativa:before {
+      background-image: url("../icons/Administrativa.svg");
+    }
+
+    &.finace-a-ucetnictvi:before,
+    &.finance-a-ucetnictvi:before,
+    &.financie-a-uctovnictvo:before {
+      background-image: url("../icons/Finance.svg");
+    }
+
+    &.it-is:before {
+      background-image: url("../icons/It.svg");
+    }
+
+    &.jine:before,
+    &.ine:before {
+      background-image: url("../icons/Jine.svg");
+    }
+
+    &.logistika-a-doprava:before,
+    &.logistika-a-sklad:before {
+      background-image: url("../icons/Logistika.svg");
+    }
+
+    &.marketing-a-pr:before {
+      background-image: url("../icons/Marketing.svg");
+    }
+
+    &.obchod-a-prodej:before,
+    &.obchod-a-predaj:before {
+      background-image: url("../icons/Obchod.svg");
+    }
+
+    &.personalistika-a-hr:before {
+      background-image: url("../icons/Personalistika.svg");
+    }
+
+    &.technicke:before {
+      background-image: url("../icons/Technicke.svg");
+    }
+
+    &.vyroba:before {
+      background-image: url("../icons/Vyroba.svg");
+    }
+
+    &.veda-a-vyskum:before,
+    &.veda-a-vyzkum:before {
+      background-image: url("../icons/Vyzkum.svg");
+    }
+
+    &.projektovani-a-dozor:before,
+    &.projektovanie-a-dozor:before {
+      background-image: url("../icons/Projektovani.svg");
+    }
+
+    &.manazerske-pozice:before,
+    &.manazerske-pozicie:before {
+      background-image: url("../icons/Manazerske.svg");
+    }
+
+    &.vystavba-a-sprava-majetku:before {
+      background-image: url("../icons/Vystavba.svg");
+    }
+
+    &.autodoprava:before {
+      background-image: url("../icons/Autodoprava.svg");
+    }
+
+    &.prodej-a-podpora-prodeje:before {
+      background-image: url("../icons/Prodej.svg");
+    }
+
+    &.obchodnicke-pozice:before {
+      background-image: url("../icons/Obchodni_pozice.svg");
+    }
+  }
+
+  span.nameFilerSelect {
+    font-weight: 400;
+  }
+
+  .list {
+    position: absolute;
+    top: 38px;
+    left: 10px;
+    z-index: 2;
+    background: white;
+    padding: 15px 15px 15px 0px;
+    min-width: 270px;
+    max-height: 500px;
+    overflow-y: auto;
+    box-shadow: 0px 0px 7px #00000033;
+    border: 1px solid #c3c3c3;
+
+    @media (max-width: 650px) {
+      max-height: 40vh;
+    }
+  }
+
+  .holder[data-name="uvazek"] .list {
+    left: inherit;
+    //right: 0;
+  }
+
+  .holder[data-name="obor"] .list {
+    padding: 15px 15px;
+    min-width: 300px;
+  }
+
+  .list > .item {
+    padding: 5px 0;
+    position: relative;
+  }
+
+  .list > .item:hover:before,
+  .list > .item:hover:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 8px;
+    right: 8px;
+    width: 2px;
+    height: 14px;
+    opacity: 0.5;
+    background: @dek-color-red;
+    transform: rotate(45deg);
+  }
+
+  .list > .item:hover:after {
+    height: 8px;
+    right: 15px;
+    top: 13px;
+    transform: rotate(-45deg);
+  }
+
+  #employment {
+    display: flex;
+    border-bottom: 1px solid @dek-color-grey-light;
+    border-top: 1px solid @dek-color-grey-light;
+    padding: 5px 0;
+  }
+
+  .selected-value {
+    padding: 10px 8px;
+    position: relative;
+    
+    @media (max-width: @breakpoint-small-max) {
+      padding: 10px 4px 10px 0px;
+    }
+
+    @media (max-width: @breakpoint-small-max) {
+      font-size: 12px; 
+
+      span {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+
+  .clear,
+  .null-value,
+  .selected {
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .clear:before,
+  .clear:after,
+  .null-value:before,
+  .null-value:after,
+  .selected:before,
+  .selected:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 3px;
+    left: 0;
+    width: 2px;
+    height: 14px;
+    background: @dek-color-grey-dark;
+    transform: rotate(45deg);
+
+    @media (max-width: @breakpoint-small-max) {
+      //   font-size: 12px;
+      height: 10px; //todo
+      width: 1px;
+    }
+  }
+
+  .selected {
+    margin-left: 0;
+    float: right;
+  }
+
+  .selected + span {
+    font-weight: bold;
+  }
+
+  .clear:hover:before,
+  .clear:hover:after,
+  .null-value:hover:before,
+  .null-value:hover:after,
+  .slected:hover:before,
+  .selected:after,
+  .selected:before {
+    background: @dek-color-red;
+  }
+
+  .clear:after,
+  .null-value:after,
+  .selected:after {
+    transform: rotate(-45deg);
+  }
+
+  .selected:after {
+    height: 8px;
+    left: -2px;
+    top: 8px;
+  }
+
+  .selected:before {
+    left: 5px;
+  }
+
+  .null-value:before {
+    left: 9px;
+
+    @media (max-width: @breakpoint-small-max) {
+      //   font-size: 12px;
+      left: 7px; //todo
+    }
+  }
+
+  .holder {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 18px;
+    font-weight: 600;
+
+    .carr-sellector {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: @breakpoint-small-max) {
+        font-size: 12px;
+      }
+    }
+
+    .list {
+      font-size: 16px;
+    }
+  }
+
+  .confirm {
+    display: none;
+    background-image: url(/assets/desert.jpg);
+    background-size: 30% auto;
+    background-position: 20px calc(100% - 20px);
+    height: 300px;
+    width: 500px;
+    position: fixed;
+    top: calc(50% - 150px);
+    left: calc(50% - 250px);
+    z-index: 999;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 7px #707070 inset;
+    padding: 25px 20px;
+
+    & > .cross {
+      top: 10px;
+      right: 10px;
+    }
+
+    & > .cross:after,
+    & > .cross:before {
+      height: 15px;
+      background-color: @dek-color-red;
+    }
+
+    & .btn {
+      position: absolute;
+      bottom: 30px;
+      right: 10px;
+      font-weight: bold;
+    }
+
+    & > p {
+      margin-top: 10px;
+    }
+
+    & > strong {
+      font-size: 15px;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 980px;
+  }
+
+  #employment-table {
+    border-top: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+
+    & > .position {
+      display: block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    & span.icon {
+      width: 18px;
+      height: 22px;
+    }
+
+    & span.title {
+      color: @dek-color-red;
+    }
+
+    & span.title:after {
+      content: "/";
+      color: #000;
+      margin: 0 7px;
+    }
+
+    & > .position:after,
+    & > .position:before {
+      content: "";
+      right: 30px;
+      position: absolute;
+      display: block;
+      height: 14px;
+      width: 2.5px;
+      background-color: #c3c3c3;
+    }
+
+    & > .position:after {
+      transform: rotate(45deg);
+      top: 19px;
+    }
+
+    & > .position:before {
+      transform: rotate(-45deg);
+      top: 10px;
+    }
+
+    & > .position:hover:after {
+      content: "detail nabÃƒÂ­dky";
+      text-decoration: underline;
+      transform: none;
+      right: 40px;
+      width: auto;
+      background: none;
+    }
+
+    & > .position:hover:before,
+    & > .position:hover .icon {
+      display: none;
+    }
+  }
+
+  #employment-table > .position:hover,
+  .position:hover .title,
+  .position:hover .title:after {
+    color: #fff !important;
+  }
+
+  .position:hover .title {
+    font-weight: bold;
+  }
+
+  #filter {
+    max-width: 980px;
+    margin: auto;
+    justify-content: center;
+
+    & > * {
+      padding: 0;
+      flex-grow: 0;
+    }
+
+    & .btn {
+      white-space: nowrap;
+      border-radius: 30px;
+      font-size: 16px;
+      display: inline-block;
+      min-width: 0px;
+      width: auto;
+      padding: 0px 30px;
+      height: 37px;
+      margin: 0 7px;
+      line-height: 2.5;
+      transition: all 0.2s ease-in-out;
+    }
+
+    & .btn:not(.red):hover {
+      background: @dek-color-grey-light;
+    }
+  }
+
+  .grid {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+
+    & > * {
+      width: 33%;
+      display: inline-block;
+      padding: 15px 0;
+    }
+
+    & img {
+      margin-left: auto;
+      margin-right: auto;
+      height: 154px;
+      width: 154px;
+      display: block;
+      border-radius: 50%;
+    }
+
+    & p,
+    & strong {
+      padding: 0 15px;
+    }
+
+    & > *:nth-child(2n + 1) {
+      background-color: #f6f6f6;
+    }
+  }
+
+  #candidate {
+    display: flex;
+    justify-content: center;
+    background: #f9f9f9;
+    flex-direction: column;
+
+    & h1 {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    & table {
+      //min-width : 980px;
+      background: #fff;
+      padding: 20px;
+    }
+
+    & td {
+      padding: 0 11px;
+    }
+
+    & td:not(.required) {
+      padding-bottom: 14px;
+    }
+
+    & .cross {
+      top: calc(50% - 7px);
+      right: 15px;
+    }
+
+    & .cross:before,
+    & .cross:after {
+      height: 15px;
+    }
+
+    & .btn {
+      cursor: pointer;
+      border: none;
+      font-size: 13px;
+      border-radius: 17px;
+      height: 33px;
+      display: block;
+      line-height: 2.8;
+      text-align: center;
+      padding: 0 26px;
+      text-transform: uppercase;
+      min-width: 120px;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    & .btn {
+      /*
+            position     : absolute;
+            bottom       : 30px;
+            left         : calc(50% - 60px);
+            width        : 120px !important;
+            height       : 40px !important;
+            border-radius: 20px !important;
+            font-weight  : 800;
+*/
+      margin-bottom: 30px;
+    }
+
+    & #agree .checkmark {
+      position: absolute;
+      background: #fff;
+      border: 1px solid #c3c3c3;
+      width: 16px;
+      height: 16px;
+      top: 0px;
+      left: -20px;
+      cursor: pointer;
+    }
+
+    .btn.red {
+      background-color: @dek-color-red;
+      color: #fff;
+    }
+
+    #files {
+      padding-top: 0 !important;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    label.upload,
+    .js-fakeinput input,
+    .fakeinput input {
+      cursor: pointer;
+    }
+
+    label.upload:before {
+      content: "\002B";
+      background: #e8313f;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50%;
+      color: #fff;
+      font-weight: 800;
+      font-size: 16px;
+      margin-right: 10px;
+      line-height: 20px;
+    }
+
+    label.upload:hover:before {
+      background: @button-primary-hover-background;
+      color: @button-primary-hover-color;
+    }
+  }
+
+  .w-career__back {
+    width: calc(100% - 120px);
+    padding-top: 20px;
+
+    @media (max-width: @breakpoint-small-max) {
+      width: calc(100% - 60px);
+    }
+  }
+
+  .career__back {
+    color: #ccc;
+
+    & .notrequired {
+      width: calc(50% - 10px);
+    }
+
+    &:before {
+      content: url(../icons/arrows-gray.svg);
+      width: 20px;
+      height: 27px;
+      display: inline-block;
+      margin-right: 6px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .career__additionalinfo {
+    margin: 3rem auto;
+    max-width: 980px;
+
+    & a {
+      font-weight: bold;
+      text-decoration: underline;
+      color: #000;
+    }
+  }
+
+  .career__list {
+    list-style: none;
+
+
+            & .required {
+                width: 100%;
+            }
+
+            & .notrequired {
+                width: 100%;
+            }
+    & li::before {
+      content: "\2022";
+      color: @dek-color-red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+
+    }
+  }
+}
+
+.dotaznik_pro_uchazece {
+  width: calc(100% - 30px);
+  max-width: 550px;
+
+  & h1 {
+    font-size: 32px;
+    margin-top: 40px;
+  }
+
+  & input:not([type="checkbox"]),
+  & select,
+  & textarea {
+    width: 100%;
+    display: block;
+    padding: 13px 19px;
+    border: 1px solid #c3c3c3;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  & textarea {
+    resize: vertical;
+  }
+
+  div.fakeinput {
+    position: relative;
+    min-height: 44px;
+
+    //margin-bottom: 7px;
+    width: 100%;
+    display: block;
+    padding: 13px 19px;
+    border: 1px solid #c3c3c3;
+    margin-top: 5px;
+    font-size: 14px;
+    background: #fff;
+
+    .cross {
+      cursor: pointer;
+      position: absolute;
+      right: 30px;
+      width: 15px;
+      height: 15px;
+      top: calc(50% - 7.5px);
+    }
+
+    .cross:before,
+    .cross:after {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 2px;
+      background-color: @dek-color-grey-dark;
+      top: 50%;
+      margin-top: -8px;
+      left: 50%;
+      margin-left: -1px;
+      z-index: 2;
+    }
+
+    .cross:before {
+      transform: rotate(-45deg);
+    }
+
+    .cross:after {
+      transform: rotate(45deg);
+    }
+
+    .cross:hover:before,
+    .cross:hover:after {
+      background-color: #707070;
+    }
+  }
+
+  input[type="file"] {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    margin: 0 !important;
+
+    padding: 0;
+    border: 1px solid #c3c3c3;
+  }
+
+  .dotaznik_oneline {
+    display: flex;
+    justify-content: space-between;
+
+    & .required {
+      width: calc(50% - 10px);
+    }
+
+    & .required input {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: @breakpoint-xsmall-max) {
+    .dotaznik_oneline {
+      display: block;
+
+      & .required {
+        width: 100%;
+      }
+    }
+  }
+
+  & #agree input[type="checkbox"]:checked ~ .checkmark:after {
+    content: "\2714";
+    font-size: 18px;
+    top: -3px;
+    color: @dek-color-grey-dark;
+    position: absolute;
+    left: 1px;
+  }
+}
+
+.kvdd2 {
+  margin-right: 60px;
+}
+
+@media (min-width: 1300px) {
+  .lid-wrap {
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+}
+
+@media (max-width: 650px) {
+  .kvdd {
+    flex-direction: column;
+  }
+
+  .kvdd1 {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .kvdd1 {
+    margin-left: 2rem;
+  }
+
+  .kvdd2 {
+    margin-right: calc(2rem + 60px);
+  }
+}
+
+.section-kariera #candidate .btn.red,
+.section-career #candidate .btn.red {
+  //font-weight     : bold;
+  background-color: @dek-color-red;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 25px;
+  width: 156px;
+  height: 50px;
+  margin-top: 30px;
+  margin-bottom: -25px;
+  padding: 0;
+  outline: none;
+}
+
+.section-kariera #candidate .btn.red:hover,
+.section-career #candidate .btn.red:hover {
+  background-color: @button-primary-hover-background;
+  color: @button-primary-hover-color;
+}
+
+.section-career #candidate {
+  padding-bottom: 4rem;
+  margin-bottom: 1rem;
+}
+
+.dotaznik_pro_uchazece .fakeinputHide {
+  display: none;
+}
+
+@media (max-width: 485px) {
+  .section-kariera #candidate td,
+  .section-career #candidate td {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.section-career form#candidate {
+  margin-top: 2rem;
+}
+
+#employment-zero {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  a.btn {
+    cursor: pointer;
+    border: none;
+    display: block;
+    line-height: 2.6;
+    text-transform: uppercase;
+    background-color: @dek-color-red;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 25px;
+    width: 200px;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 0;
+    outline: none;
+    text-align: center;
+
+    &:hover {
+      background-color: #ca0011;
+    }
+  }
+
+  .clear {
+    margin-left: 0;
+  }
+
+  .clear:before,
+  .clear:after {
+    background: #fff;
+    top: 2px;
+
+    @media (max-width: @breakpoint-small-max) {
+      top: 4px;
+    }
+  }
+
+  a.btn.sk {
+    width: 210px;
+  }
+
+  .hide-on-mobile{
+    @media (max-width: @breakpoint-small-max) {
+      display: none;
+    }
+    
+  }
+
+
+}

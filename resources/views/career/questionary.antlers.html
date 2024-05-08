@@ -1,0 +1,165 @@
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="column">
+                <h1 class="page-name">{{title}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{ form:set is="dotaznik_pro_uchazece" }}
+
+
+{{form:create in="dotaznik_pro_uchazece" files="true" attr="id:candidate|onsubmit:return validateFormCarrer(this.id)"}}
+
+<input type="hidden" readonly="true" name="lang" value="{{ locale }}">
+<div class="uk-container uk-container-small dotaznik_pro_uchazece">
+
+    {{ if errors }}
+    <ul class="form-errors">
+        {{ errors }}
+        <li>{{ value }}</li>
+        {{ /errors }}
+    </ul>
+    {{ /if }}
+
+    <table>
+        <tr>
+            <td colspan="2" class="required">
+                <label for="name">{{name}}</label>
+                <input class="required" id="name" type="text" name="name" value="{{old:name}}">
+                <span class="error-message">{{name-error}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="required">
+                <label for="email">{{email}}</label>
+                <input class="required" id="email" name="e-mail" placeholder="..." type="text" value="{{old:e-mail}}">
+                <span class="error-message">{{email-error}}</span>
+            </td>
+            <td class="required">
+                <label for="phone">{{phone}}</label>
+                <input class="required" id="phone" name="phone" type="text" value="{{old:phone}}">
+                <span class="error-message">{{phone-error}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required">
+                <label for="upload">{{files}}</label>
+
+                <div id="files"></div>
+                <div id="js-fakeinput">
+                    <div class="fakeinput">
+                        <span></span>
+                        <input id="upload" type="file" name="files[]" class="required">
+                    </div>
+                </div>
+                {{ if error:files }}<span class="error-message visible">*{{ error:files }}</span><br>
+                {{ else }}<span class="error-message">*Soubor je povinný</span><br>
+                {{ /if }}
+                <label for="upload" class="upload required-disable">{{add}}</label>
+                <span>&nbsp;</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="position:relative">
+                <label>{{position}}</label>
+                <select class="required" name="vr_id" id="position" onChange="saveForLate(this);">
+                    <option selected="true" disabled="disabled" hidden="hidden" value="disabled">{{select-default}}
+                    </option>
+                    {{ employment_addon:get_regular_positions_list }}
+                    <option value="{{ ID }}" {{ if old:vr_id == (ID) }}selected{{ /if }} text="{{ POPIS }}">{{ POPIS }}
+                    </option>
+                    {{ /employment_addon:get_regular_positions_list }}
+                </select>
+                <div id="select-arrow"></div>
+                <span class="error-message">{{vr_id-error}}</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="required">
+                <label for="location">{{location}}</label>
+                <input class="required" id="location" placeholder="..." type="text" name="location"
+                    value="{{old:location}}">
+                <span class="error-message">{{location-error}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label for="note">{{note}}</label>
+                <textarea id="note" placeholder="..." name="note" value="{{old:note}}" rows="5">{{ old:note }}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="required">
+                <label id="agree">
+                    <input type='checkbox' class="required" name="agree" {{ if old:agree == 'on' }}checked{{ /if }}>
+
+                    <span>
+                        {{agree1}}
+                        <a href="{{main_addon:translate type='url' :lang="locale" page="protection"}}">
+                            {{agree2}}
+                        </a>
+                    </span>
+                </label><br>
+                <span class="error-message">{{agree-error}}</span>
+            </td>
+        </tr>
+    </table>
+</div>
+<button type="submit" class="btn red">{{submit}}</button>
+
+
+{{ if errors }}
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        UIkit.notification('Formulář obsahuje chyby!', {
+            status: 'danger'
+        });
+        scrollToElement('form#candidate');
+    });
+</script>
+{{ /if }}
+{{ if success }}
+
+{{ /if }}
+
+{{/form:create}}
+
+{{ if {form:success} }}
+{{ form:submission }}
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+
+        var nazevPozice = localStorage.getItem("pozice");
+
+        UIkit.notification('Formulář byl úspěšně odeslán.', {
+            status: 'success'
+        });
+        dataLayer.push({
+            'event': 'send-form',
+            'eventCategory': 'Kariera-obecny-dotaznik',
+            'eventAction': nazevPozice,
+            'eventLabel': ''
+        });
+        scrollToElement('form#candidate');
+    });
+</script>
+{{ /form:submission }}
+{{ /if }}
+{{ /form:set }}
+
+
+<script src="{{theme:js src="employmentform" cache_burst="true"}}"></script>
+
+<script>
+    dekReCaptcha.createInput("dotaznik_pro_uchazece", "candidate");
+
+    function saveForLate(sel) {
+        localStorage.setItem("pozice", sel.options[sel.selectedIndex].text);
+    }
+</script>

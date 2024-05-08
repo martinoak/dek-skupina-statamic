@@ -1,0 +1,153 @@
+---
+cz: 
+   nadpis-1: 'Co se u nás děje?'
+   button-1: 'VOLNÁ PRACOVNÍ MÍSTA'
+sk: 
+   nadpis-1: 'Čo sa u nás deje?'
+   button-1: 'VOĽNÉ PRACOVNÉ MIESTA'
+---
+<div class="container">
+    <h1 class="page-name">{{title}}</h1>
+</div>
+{{ partial:careerfilters }}
+<div class="uk-container uk-container-small">
+
+</div>
+
+
+
+
+
+<h2 style="text-align: center;">{{{{locale}}.nadpis-1}}</h2>
+
+<div id="hack-height" 
+    class="uk-child-width-1-3@m uk-child-width-1-2@s media-boxes uk-grid uk-flex-top uk-flex-wrap-top lid-wrap" 
+    data-uk-grid="masonry: true" 
+    data-uk-height-match="target: > .matched" data-uk-lightbox>
+
+    {{ collection:zivot-v-deku-video }}
+        
+        <div class="media-box">
+            <div class="message">
+                <div class="message-preview">
+                    {{assets:image}}
+                    <a href="{{ glide:image width="900" fit="max" }}" >
+                        <img src="{{ glide:image width="900" fit="max" }}">
+                    </a> 
+                    {{/assets:image}}      
+                </div>
+                <div class="message-content">
+                    <p>{{intro}}</p>
+                </div>
+            </div>
+        </div>
+    {{ /collection:zivot-v-deku-video }}       
+</div>
+
+<div>
+    <a href="{{ main_addon:translate type='url' :lang="locale" page="volna-mista" }}"  class="butk red">{{{{locale}}.button-1}}</a>
+</div>
+
+<div style="
+    padding: 40px 0 5rem 0;
+    background-color: #d8d8d8;
+    margin-bottom: -5rem;
+    margin-top: 40px;">
+    <div style="
+    margin: 0 auto;
+    max-width: 1300px;
+    display: flex;
+    flex-wrap: nowrap;
+" class="kvdd">
+
+    {{ if locale == 'cz'}}
+    <div class="kvdd1">
+        <h3>Dáváme šanci studentům vysokých škol</h3>
+        <p>Pokud jsi student a rád bys získal brigádu ke studiu nebo s námi spolupracoval při psaní své závěrečné práce, ozvi se nám prostřednictvím <a href="/kariera/dotaznik">formuláře</a>. 
+            Když bude téma oboustranně zajímavé, rádi ti s ním pomůžeme.</p>
+        <p>Studenti mohou nahlédnout, jak to funguje například v:</p>
+
+        <ul>
+            <li>technické oddělení ATELIER DEK </li>
+            <li>ekonomické oddělení </li>
+            <li>personální oddělení</li>
+        </ul>
+    </div>
+    {{ /if }}
+    
+    {{ if locale == 'sk'}}
+    <div class="kvdd1">
+        <h3>Dávame šancu študentom</h3>
+        <p>Pokiaľ si študent a rád by si získal prax alebo s nami spolupracoval pri písaní svojej záverečnej práce, ozvi sa nám prostredníctvom <a href="/sk/kariera/dotaznik">formulára</a>. 
+            Keď bude téma obojstranne zaujímavá, radi Ti s ňou pomôžeme.</p>
+        <p>Študentom ponúkame získanie praxe v týchto oddeleniach:</p>
+
+        <ul>
+            <li>technické oddelenie ATELIER DEK</li>
+            <li>ekonomické oddelenie</li>
+            <li>personálne oddelenie</li>
+        </ul>
+    </div>
+    {{ /if }}
+    
+    <div class="kvdd2">
+        <img style="
+        max-width: 100%;
+        margin-left: 40px;
+    " src="/assets/media/VIC_9958_rgb.jpg">
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    #kariera__lifeInDek{
+        background-color: #E30013;
+        border-radius: 25px;
+    }
+    @media(max-width:650px) {
+        .footer .bottom__wrap {
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+<script>
+    $('.table-scroll').on('click',function()
+    {
+        var notThis = $('.table-scroll').not($(this));
+        notThis.find('.table-scroll-content').slideUp();
+        notThis.removeClass('scrolled');
+        $(this).toggleClass('scrolled');
+        $(this).find('.table-scroll-content').slideToggle();
+    });
+    function checkMediaQuery(mediaQuery) {
+        if (mediaQuery.matches) {
+            document.getElementById('emp-btn').children[0].innerHTML = 'Volné pozice';
+            document.getElementById('faq-btn').children[0].innerHTML = 'Dotazy';
+        } else {
+            document.getElementById('emp-btn').children[0].innerHTML = 'Volná pracovní místa';
+            document.getElementById('faq-btn').children[0].innerHTML = 'Časté dotazy';
+        }
+    }
+    var media = window.matchMedia("(max-width: 650px)");
+    checkMediaQuery(media);
+    media.addListener(checkMediaQuery);
+  /*  document.getElementById('content-page').getElementsByClassName('table-scroll')[0].classList.add('scrolled');*/
+</script>

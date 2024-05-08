@@ -1,0 +1,85 @@
+
+#companies .class
+{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 100;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #707070;
+    text-transform: uppercase;
+    margin:auto;
+    padding:15px 0;
+    width:90%;
+    /*border-top-left-radius:10px;*/
+        /*border-top-right-radius:10px;*/
+    background: #e30013;
+    color:#fff;
+}
+#companies .company
+{
+    position: relative;
+    background-color: #FFF;
+    text-align: center;
+    width: 90%;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #D8D8D8;
+    padding: 5px;
+    transition: all .2s ease-in-out;
+}
+#companies .company h2
+{
+    padding-top: 30px;
+    padding-bottom: 0;
+}
+#companies .company img
+{
+    position: absolute;
+    margin: auto;
+    width: auto;
+    height: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    max-width: 100%;
+}
+#companies .company > p
+{
+    padding: 15px 20px;
+}
+#companies .company > div
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+#companies .company > *:not(div)
+{
+    display: none;
+}
+#companies .company > .btn
+{
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 60px);
+}
+#companies .company:hover
+{
+    background: #fff;
+    box-shadow: 0px 0px 7px #707070;
+    z-index: 1;
+    border: none;
+    transform: scale(1.0);
+}
+#companies .company:hover > div
+{
+    display: none;
+}
+#companies .company:hover > *:not(div)
+{
+    display: block;
+}

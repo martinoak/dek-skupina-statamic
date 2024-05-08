@@ -1,0 +1,297 @@
+title: 'Složka s Médii'
+path: assets
+url: /assets
+assets:
+  img/black-bear-cubs.jpg:
+    title: 'Black Bear Cubs'
+    alt: 'Some black bears standing up'
+  img/coffee-mug.jpg:
+    title: 'Coffee Mug'
+    alt: dwdwdwdwd
+  img/me.jpg:
+    title: Me
+    alt: 'Niles Peppertrout'
+  img/redwood-sign.jpg:
+    title: 'redwood sign'
+  img/desert.jpg:
+    focus: 77-70
+  desert.jpg:
+    focus: 99-98
+  mh_dekmetal-ms-benesov_9905250.jpg:
+    focus: 45-64
+  rd_10_tania_persp_002.tif-2000x1340-29813752-1544384662-t.jpg:
+    focus: 49-57
+  20180207_091406_upr2.jpg:
+    focus: 68-46
+  20a.JPG:
+    focus: 61-76
+  7285879232_57b13a2b2c_o.jpg:
+    focus: 42-65
+  mh_dekmetal-ms-benesov_99325070.jpg:
+    title: 'DEKMETAL Školka Benešov'
+    alt: 'DEKMETAL Školka Benešov'
+    focus: 59-57
+  rd_09_molina_persp_002.tif-2000x1340-27587568-1544191905-t.jpg:
+    focus: 56-52
+  zprava_forbesobalka_rijen-min.jpg:
+    focus: 46-18
+  zprava_9nej_foto-min.jpg:
+    focus: 56-69
+  media/zprava_forbesobalka_rijen-min-1576580546.jpg:
+    title: 'Forbes Vít Kutnar'
+    alt: 'Forbes Vít Kutnar'
+    focus: 95-8
+  media/zprava_bohmova-min.jpg:
+    title: 'Martina Bohmová - Stavebniny DEK'
+    alt: 'Martina Bohmová - Stavebniny DEK'
+    focus: 19-94
+  homepage/tiles/first.png:
+    alt: 'alt text'
+    focus: 32-52
+  companies/foto/dekmetal_foto.jpg:
+    title: DEKMETAL
+    alt: DEKMETAL
+    focus: 96-93
+  stavebninydek-1579009521.jpg:
+    title: 'Stavebniny DEK terminál'
+    alt: 'Stavebniny DEK terminál'
+    focus: 81-52
+  stavebninydek-1579009735.jpg:
+    title: 'Stavebniny DEK terminál'
+    alt: 'Stavebniny DEK terminál'
+    focus: 51-77
+  ./mh_dekmetal.jpg:
+    focus: 54-97
+  dekmetal.jpg:
+    title: DEKMETAL
+    alt: DEKMETAL
+    focus: 48-75
+  mh_dekmetal.jpg:
+    title: 'DEKMETAL RIGAKU'
+    alt: 'DEKMETAL RIGAKU'
+    focus: 21-71
+  homepage_mobil-_tmavsi.png:
+    title: 'Stavebniny DEK kamion'
+    alt: 'Stavebniny DEK kamion'
+    focus: 27-55
+  dek-kamion.jpg:
+    title: 'DEK kamion'
+    alt: 'DEK kamion'
+    focus: 36-57
+  stavebninydek_foto.jpg:
+    title: 'Stavebniny DEK pobočka'
+    alt: 'Stavebniny DEK pobočka'
+    focus: 49-87
+  argos_foto-1581079347.jpg:
+    title: Argos_
+    alt: Argos
+    focus: 99-98
+  media/vyrocni_zpravy---kopie---kopie.jpg:
+    title: 'Skupina DEK - výroční zpráva'
+    alt: 'Skupina DEK - výroční zpráva'
+    focus: 48-78
+  argos_foto.jpg:
+    title: Argos
+    alt: Argos
+  atelierdek_foto.jpg:
+    title: 'Atelier DEK'
+    alt: 'Atelier DEK'
+  atelierdek_foto_tmave.jpg:
+    title: 'Atelier DEK_'
+    alt: 'Atelier DEK_'
+  dekexpres-dek-as.png:
+    title: 'DEK Expres'
+    alt: 'DEK Expres'
+  dekexpres-dek-as-1594815737.png:
+    title: 'DEK Expres_mobil'
+    alt: 'DEK Expres_mobil'
+  dekmetal-1585212972.jpg:
+    title: 'DEKMETAL Administratívní a technologické centrum RIGAKU'
+    alt: 'DEKMETAL Administratívní a technologické centrum RIGAKU'
+  dekmetal_foto.jpg:
+    title: 'DEKMETAL Vodárny a kanalizace'
+    alt: 'DEKMETAL Vodárny a kanalizace'
+  dekmetal_foto2.jpg:
+    title: 'DEKMETAL centrum RIGAKU'
+    alt: 'DEKMETAL centrum RIGAKU'
+  dekmetal_foto2-1581080173.jpg:
+    title: 'DEKMETAL centrum RIGAKU_'
+    alt: 'DEKMETAL centrum RIGAKU_'
+  dekwood_foto.jpg:
+    title: 'DEKWOOD krovy'
+    alt: 'DEKWOOD krovy'
+  dekwood_foto_tmave.jpg:
+    title: 'DEKWOOD krovy'
+    alt: 'DEKWOOD krovy'
+  dekwood_foto_tmave-1581079121.jpg:
+    title: 'DEKWOOD krovy'
+    alt: 'DEKWOOD krovy'
+  dekwood_foto_tmave-1581079659.jpg:
+    title: 'DEKWOOD krovy'
+    alt: 'DEKWOOD krovy'
+  gservis_foto.jpg:
+    title: 'GSERVIS Molina bungalov'
+    alt: 'GSERVIS Molina bungalov'
+  gservis_foto_tmave.jpg:
+    title: 'GSERVIS Molina bungalov'
+    alt: 'GSERVIS Molina bungalov'
+  homepage_aktuality.jpg:
+    title: DEKTIME
+    alt: DEKTIME
+  illustrace_kariera.jpg:
+    title: Kariéra
+    alt: Kariéra
+  mh_dekmetal-ms-benesov_008650.jpg:
+    title: 'DEKMETAL Školka Benešov'
+    alt: 'DEKMETAL Školka Benešov'
+  stavebninydek.jpg:
+    title: 'Stavebniny DEK terminál'
+    alt: 'Stavebniny DEK terminál'
+  stavebninydek-1585212881.jpg:
+    title: 'Stavebniny DEK terminál'
+    alt: 'Stavebniny DEK terminál'
+  stavebninydek_foto-1579855601.jpg:
+    title: 'Stavebniny DEK pobočka'
+    alt: 'Stavebniny DEK pobočka'
+  stavebninydek_tmave.jpg:
+    title: 'Stavebniny DEK pobočka'
+    alt: 'Stavebniny DEK pobočka'
+  urs_foto_tmave.jpg:
+    title: URS
+    alt: URS
+  urs_foto_tmave-1581080513.jpg:
+    title: URS
+    alt: URS
+  about/history/1993.jpg:
+    title: '1993'
+    alt: '1993 Vít Kutnar Ondřejem Hrdličkou'
+  about/history/1994.jpg:
+    title: '1994'
+    alt: '1994 ELASTEK a GLASTEK'
+  about/history/1998.jpg:
+    title: '1998'
+    alt: '1998 Atelier stavebních izolací'
+  about/history/2006.JPG:
+    title: '2006'
+    alt: '2006 Skupina DEK největší dodavatel stavebních materiálů v ČR'
+  about/history/2013.jpg:
+    title: '2013'
+    alt: '2013 Stavebniny DEK Praha Vestec'
+  about/history/2015.JPG:
+    title: '2015'
+    alt: 'Stavebniny DEK katalog'
+  about/history/2016.jpg:
+    title: '2016'
+    alt: '2016 DEK 25 let existence. Nová společnost URS CZ a.s., ARGOS ELEKTRO, a.s.'
+  about/history/2017.jpg:
+    title: '2017'
+    alt: '2017 jednička na trhu půjčování stavebního nářadí a techniky'
+  companies/foto/DEKWOOD_foto.jpg:
+    title: DEKWOOD
+    alt: DEKWOOD
+  companies/foto/argos_foto.jpg:
+    title: ARGOS
+    alt: ARGOS
+  companies/foto/atelierdek_foto.jpg:
+    title: 'Atelier DEK'
+    alt: 'Atelier DEK'
+  companies/foto/gservis_foto.jpg:
+    title: GSERVIS
+    alt: GSERVIS
+  companies/foto/stavebninydek_foto.jpg:
+    title: 'Stavebniny DEK'
+    alt: 'Stavebniny DEK'
+    focus: 67-50
+  companies/foto/urs_foto.jpg:
+    title: URS
+    alt: URS
+  companies/logo/DEKWOOD_logo.jpg:
+    title: DEKWOOD_logo
+    alt: DEKWOOD_logo
+  companies/logo/argos_logo.jpg:
+    title: Argos_logo
+    alt: Argos_logo
+  companies/logo/atelier_logo.jpg:
+    title: Atelier_logo
+    alt: Atelier_logo
+  companies/logo/dekmetal_logo.jpg:
+    title: Dekmetal_logo
+    alt: Dekmetal_logo
+  companies/logo/gservis_logo.jpg:
+    title: GSERVIS_logo
+    alt: GSERVIS_logo
+  companies/logo/stavebninydek_logo.jpg:
+    title: 'Stavebniny DEK logo'
+    alt: 'Stavebniny DEK logo'
+  companies/logo/urs_logo.jpg:
+    title: 'URS logo'
+    alt: 'URS logo'
+  employmentcards/dek_bear_upr.jpg:
+    title: 'Běh Terezy Maxové'
+    alt: 'Běh Terezy Maxové'
+  employmentcards/kariera_1-min.JPG:
+    title: DEK_kariéra
+    alt: DEK_kariéra
+  employmentcards/kariera_2-min.jpg:
+    title: DEK_kariéra2
+    alt: DEK_kariéra2
+  employmentcards/kariera_3-min.JPG:
+    title: DEK_kariéra3
+    alt: DEK_kariéra3
+  employmentcards/kariera_4-min.JPG:
+    title: DEK_kariéra4
+    alt: DEK_kariéra4
+  employmentcards/kariera_5-min.JPG:
+    title: DEK_kariéra5
+    alt: DEK_kariéra5
+  media/kutnar1-e1528190757857.jpg:
+    title: 'Vít Kutnar'
+    alt: 'Vít Kutnar'
+  media/kutnarova_125.jpg:
+    title: 'Petra Kutnarová'
+    alt: 'Petra Kutnarová'
+  media/vyrocka.jpg:
+    title: 'Skupina DEK - výroční zpráva'
+    alt: 'Skupina DEK - výroční zpráva'
+  volne_pozice_images_1-1598969777.jpg:
+    focus: 53-56
+  media/vyrocka-2019-1600939430.jpg:
+    focus: 53-60
+  media/mh_dek-party2019_3136.jpg:
+    title: 'DEKPARTY - 2020'
+    alt: 'DEKPARTY - 2020'
+  employmentcards/Zivot_v_DEK/dekbeer-25-let-(1).jpg:
+    title: 'DEKBEER - 25 let'
+    alt: 'DEKBEER - 25 let'
+  employmentcards/Zivot_v_DEK/dekparty-2020.jpg:
+    title: 'DEKPARTY 2020'
+    alt: 'DEKPARTY 2020'
+  employmentcards/Zivot_v_DEK/nadacni-beh-terexy-maxove.jpg:
+    title: 'Nadacni beh Terexy Maxove'
+    alt: 'Nadacni beh Terexy Maxove'
+  employmentcards/Zivot_v_DEK/prostredi-modernich-prodejen.jpg:
+    title: 'Stavebniny DEK - moderni-prodejny'
+    alt: 'Stavebniny DEK - moderni-prodejny'
+  employmentcards/Zivot_v_DEK/sbirka-pro-detske-domovy.jpg:
+    title: 'Vánoční sbírky pro dětské domovy'
+    alt: 'Vánoční sbírky pro dětské domovy'
+  employmentcards/Zivot_v_DEK/voda.jpg:
+    title: Voda
+    alt: Voda
+  sk_emidark.jpg:
+    focus: 81-43
+  media/docent.jpg:
+    title: 'Doc. Ing. Zdeněk Kutnar, CSc.'
+    alt: 'Doc. Ing. Zdeněk Kutnar, CSc.'
+    focus: 41-64
+  media/docent_2.jpg:
+    focus: 45-10
+  media/agregovana-vyrocni-zprava.JPG:
+    focus: 81-83
+  media/esg_dek_2022.pdf:
+    title: 'Zpráva o udržitelném rozvoji společnosti'
+    alt: 'Zpráva o udržitelném rozvoji společnosti'
+  media/dek---zprava-o-udrzitelnosti.JPG:
+    focus: 51-81
+  media/dek---zprava-o-udrzitelnosti.jpg:
+    focus: 49-73

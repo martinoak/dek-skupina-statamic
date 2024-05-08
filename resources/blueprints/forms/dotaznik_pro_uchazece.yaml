@@ -1,0 +1,60 @@
+title: 'Dotazník pro uchazeče'
+fields:
+  -
+    handle: name
+    field:
+      type: text
+      display: 'Jméno a příjmení'
+      validate: required
+  -
+    handle: e-mail
+    field:
+      type: text
+      display: E-mail
+      validate: email|required
+  -
+    handle: phone
+    field:
+      type: text
+      display: Telefon
+  -
+    handle: files
+    field:
+      type: files
+      display: Soubory
+      destination: uploads/
+      validate: required
+  -
+    handle: location
+    field:
+      type: text
+      display: Lokalita
+  -
+    handle: note
+    field:
+      type: text
+      display: Poznámka
+  -
+    handle: agree
+    field:
+      type: text
+      display: Souhlas
+      validate: required
+  -
+    handle: lang
+    field:
+      type: text
+      display: 'Verze formuláře'
+      listable: false
+  -
+    handle: advertisement
+    field:
+      type: text
+      display: 'Zdroj inzerátu'
+      listable: false
+  -
+    handle: vr_id
+    field:
+      type: text
+      display: 'id pozice'
+      listable: false

@@ -1,0 +1,41 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          display: Nadpis
+          localizable: true
+      -
+        handle: meta_description
+        field:
+          type: text
+          display: 'Meta Description'
+      -
+        handle: content
+        field:
+          type: bard
+          restrict_assets: false
+          localizable: true
+          display: Obsah
+          save_html: true
+          buttons:
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - html
+            - image
+            - quote
+            - codeblock
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+            - anchor
+taxonomies: true
+title: 'Simple Redactor Page'

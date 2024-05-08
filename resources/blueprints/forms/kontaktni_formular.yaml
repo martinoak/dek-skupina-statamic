@@ -1,0 +1,38 @@
+title: 'Kontakt - footer'
+fields:
+  -
+    handle: e-mail
+    field:
+      type: text
+      display: E-mail
+      validate: email|required
+  -
+    handle: zprava
+    field:
+      type: text
+      display: Zpráva
+      validate: required
+  -
+    handle: agree
+    field:
+      type: text
+      display: agree
+      validate: required
+  -
+    handle: telefon
+    field:
+      type: text
+      display: telefon
+      listable: false
+  -
+    handle: meno
+    field:
+      type: text
+      display: meno
+      listable: false
+  -
+    handle: lang
+    field:
+      type: text
+      display: Lang
+      listable: false

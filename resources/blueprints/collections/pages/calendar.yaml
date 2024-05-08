@@ -1,0 +1,108 @@
+title: Default
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          display: Nazev
+          width: 66
+          localizable: true
+      -
+        handle: slug
+        field:
+          type: text
+          width: 33
+      -
+        handle: subtext
+        field:
+          type: text
+          width: 100
+          localizable: true
+      -
+        handle: obor
+        field:
+          type: text
+          display: Obor
+          width: 33
+          localizable: true
+      -
+        handle: typAkce
+        field:
+          type: text
+          display: 'Typ akce'
+          width: 33
+          localizable: true
+      -
+        handle: forma
+        field:
+          type: text
+          display: Forma
+          width: 33
+          localizable: true
+      -
+        handle: zobrazeni
+        field:
+          type: text
+          display: Zobrazení
+          width: 33
+          localizable: true
+      -
+        handle: razeni
+        field:
+          type: text
+          display: Řazení
+          width: 33
+          localizable: true
+      -
+        handle: podNadpis
+        field:
+          type: text
+          display: Podnadpis
+          width: 100
+          localizable: true
+      -
+        handle: prazdnyTucne
+        field:
+          type: text
+          display: 'Prazdny tucne'
+          width: 100
+          localizable: true
+      -
+        handle: prazdnyNormalni
+        field:
+          type: text
+          display: 'Prazdny normalni'
+          width: 100
+          localizable: true
+      -
+        handle: praznyTlacitko
+        field:
+          type: text
+          display: 'Prazny tlacitko'
+          width: 100
+          localizable: true
+      -
+        handle: nadchazejici
+        field:
+          type: text
+          display: Nadchazejici
+          width: 50
+          localizable: true
+      -
+        handle: archiv
+        field:
+          type: text
+          display: Archiv
+          width: 50
+          localizable: true
+      -
+        handle: nextButton
+        field:
+          type: text
+          display: 'Tlacitko dalsi'
+          width: 33
+          localizable: true
+taxonomies: true

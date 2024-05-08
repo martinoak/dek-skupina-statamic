@@ -1,0 +1,22 @@
+sections:
+  main:
+    display: Benefity
+    fields:
+      image:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        display: obrazek
+      title:
+        display: nadpis
+        type: text
+        localizable: true
+      content:
+        type: textarea
+        display: obsah
+        localizable: true
+        instructions: '- pro nedělitelné mezery vložte `&nbsp;`'
+taxonomies: true
+title: benefits

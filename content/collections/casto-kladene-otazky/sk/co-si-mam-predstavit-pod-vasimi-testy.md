@@ -1,0 +1,20 @@
+---
+title: 'Čo si mám predstaviť pod vašimi testami?'
+id: 22093368-090b-47b0-9f77-b7e49a76a8a7
+published: false
+origin: 241dff03-13a2-427c-ac93-09f16ea1d4d9
+blueprint: simple_redactor_page
+---
+<p>V rámci výberového konania sa môžete stretnúť s rôznymi druhmi testov. Väčšinou ste na absolvovanie testu v rámci pohovoru upozornený vopred. Môžeme ich rozdeliť do troch skupín:
+</p>
+<ul>
+	<li><strong></strong><strong>Testy praktických schopností a zručností</strong> – patria sem napríklad jazykové testy, testy počítačových znalostí, testy manuálnej zručnosti a pod.</li>
+	<li><strong></strong><strong>Psychodiagnostické testy </strong>– majú doplňujúcu funkciu pri hľadaní vhodného kandidáta. Niektoré môžu byť aj časovo náročné. Pri zadaní pozorne sledujte inštrukcie, ak vám nie je niečo jasné, spýtajte sa. Na otázky odpovedajte pravdivo a odpovede neskresľujte, väčšinou sa na to pri vyhodnotení príde. Do tejto skupiny testov radíme:<o:p></o:p>
+	<ul>
+		<li>Testy schopností – majú overiť vaše schopnosti, nadanie, výkonnosť (IQ testy, testy pozornosti a pod.).<o:p></o:p></li>
+		<li>Osobnostné dotazníky – sústreďujú sa na osobnostné charakteristiky, štýly správania, vzťahy k ostatným ľuďom (napr. MBTI test, testy tímových rolí, zvládanie stresu, postoje k práci).<o:p></o:p></li>
+		<li>Projektívne testy – ide napríklad o maľovanie obrázku, či doplňovanie príbehu.</li>
+	</ul></li>
+	<li><strong></strong><strong>Assessment Centre (AC) </strong>– Používajú sa väčšinou pri výbere kandidátov na manažérske alebo obchodné pozície. Ide predovšetkým o riešenie rôznych situácií či už tímovo alebo individuálne. Sú časovo najnáročnejšia a môžu trvať aj dva dni. Zúčastňuje sa ho viac uchádzačov a niekoľko hodnotiteľov. Súčasťou bývajú aj psychodiagnostické testy a individuálny pohovor. Vyhodnotenie je veľmi zložité, a preto výsledky očakávajte v horizonte týždňa či dvoch.
+	</li>
+</ul>

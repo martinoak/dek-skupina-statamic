@@ -1,0 +1,21 @@
+sections:
+  main:
+    display: Main
+    fields:
+      tiles:
+        localizable: true
+        type: replicator
+        display: 'Kolekce karuselů'
+        sets:
+          tile:
+            display: Karusel
+            fields:
+              video:
+                type: video
+                instructions: |
+                  video v hlavičce na hlavní stránce (cesta k souboru videa)<br>
+                  - video musí být nahráno ve složce média
+                  - cesta je poté ve formátu /assets/cesta_k_souboru/<název_souboru> např `/assets/homepage/videos/dek.mp4`
+                display: Video
+taxonomies: true
+title: HP_Karusel

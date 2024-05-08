@@ -1,0 +1,61 @@
+license_key: 3b0f2a96-ebd0-457e-9004-f0fb3018cf57
+timezone: Europe/Prague
+date_format: 'F jS, Y'
+default_extension: md
+filesystems:
+  content:
+    driver: local
+    root: site/content
+  storage:
+    driver: local
+    root: site/storage
+  users:
+    driver: local
+    root: site/users
+  themes:
+    driver: local
+    root: site/themes
+    url: /site/themes
+app_key: Y2OLjC47rWO0jnuUlh3ggFajW9mCoAT1
+redactor:
+  -
+    name: Standard
+    settings:
+      buttons:
+        - formatting
+        - bold
+        - italic
+        - link
+        - unorderedlist
+        - orderedlist
+        - html
+        - image
+      formattingAdd:
+        -
+          tag: div
+          title: 'Seznam container'
+  -
+    name: Basic
+    settings:
+      buttons:
+        - bold
+        - italic
+csrf_exclude:
+  - '/!/Form/*'
+yaml_parser: symfony
+use_https: true
+send_powered_by_header: true
+ensure_unique_ids: true
+locales:
+  cz:
+    full: cs.utf8
+    name: Čeština
+    url: '{env:SETTINGS_SYSTEM_LOCALES_CS_URL}'
+  en:
+    full: en_US
+    name: 'English Language'
+    url: '{env:SETTINGS_SYSTEM_LOCALES_EN_URL}'
+  sk:
+    full: sk_SK
+    name: 'Slovenština'
+    url: '{env:SETTINGS_SYSTEM_LOCALES_SK_URL}'

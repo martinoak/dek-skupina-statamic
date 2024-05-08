@@ -1,0 +1,68 @@
+---
+en: 
+    btn: 'DETAIL'
+    obchod: 'business'
+    sluzby: 'SERVICES'
+    vyroba: 'PRODUCTION'
+cz: 
+   btn: 'DETAIL'
+   obchod: 'OBCHOD'
+   sluzby: 'SLUŽBY'
+   vyroba: 'VÝROBA'
+sk: 
+   btn: 'DETAIL'
+   obchod: 'OBCHOD'
+   sluzby: 'SLUŽBY'
+   vyroba: 'VÝROBA'
+---
+    <div class="uk-container uk-container-small">
+        
+        <h1 class="page-name">{{ title }}</h1>
+
+        {{ introduction }}
+
+        <div id="companies">
+            <div data-uk-grid class="uk-grid-collapse">
+
+                {{collection:nase-spolecnosti sort="type|order"}}
+                    {{ session:set typSpolocnosti=type}}
+
+                    {{ session }}
+                        {{if first}}
+                        <div class="uk-width-1-3@s">
+                        <div class="companies-head">{{{{locale}}.{{typSpolocnosti|substr:2:20}}}}</div>
+                        {{elseif typSpolocnosti != typSpolocnostiLast }}
+                        </div>
+                        <div class="uk-width-1-3@s">
+                        <div class="companies-head">{{{{locale}}.{{typSpolocnosti|substr:2:20}}}}</div>
+                        {{/if}}
+                    {{ /session }}
+                            <div class="company">
+                                <div><img src='{{logo}}'></div>
+                                <h2>{{name}}</h2>
+                                <p>
+                                    {{intro}}
+                                </p>
+                                <a href="{{url}}" class="uk-button uk-button-primary uk-button-small">{{{{locale}}.btn}}</a>
+                            </div>
+                    {{ session:set typSpolocnostiLast=type }}    
+                    {{ session }}
+
+                    {{ /session }}
+                {{/collection:nase-spolecnosti}}
+            </div>
+        </div>
+
+
+
+        <div class="uk-margin-large-top uk-margin-large-bottom">
+                {{ if video | is_embeddable }}
+                <!-- Youtube video -->
+                <iframe class="video" src="{{ video | embed_url }}?rel=0&showinfo=0&iv_load_policy=3&controls=0" data-video-ratio="1.779"></iframe>
+                {{ else }}
+                <!-- Other HTML5 video types -->
+                <video class="video" src="{{ video | embed_url }}" controls data-video-ratio="1.779"></video>
+                {{ /if }}
+        </div>
+    </div>
+

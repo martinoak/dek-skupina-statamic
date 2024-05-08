@@ -1,0 +1,123 @@
+//
+// Component: Variables
+//
+// ========================================================================
+
+
+// Global variables
+// ========================================================================
+
+@breakpoint-small:                             650px;  // Phone landscape
+@breakpoint-medium:                            900px;  // Tablet Landscape
+@breakpoint-large:                             1200px; // Desktop
+@breakpoint-xlarge:                            1600px; // Large Screens
+
+@breakpoint-xsmall-max:                        (@breakpoint-small - 1);
+@breakpoint-small-max:                         (@breakpoint-medium - 1);
+@breakpoint-medium-max:                        (@breakpoint-large - 1);
+@breakpoint-large-max:                         (@breakpoint-xlarge - 1);
+
+//
+// DEK colors
+//
+
+@dek-color-red         : #e30013;
+@dek-color-almost-white: #f9f9f9;
+@dek-color-grey-light  : #d8d8d8;
+@dek-color-grey        : #888;
+@dek-color-grey-dark   : #464646;
+@dek-color-almost-black: #222;
+
+//
+// Typography
+//
+
+@global-font-family: Roboto, sans-serif;
+@global-font-size  : 16px;
+@global-line-height: 1.3;
+
+@global-2xlarge-font-size: 42px;
+@global-xlarge-font-size : 26px;
+@global-large-font-size  : 20px;
+@global-medium-font-size : @global-font-size;
+@global-small-font-size  : 0.875rem;
+
+//
+// Colors
+//
+
+@global-color         : @dek-color-grey-dark;
+@global-emphasis-color: @dek-color-red;
+@global-muted-color   : @dek-color-grey;
+
+@global-link-color      : @dek-color-red;
+@global-link-hover-color: darken(@dek-color-red, 20%);
+
+@global-inverse-color: #fff;
+
+//
+// Backgrounds
+//
+
+@global-background: #fff;
+
+@global-muted-background    : @dek-color-grey-light; // #d8d8d8
+@global-primary-background  : @dek-color-red;
+@global-secondary-background: @dek-color-almost-black; // #222
+
+@global-success-background: #32d296;
+@global-warning-background: #faa05a;
+@global-danger-background : #f0506e;
+
+//
+// Borders
+//
+
+@global-border-width: 1px;
+@global-border      : #d8d8d8;
+
+//
+// Box-Shadows
+//
+
+@global-small-box-shadow : 0 0px 7px #707070;
+@global-medium-box-shadow: 0 0px 15px #707070;
+@global-large-box-shadow : 0 14px 25px -14px #7f7f7f;
+@global-xlarge-box-shadow: 0px 25px 58px -25px #7f7f7f;
+
+//
+// Spacings
+//
+
+// Used in margin, section, list
+@global-margin       : 20px;
+@global-small-margin : 10px;
+@global-medium-margin: 30px;
+@global-large-margin : 50px;
+@global-xlarge-margin: 100px;
+
+// Used in grid, column, container, align, card, padding
+@global-gutter       : 30px;
+@global-small-gutter : 15px;
+@global-medium-gutter: 40px;
+@global-large-gutter : 70px;
+
+//
+// Controls
+//
+
+@global-control-height      : 40px;
+@global-control-small-height: 30px;
+@global-control-large-height: 55px;
+
+//
+// Z-index
+//
+
+@global-z-index: 1000;
+
+//
+// Transition time
+//
+
+@global-transition-time: 0.2s;

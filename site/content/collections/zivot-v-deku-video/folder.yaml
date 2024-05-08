@@ -1,0 +1,8 @@
+title: 'Život v DEK'
+fieldset: 'life-in-dek'
+order: numeric
+template: print-and-media/mediadetail
+css-files:
+#    - pages/detail
+columns:
+    - title

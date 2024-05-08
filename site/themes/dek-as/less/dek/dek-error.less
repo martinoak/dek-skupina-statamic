@@ -1,0 +1,56 @@
+
+body .page-content .error-page h1 {
+    color: @global-emphasis-color;
+    font-size: 110px;
+    line-height: 76px;
+    font-weight: normal;
+    margin-top: 40px;
+}
+
+body .page-content .error-page h2 {
+    color: @global-emphasis-color;
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: 30px;
+}
+
+body .page-content .error-page p {
+    margin: 10px 0 30px 0;
+}
+
+@media (max-width: @breakpoint-small-max) {
+    body .page-content .error-page .error-text,
+    body .page-content .error-page .error-img {
+        text-align: center;
+    }
+    
+    body .page-content .error-page .error-img img {
+        max-width: 60%;  // musi byt v % kvuli responzivite
+    }
+}
+    
+@media (min-width: @breakpoint-medium) {
+    body .page-content .error-page h1 {
+        font-size: 190px;
+        line-height: 130px;
+        margin-top: 0;  // .uk-flex-middle v kodu
+    }
+
+    body .page-content .error-page h2 {
+        font-size: 45px;
+        margin-top: 60px;
+    }
+
+    body .page-content .error-page p {
+        margin: 10px 0 50px 0;
+    }
+
+    body .page-content .error-page .error-text {
+        max-width: 520px;
+    }
+
+    body .page-content .error-page .error-img {
+        max-width: 520px;
+        float: right;
+    }
+}

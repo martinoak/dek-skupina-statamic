@@ -1,0 +1,40 @@
+sections:
+  main:
+    display: Main
+    fields:
+      show:
+        type: toggle
+        display: Show
+      headline:
+        type: text
+        display: Title
+        width: 50
+        default: 'Plánovaná aktualizace'
+      style:
+        type: select
+        display: Style
+        width: 50
+        validate: required
+        options:
+          danger: Danger
+        default: danger
+      message:
+        type: markdown
+        display: Message
+        validate: required
+        default: 'Dnes v ?? hod proběhne aktualizace. Uložte rozpracovanou práci a odhlašte se. V případě potřeby kontaktujte IT oddělení.'
+      begin:
+        type: date
+        require_time: true
+        allow_blank: true
+        width: 50
+        display: Begin
+      end:
+        type: date
+        require_time: true
+        allow_blank: true
+        width: 50
+        display: End
+taxonomies: false
+hide: true
+title: 'Deploy message'

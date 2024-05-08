@@ -1,0 +1,35 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateAuthLogTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('dek_dev', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('user_id');
+            $table->string('ip', 15)->nullable();
+			$table->string('token', 40)->nullable();
+            $table->timestamp('action')->nullable();
+			$table->timestamp('login')->nullable();
+			$table->timestamp('logout')->nullable();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('dek_dev');
+    }
+}

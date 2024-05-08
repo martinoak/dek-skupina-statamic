@@ -1,0 +1,34 @@
+<script
+  src="/site/themes/dek-as/js/cookies/VueCookiesBarNoLib.umd.min.js?v=556478987"
+  defer
+  onload="typeof mountVueCookiesBar === 'function' && mountVueCookiesBar()"
+></script>
+<script src="/site/themes/dek-as/js/cookies/VueCookiesGtm.min.js?v=556478987"></script>
+<div id="vue-cookies-bar"></div>
+<script>
+  function mountVueCookiesBar() {
+    var mount = VueCookiesBarNoLib.default;
+    mount({
+      target: "#vue-cookies-bar",
+      settingsHref: "/soubory-cookies",
+      buttonReject: "uk-button v-coo-button",
+      buttonConfirm: "uk-button uk-button-danger",
+      zIndex: 100,
+      lang: "cz",
+      i18n: {
+        cz: DEK.Cookies.i18n.cz,
+      },
+    });
+  }
+
+  window.DEK = window.DEK || {};
+  window.DEK.Cookies = window.DEK.Cookies || {};
+  window.DEK.Cookies.i18n = window.DEK.Cookies.i18n || {};
+  DEK.Cookies.i18n.cz = {
+    title: "Stránky používají soubory cookies",
+    text: "Díky souborům cookies můžeme upravovat a vylepšovat naše webové stránky tak, aby váš zážitek z nakupování v našem e-shopu byl co nejpříjemnější. Zvolením možnosti „Povolit všechny soubory cookies“ nám umožníte předkládat vám obsah ušitý na míru podle vašich preferencí a potřeb. Samozřejmě můžete v nastavení povolit jen některé druhy cookies, ale v takovém případě nám omezujete možnosti přizpůsobit naši nabídku podle toho, co zrovna hledáte.",
+    confirm: "Povolit všechny cookies",
+    settings: "Nastavit ručně",
+    reject: "Povolit pouze nutné",
+  };
+</script>

@@ -1,0 +1,48 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<header id="header">
+        <style>
+
+
+        </style>
+    <div class="lang-switcher-new">
+
+        {{ locales }}
+        <a href="{{ url }}">
+            {{ if first }}
+            <span class="sipka" id="js-actual-lang">{{ locale:key }} </span>
+            {{ else }}
+            <span class="fajfka">{{ locale:key }} </span>
+            {{ /if }}
+        </a>
+        {{ /locales }}
+
+    </div>
+    <div class="uk-container">
+        <div data-uk-sticky="media: @m">
+            <nav data-uk-navbar>
+                <div class='logo'>
+                    <a href="{{ link to="/" }}"></a>
+                </div>
+                <div id="js-menu-icon" class="menu-icon">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <ul class="uk-navbar-nav" id="js-uk-navbar-nav">
+                    {{ nav from="/" is_hidden:isnt="true" title:isnt="dokumenty" title:isnt="documents" scope="tag" }}
+                    <li{{ if is_current or is_parent }} class="uk-active" {{ /if }}>
+                        <a href="{{ url }}">{{ tag:nav_title or title }}</a>
+                        </li>
+                        {{/nav}}
+                        {{ locales }}
+                        {{ if !first }}
+                        <li class="lang-menu">
+                            <a href="{{ url }}">{{ locale:name }}</a>
+                        </li>
+                        {{ /if }}
+                        {{ /locales }}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

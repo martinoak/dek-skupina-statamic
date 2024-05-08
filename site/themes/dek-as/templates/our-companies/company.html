@@ -1,0 +1,69 @@
+---
+en: 
+    btn: 'VISIT PAGE'
+cz: 
+   btn: 'NAVŠTÍVIT STRÁNKY'
+sk: 
+   btn: 'NAVŠTÍVTE STRÁNKY'
+---
+
+<div class="uk-container uk-container-small">
+    <h1 class="page-name">{{name}}</h1>
+</div>
+    <div class='media-detail-navigation'>
+        {{ collection:previous in="nase-spolecnosti" limit="1" sort="order:desc"}}
+            {{ if no_results }}
+                {{collection:nase-spolecnosti limit="1" sort="order:asc" }}
+                    <a href="{{NewsAddon:setAnchorHref url=url}}"  class="nav-arrow nav-next"></a>
+                {{/collection:nase-spolecnosti}}
+            {{else}}
+                <a href="{{NewsAddon:setAnchorHref url=url}}" class="nav-arrow nav-next"></a>
+            {{ /if }}
+        {{/collection:previous}}
+
+        <a href='{{main_addon:translate :lang="locale" type="url" page="companies"}}' class="icon icon-close">
+            <svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="close">
+                <path fill="none" stroke="#fff" stroke-width="2.06" d="M16,16 L4,4"></path>
+                <path fill="none" stroke="#fff" stroke-width="2.06" d="M16,4 L4,16"></path>
+            </svg>
+        </a>
+        {{ collection:next in="nase-spolecnosti" limit="1" sort="order:desc"}}
+            {{ if no_results }}
+                {{collection:nase-spolecnosti limit="1" sort="order:desc" }}
+                    <a href="{{NewsAddon:setAnchorHref url=url}}" class="nav-arrow nav-back"></a>
+                {{/collection:nase-spolecnosti}}
+            {{else}}
+                <a href="{{NewsAddon:setAnchorHref url=url}}" class="nav-arrow nav-back"></a>
+            {{ /if }}
+        {{/collection:next}}
+    </div>
+
+    <section class="uk-section uk-section-secondary media-detail">
+        <div class="uk-container uk-container-xsmall">
+    
+            <div class="redactor-style" data-uk-grid>
+                
+                    <div class="uk-width-1-1">
+                    {{ if company_video | is_embeddable }}
+                    <div class="videowrapper">
+                        <iframe class="Xvideo" src="{{ company_video | embed_url }}?rel=0&showinfo=0&iv_load_policy=3&controls=0" data-video-ratio="1.779"></iframe>
+                    </div>
+                    {{elseif company_video}}
+                    <video src="{{ company_video }}" controls></video>
+                    {{ else }}
+                    <div class="uk-align-center detail-image">
+                        <img src="{{big_picture}}">
+                    </div>
+                    {{ /if }}
+                    <p class="redactor-style">
+                        {{description}}
+                    </p>
+                    <a href="{{web_url}}" style="width: 200px; border-radius: 40px; font-size: 16px; height: 40px;"
+                        class="btn red">{{{{locale}}.btn}}</a><br>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+

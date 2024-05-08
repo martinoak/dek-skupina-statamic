@@ -1,0 +1,35 @@
+title: 'Studentské stáže'
+fields:
+  name:
+    display: 'Jméno a příjmení'
+    validate: required
+  e-mail:
+    display: E-mail
+    validate: email|required
+  phone:
+    display: Telefon
+    validate: required
+  obor:
+    display: obor
+  coop:
+    display: spolupráce
+  files:
+    display: Soubory
+    type: files
+    destination: local/storage/
+  note:
+    display: Poznámka
+  agree:
+    display: Souhlas
+    validate: required
+  lang:
+    display: Jazyk
+columns:
+  - name
+  - e-mail
+  - phone
+  - obor
+  - coop
+  - files
+  - note
+  - agree

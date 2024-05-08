@@ -1,0 +1,58 @@
+sections:
+  main:
+    display: Career
+    fields:
+      -
+        handle: introduction-heading
+        field:
+          type: text
+          localizable: true
+          display: Nadpis
+      -
+        handle: introduction
+        field:
+          type: bard
+          localizable: true
+          display: 'Zaměstnání v DEK'
+          restrict_assets: false
+          save_html: true
+          buttons:
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - html
+            - image
+            - quote
+            - codeblock
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+            - anchor
+      -
+        handle: video
+        field:
+          type: video
+          display: Video
+          instructions: |-
+            Video může být nahráno z youtube
+            - stačí zkopírovat adresu videa z youtube
+
+
+            Video může být nahráno jako soubor
+            - video musí být nahráno ve složce média
+            - cesta je poté ve formátu /assets/cesta_k_souboru/název_souboru např `/assets/homepage/videos/dek.mp4`
+      -
+        handle: vacanies_image
+        field:
+          type: assets
+          container: main
+          folder: /
+          restrict: false
+          max_files: 1
+          width: 33
+          display: 'Náhled k počtu volných pozic'
+taxonomies: true

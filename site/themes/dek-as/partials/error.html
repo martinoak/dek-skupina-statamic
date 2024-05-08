@@ -1,0 +1,20 @@
+<div class="uk-container error-page error-404">
+    
+    <div data-uk-grid class="uk-flex-middle">
+        <div class="uk-width-1-2@m">
+            <div class="error-text">
+                <h1>{{ error }}</h1>
+                <h2>{{{{locale}}.title}}</h2>
+                <p>{{{{locale}}.content}}</p>
+                <a href="{{main_addon:translate type='url' :lang="locale" page="index"}}" class="uk-button uk-button-primary uk-button-large">{{{{locale}}.button}}</a>
+            </div>
+        </div>
+        <div class="uk-width-1-2@m">
+            <div class="error-img">
+                {{ theme:img src={img} tag="true" }}
+            </div>
+        </div>
+ 
+    </div>    
+
+</div>

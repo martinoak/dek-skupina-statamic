@@ -1,0 +1,6 @@
+cache_tags_enabled: true
+static_caching_enabled: false
+stache_lock_enabled: true
+stache_lock_wait_length: 30
+static_caching_lock_hold_length: 0
+stache_always_update: '{env:SETTINGS_CACHING_STACHE_ALLWAYS_UPDATE}'

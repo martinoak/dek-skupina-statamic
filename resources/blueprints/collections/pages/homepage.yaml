@@ -1,0 +1,193 @@
+sections:
+  main:
+    display: Statistiky
+    fields:
+      -
+        handle: meta_description
+        field:
+          type: text
+          display: 'Meta Description'
+      -
+        handle: statistics_heading
+        field:
+          type: text
+          instructions: '9. nejobdivovanější firma'
+          width: 25
+          display: 'Nadpis zprávy bloku Statistiky'
+          localizable: true
+      -
+        handle: statistics_content
+        field:
+          type: bard
+          localizable: true
+          width: 66
+          display: 'Obsah zprávy pro blok statistiky'
+          instructions: '- pro nedělitelné mezery vložte `&nbsp;`'
+          restrict_assets: false
+          save_html: true
+          buttons:
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - html
+            - image
+            - quote
+            - codeblock
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+            - anchor
+      -
+        handle: companies
+        field:
+          type: section
+          display: Společnosti
+      -
+        handle: company_last_heading
+        field:
+          type: text
+          localizable: true
+          display: 'Nadpis poslední karty'
+      -
+        handle: company_last_tile
+        field:
+          type: text
+          display: 'obsah poslední karty'
+          localizable: true
+      -
+        handle: employment
+        field:
+          type: section
+          display: Kariéra
+      -
+        handle: employment_title
+        field:
+          type: text
+          localizable: true
+          display: Nadpis
+      -
+        handle: employment_paragraph
+        field:
+          type: textarea
+          localizable: true
+          display: odstavec
+      -
+        handle: employment_card
+        field:
+          type: text
+          display: 'Obsah karty'
+          localizable: true
+      -
+        handle: videa
+        field:
+          type: replicator
+          sets:
+            video:
+              display: 'Video + Img'
+              fields:
+                -
+                  handle: video
+                  field:
+                    type: video
+                    instructions: |-
+                      video v hlavičce na hlavní stránce (cesta k souboru videa)<br>
+                      - video musí být nahráno ve složce média
+                      - cesta je poté ve formátu /assets/cesta_k_souboru/<název_souboru> např `/assets/homepage/videos/dek.mp4`
+                    display: Video
+                -
+                  handle: obrazek2
+                  field:
+                    type: assets
+                    container: main
+                    folder: /
+                    restrict: false
+                    instructions: 'First frame obrázek '
+                    display: Obrázek
+                    max_files: 1
+          display: Videa
+          localizable: true
+      -
+        handle: nadpis-1
+        field:
+          type: text
+          localizable: true
+          width: 33
+          display: 'Nadpis bloku 1'
+      -
+        handle: nadpis-2
+        field:
+          type: text
+          localizable: true
+          width: 33
+          display: 'Nadpis bloku 2'
+      -
+        handle: nadpis-3
+        field:
+          type: text
+          localizable: true
+          width: 33
+          display: 'Nadpis bloku 3'
+      -
+        handle: text-1
+        field:
+          type: text
+          localizable: true
+          width: 33
+          display: 'text bloku 1'
+      -
+        handle: text-2
+        field:
+          type: text
+          localizable: true
+          width: 33
+          display: 'text bloku 2'
+      -
+        handle: text-3
+        field:
+          type: text
+          localizable: true
+          width: 33
+          display: 'text bloku 3'
+      -
+        handle: odkaz_1
+        field:
+          type: text
+          width: 33
+          display: 'Odkaz 1'
+          localizable: true
+      -
+        handle: odkaz_2
+        field:
+          type: text
+          localizable: true
+          width: 33
+          display: 'Odkaz 2'
+      -
+        handle: odkaz_3
+        field:
+          type: text
+          localizable: true
+          width: 33
+          display: 'Odkaz 3'
+      -
+        handle: nadpis-mobil
+        field:
+          type: text
+          localizable: true
+          display: 'Text ktorý sa zobrazí na mobile'
+      -
+        handle: obrazek
+        field:
+          type: assets
+          container: main
+          folder: /
+          restrict: false
+          instructions: 'Obrázek pro mobil, min 1665px široké a optimalizované pro co nejmenší datovou náročnost'
+          display: 'Obrázek 1'
+          max_files: 1
+taxonomies: true
+title: Homepage

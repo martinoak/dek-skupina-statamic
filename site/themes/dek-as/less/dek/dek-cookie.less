@@ -1,0 +1,449 @@
+.vue-cookies-form {
+    --checkbox-bg    : #58bc00;
+    --title-bg       : #f2f2f2;
+    --title-color    : #888;
+    --sub-title-color: #464646;
+}
+
+.vue-cookies-bar {
+    --color     : #464646;
+    --background: #fcfbde;
+    --radius    : 4px;
+    --z-index   : 10;
+}
+
+.v-coo-f {
+    margin-bottom: 30px;
+}
+
+.v-coo-f__buttons {
+    display: flex;
+}
+
+.v-coo-f__buttons button {
+    margin-right : 18px;
+    margin-bottom: 18px;
+}
+
+.v-coo-f__buttons button:last-child {
+    margin-right: 0;
+}
+
+.v-coo-f__box {
+    margin-bottom: 18px;
+    border       : 1px solid #dfdfdf;
+    border-radius: 4px;
+}
+
+.v-coo-f__header {
+    display         : flex;
+    align-items     : center;
+    border-bottom   : 1px solid #f2f2f2;
+    background-color: #f2f2f2;
+    border-bottom   : 1px solid var(--title-bg);
+    background-color: var(--title-bg);
+    padding         : 25px;
+}
+
+.v-coo-f__button {
+    appearance      : none;
+    display         : inline-flex;
+    align-items     : center;
+    justify-content : center;
+    cursor          : pointer;
+    user-select     : none;
+    padding         : 5px 10px;
+    line-height     : 1.4;
+    text-decoration : none !important;
+    background-color: #fff;
+    border          : 1px solid #464646;
+    color           : #464646;
+    border-radius   : 4px;
+    transition      : all .15s ease-in-out;
+}
+
+.v-coo-f__button-green {
+    background-color: #58bc00;
+    border          : 1px solid #58bc00;
+    color           : #fff;
+}
+
+.v-coo-f__button-dark {
+    background-color: #464646;
+    border          : 1px solid #464646;
+    color           : #fff;
+}
+
+.v-coo-f__titles {
+    flex        : 1 1 0;
+    font-weight : 600;
+    font-size   : 18px;
+    margin-right: 20px;
+}
+
+.v-coo-f__title {
+    color    : #888;
+    color    : var(--title-color);
+    font-size: 16px;
+}
+
+.v-coo-f__sub-title {
+    font-weight: 600;
+    color      : #464646;
+    color      : var(--sub-title-color);
+    font-size  : 18px;
+}
+
+.v-coo-f__checkbox {
+    margin: 0;
+}
+
+.v-coo-f__checkbox__input {
+    width              : 36px;
+    height             : 18px;
+    margin             : 4.5px 9px 0 0;
+    vertical-align     : top;
+    background-color   : #fff;
+    background-image   : url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+    background-position: left center;
+    background-repeat  : no-repeat;
+    background-size    : contain;
+    border             : 1px solid #c3c3c3;
+    border-radius      : 26px;
+    transition         : background-position .15s ease-in-out;
+    -webkit-appearance : none;
+    appearance         : none;
+}
+
+.v-coo-f__checkbox__input:checked {
+    background-position: right center;
+    background-image   : url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    background-color   : #58bc00;
+    border-color       : #58bc00;
+    background-color   : var(--checkbox-bg);
+    border-color       : var(--checkbox-bg);
+}
+
+.v-coo-f__text {
+    padding    : 15px 25px 25px 25px;
+    font-size  : 15.75px;
+    line-height: 150%;
+    color      : #888;
+}
+
+.v-coo-f__message {
+    width           : 100%;
+    border          : 0px solid #58bc00;
+    background-color: #e6f1d8;
+    padding-left    : 18px;
+    color           : #58bc00;
+    overflow        : hidden;
+    box-sizing      : border-box;
+    display         : flex;
+    align-items     : center;
+    transition      : height 0.3s ease-out, opacity 0.3s ease-out, margin-bottom 0.3s ease-out;
+    ;
+    height       : 0;
+    opacity      : 0;
+    margin-bottom: 0;
+}
+
+.v-coo-f__message.error {
+    border-color    : #e2001a;
+    background-color: #ebbcbc;
+    color           : #e2001a;
+}
+
+.v-coo-f__message.visible {
+    height       : 45px;
+    opacity      : 1;
+    margin-bottom: 18px;
+    border-width : 1px;
+}
+
+@media screen and (max-width: 500px) {
+    .v-coo-f__buttons {
+        flex-direction: column-reverse;
+    }
+
+    .v-coo-f__buttons button {
+        margin-right: 0;
+    }
+
+    .v-coo-f__header {
+        padding       : 15px;
+        flex-direction: column;
+        align-items   : baseline;
+    }
+
+    .v-coo-f__text {
+        padding: 15px;
+    }
+
+    .v-coo-f__checkbox {
+        margin-top: 13.5px;
+    }
+}
+
+/*cookie bar*/
+.v-coo-b {
+    position  : fixed;
+    width     : 100%;
+    bottom    : 10px;
+    z-index   : 10;
+    z-index   : var(--z-index);
+    transition: opacity .35s ease-out;
+    opacity   : 0;
+    color     : #464646;
+    color     : var(--color);
+    padding   : 0 10px;
+}
+
+.v-coo-b,
+.v-coo-b * {
+    box-sizing: border-box;
+}
+
+.v-coo-b.visible {
+    opacity: 1;
+}
+
+.v-coo-b__inner {
+    max-width    : 960px;
+    padding      : 20px;
+    background   : #fcfbde;
+    background   : var(--background);
+    border-radius: 4px;
+    border-radius: var(--radius);
+    margin       : auto;
+    border       : 1px solid #dfdfdf;
+    box-shadow   : 0px 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+.v-coo-b__title {
+    font-size  : 20px;
+    font-weight: bold;
+    margin     : 0 0 10px 0;
+}
+
+.v-coo-b__text {
+    font-size    : 14px;
+    margin-bottom: 20px;
+}
+
+.v-coo-b__buttons a {
+    margin-right: 10px;
+}
+
+.v-coo-b__button {
+    appearance      : none;
+    display         : inline-flex;
+    align-items     : center;
+    justify-content : center;
+    cursor          : pointer;
+    user-select     : none;
+    padding         : 5px 10px;
+    line-height     : 1.4;
+    text-decoration : none !important;
+    background-color: #fff;
+    border          : 1px solid #464646;
+    color           : #464646;
+    border-radius   : 4px;
+    transition      : all .15s ease-in-out;
+}
+
+.v-coo-b__button-green {
+    background-color: #58bc00;
+    border          : 1px solid #58bc00;
+    color           : #fff;
+}
+
+@media screen and (max-width: 500px) {
+    .v-coo-b__buttons a {
+        margin: 0;
+    }
+
+    .v-coo-b__buttons a:last-child {
+        margin-bottom: 10px;
+    }
+
+    .v-coo-b__buttons {
+        display       : flex;
+        flex-direction: column-reverse;
+    }
+}
+
+.cookie-message {
+    position        : fixed;
+    bottom          : 0;
+    left            : 0;
+    display         : table;
+    width           : 100%;
+    background-color: #D8BB00;
+    padding         : 13px 15px;
+    text-align      : center;
+    font-size       : 13px;
+    font-weight     : bold;
+    color           : #fff;
+    z-index         : 100;
+
+    a {
+        color          : #fff;
+        text-decoration: underline;
+    }
+
+    .more-info {
+        background-color: @dek-color-grey-dark;
+        color           : #fff;
+    }
+
+    .cookie-button {
+        height            : 40px;
+        border            : none;
+        border-radius     : 30px;
+        background-color  : #fff;
+        padding           : 6px 19px;
+        //margin-left     : 20px;
+        font-size         : 14px;
+        cursor            : pointer;
+        outline           : none;
+    }
+
+
+    .cross {
+        cursor  : pointer;
+        position: absolute;
+        right   : 30px;
+        width   : 15px;
+        height  : 15px;
+        top     : calc(50% - 7.5px);
+
+        &:before,
+        &:after {
+            position        : absolute;
+            content         : "";
+            height          : 22px;
+            width           : 2px;
+            background-color: #fff;
+            top             : 50%;
+            margin-top      : -8px;
+            left            : 50%;
+            margin-left     : -1px;
+            z-index         : 2;
+        }
+
+        &:hover:before,
+        &:hover:after {
+            background-color: #eee;
+        }
+
+        &:before {
+            -webkit-transform: rotate(-45deg);
+            transform        : rotate(-45deg);
+        }
+
+        &:after {
+            -webkit-transform: rotate(45deg);
+            transform        : rotate(45deg);
+        }
+
+        &:hover:before,
+        &:hover:after {
+            background-color: #707070;
+        }
+    }
+
+
+    @media (max-width: @breakpoint-small) {
+
+        padding       : 13px 30px;
+        padding-bottom: 3px;
+
+        &>div {
+            padding-top: 20px;
+        }
+
+        & .cross {
+            top  : 10px;
+            right: 15px;
+        }
+
+        & .cookie-button {
+            display: block;
+            margin : 8px auto;
+        }
+    }
+}
+
+
+/*** BAR ***/
+.vue-cookies-bar {
+    .v-coo-b__inner {
+        background-color: #f2f2f2;
+        border          : #d8d8d8 1px solid;
+        border-radius   : 0;
+    }
+
+    .v-coo-b__title {
+        //color      : #0a2d6e;
+        font-size  : 18px;
+        font-weight: 600;
+    }
+
+    .v-coo-b__text {
+        color        : #666;
+        margin-bottom: 25px;
+    }
+}
+
+
+/*** FORM ***/
+.vue-cookies-form {
+    max-width: none !important;
+
+    .v-coo-f__text {
+        font-size: 1rem;
+    }
+
+    .v-coo-f__checkbox__input {
+        cursor: pointer;
+    }
+
+    .v-coo-f__box {
+        border-radius: 0;
+        border       : #D9D9D9 1px solid;
+    }
+
+    .v-coo-f__header {
+        //background-color: #F7F7F8;
+    }
+
+    .v-coo-f__title {
+        font-weight: 500;
+        font-size  : 18px;
+        color      : #666666;
+    }
+
+    .v-coo-f__sub-title {
+        font-weight  : 600;
+        font-size    : 20px;
+        //color      : #0A2D6E;
+    }
+
+    .v-coo-f__checkbox__input:checked {
+        background-color: #58bc00;
+        border-color    : #58bc00;
+    }
+}
+
+.v-coo-button {
+    background: #fff;
+    color     : #000;
+    border    : #d8d8d8 1px solid;
+}
+
+.v-coo-button-dark {
+    background: #222222;
+    color     : #fff;
+    border    : #222222 1px solid;
+}

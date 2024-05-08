@@ -1,0 +1,37 @@
+---
+title: 'Co se děje poté, co mě vyberete?'
+id: e98b9db8-de9c-491e-96e4-b2a83dae0dab
+blueprint: simple_redactor_page
+---
+<ul>
+	<li>Domluvíme se na termínu nástupu.</li>
+	<li>Zašleme vám e-mail, ve kterém budou uvedené veškeré
+            dokumenty, které od vás budeme potřebovat při nástupu
+            (vstupní prohlídka, online výpis z rejstříku trestů apod.)
+	</li>
+	<li>Pár dní před termínem nástupu vás budeme kontaktovat a
+            potvrdíme si tak datum a čas.
+	</li>
+	<li>V den nástupu s vámi podepíšeme pracovní smlouvu, předáte
+            nám potřebné dokumenty a proplatíme vám poplatek za vstupní
+            prohlídku.
+	<br>
+	</li>
+	<li>Poté budete uvedeni na pracoviště, kde se seznámíte s
+            kolegy a bude vám ukázáno pracovní místo. Od IT oddělení se
+            dozvíte přístupová hesla do PC. Bude s vámi probrán plán
+            adaptace a přidělen mentor, který vás bude zaučovat. 
+	</li>
+	<li>Plán adaptace je navržen na 3 měsíce, tzn. na dobu
+            zkušební lhůty. Během těchto tří měsíců se budete seznamovat
+            s chodem společnosti a vaší prací. Průběžně budete plán
+            probírat s nadřízeným, abyste si vzájemně ujasnili, co už
+            zvládáte a na čem je nutné ještě pracovat. 
+	</li>
+	<li>V průběhu zaškolování se ptejte, je to určitě lepší, než
+            abyste dělali zbytečné chyby. Pokud máte dotazy k firemní
+            kultuře a jiným obecným věcem, můžete se zeptat i na
+            oddělení lidských zdrojů, rádi otázky zodpoví a pomohou vám
+            začlenit se do společnosti.
+	</li>
+</ul>

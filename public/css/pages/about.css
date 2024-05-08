@@ -1,0 +1,4 @@
+.row:nth-child(3):not(.branch) {
+    max-width: 980px;
+    margin: auto;
+}

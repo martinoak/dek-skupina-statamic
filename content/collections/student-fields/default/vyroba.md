@@ -1,0 +1,7 @@
+title: Výroba
+order_number: '2'
+field_img: strojirenstvi.svg
+popis_oboru: 'ekonomika výroby, ekologie, analýza životního cyklu, materiálové inženýrství aj.'
+order: '2'
+id: ba728010-5669-4649-b983-629b672bad5a
+blueprint: Student_fields

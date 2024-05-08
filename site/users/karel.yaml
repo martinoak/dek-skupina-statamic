@@ -1,0 +1,10 @@
+---
+roles:
+  - 406f0b7e-3217-4148-943e-e3a859e76fbf
+email: karel.zimmermann@gmail.com
+first_name: Zimmermann
+last_name: Kája
+id: 32a95baa-9dca-470c-aa2c-98441ab5db00
+password_hash: $2y$10$wmDyQOvDuyq0FYQw7kn01eq3uR0iyKmch9P/XhEa17RSmWf08eCAi
+---
+test user

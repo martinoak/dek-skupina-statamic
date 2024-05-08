@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> <html class="no-js"> <![endif]-->
+<head>
+        <title>DEK a.s. Kariéra</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="{{theme:js src="libraries/jquery.min.1.7"}}"></script>
+        {{ if {env:APP_VUE_DEVEL} }}
+            <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        {{ else }}
+            <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+        {{ /if }}
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+        <link rel="stylesheet" href="{{ theme:css }}">
+        {{scripts}}
+            <script src="{{ theme:js src=value }}"></script> 
+        {{/scripts}}
+        {{css-files}}
+            <link rel="stylesheet" href="{{ theme:css src=value }}">
+        {{/css-files}}
+
+        <script src="//www.google.com/recaptcha/api.js?render={{ env:RECAPTCHA_SITE_KEY }}"></script>
+        <script src="{{ theme:js src="dekrecaptcha.js" cache_bust="true" }}"></script>
+        <script>
+            dekReCaptcha = new DekReCaptcha("{{ env:RECAPTCHA_SITE_KEY }}");
+            //dekReCaptcha.init();
+        </script>
+</head>
+<body>
+    {{partial:nav}}
+        {{ user }} 
+            {{ if username == 'test' }}
+                <div id="here"></div>
+            {{/if}}
+        {{/user}}
+    <div id='shadow' ></div>
+    <div id="en-warn">
+        <div class='cross' onclick="closeWarning()"></div>
+        <p>
+            Sorry, this part of the site is not avaliable in English.
+        </p>
+        <p>
+            Our company requires communicative knowledge of the Czech language, therefore the choice of positions is limited.
+        </p>
+        <p>
+            <i>Human resources department DEK a.s.</i>
+        </p>
+        <a onclick="continueInVersion('en')">Go to the simplifed version</a> <a class="btn red" onclick="continueInVersion('cs')">CONTINUE IN CZECH</a>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="column">
+                    <h1 class='page-name'>{{title}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{if filters}}
+        {{ partial:careerfilters }}
+    {{/if}}
+        {{ template_content }}
+    {{ partial:footer }}
+    {{ partial:cookies }}
+    <script src="{{theme:js src='main'}}"></script>
+
+    <script src="{{ theme:js src='careerWarning.js' }}"></script> 
+    <script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+start_page: dashboard
+date_format: Y/n/d
+pagination_size: 50
+widgets:
+  -
+    type: collection
+    collection: vyrocni-zpravy
+    limit: 5
+    width: half
+  -
+    type: collection
+    collection: nase-spolecnosti
+    limit: 5
+    width: half
+  -
+    type: form
+    form: kontaktni_formular
+    width: full
+    limit: 5
+    fields:
+      - e-mail
+      - zprava

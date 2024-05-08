@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+    <head>
+
+        
+<script>
+    var dataLayer = dataLayer || [];
+</script>
+
+{{ if {env:APP_VUE_DEVEL} }}
+{{ else }}
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({ 'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TJ77783');</script>
+<!-- End Google Tag Manager -->
+{{ /if }}
+
+
+        <title>DEK a.s.{{ if title }} | {{ title }}{{ /if }}</title>
+
+        <meta charset="UTF-8">
+        {{if meta_description }}
+        <meta name="description" content="{{ meta_description }}">
+        {{ else }}
+        <meta name="description" content="DEK je skupina společností, které se zabývají dodávkami materiálů a služeb pro stavebnictví.">
+        {{ /if }}
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+        <script src="{{ theme:js src="libraries/jquery.min.1.7" }}"></script>
+        {{ if {env:APP_VUE_DEVEL} }}
+            <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        {{ else }}
+            <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+        {{ /if }}
+        <script src="{{ theme:js src="uikit/uikit.min" }}"></script>
+        <script src="{{ theme:js src="uikit/uikit-icons.min" }}"></script>
+        <script src="{{ theme:js src="dek-utils.js" cache_bust="true" }}"></script>
+        
+        <link rel="stylesheet" href="{{ theme:css src="uikit-dek.css" cache_bust="true" }}">
+
+        {{ scripts }}
+            <script src="{{ theme:js src=value cache_bust="true" }}"></script> 
+        {{/scripts}}
+        {{ css-files }}
+            <link rel="stylesheet" href="{{ theme:css src=value cache_bust="true" }}">
+        {{ /css-files }}
+
+        <script src="//www.google.com/recaptcha/api.js?render={{ env:RECAPTCHA_SITE_KEY }}"></script>
+        <script src="{{ theme:js src="dekrecaptcha.js" cache_bust="true" }}"></script>
+        <script>
+            dekReCaptcha = new DekReCaptcha("{{ env:RECAPTCHA_SITE_KEY }}");
+            //dekReCaptcha.init();
+        </script>
+
+    </head>
+    <body class="section-{{ segment_1 or "home" }}">
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ77783"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        
+        {{ partial:header }}
+        <section id="content" class="page-content">
+            {{ template_content }}
+        </section>
+        {{ partial:footer_new}}
+        {{ partial:cookies }}
+        <script src="{{ theme:js src="main" cache_bust="true" }}"></script> 
+
+    </body>
+</html>

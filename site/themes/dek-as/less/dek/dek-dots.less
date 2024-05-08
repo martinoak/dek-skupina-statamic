@@ -1,0 +1,32 @@
+
+.dots > div,
+.dots > div:before, 
+.dots > div:after {
+    position: relative;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    background-color: @dek-color-red;
+    display: inline-block;    
+}
+
+.dots > div:before, 
+.dots > div:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 13px;
+}
+
+.dots > div:after {
+    left: 26px;
+}
+
+.dots {
+    display: inline-block;
+    width: 39px;
+}
+
+.dots:hover div, .dots:hover div:before, .dots:hover div:after {
+    background: @dek-color-grey-dark;
+}

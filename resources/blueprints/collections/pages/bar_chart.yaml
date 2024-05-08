@@ -1,0 +1,16 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: axisX
+        field:
+          type: integer
+          display: 'Osa X'
+      -
+        handle: axisY
+        field:
+          type: text
+          display: 'Osa Y'
+taxonomies: true
+title: 'bar chart'

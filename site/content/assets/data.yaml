@@ -1,0 +1,16 @@
+path: data
+url: /data
+title: Data
+assets:
+  pozvanka-vh-dek-a-s--ze-dne-20--dubna-2021-3de555ea.pdf:
+    title: 'Pozvánka na řádnou valnou hromadu'
+    alt: 'Pozvánka na řádnou valnou hromadu'
+  osvedceni---dic---2022.pdf:
+    title: 'Osvědčení o DIČ'
+    alt: 'Osvědčení o DIČ'
+  osvedceni---dic---2023.pdf:
+    title: 'Osvědčení o DIČ'
+    alt: 'Osvědčení o DIČ'
+  dopis-premierovi.pdf:
+    title: 'Společná výzva k přijetí manželství pro všechny páry'
+    alt: 'Společná výzva k přijetí manželství pro všechny páry'

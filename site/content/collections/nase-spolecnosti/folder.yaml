@@ -1,0 +1,10 @@
+title: 'HP_Naše společnosti'
+fieldset: companies
+order: numeric
+template: our-companies/company
+css-files:
+  - pages/detail
+columns:
+  - title
+  - slug
+  - order

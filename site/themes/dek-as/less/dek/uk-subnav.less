@@ -1,0 +1,167 @@
+//
+// Component: Subnav
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@subnav-margin-horizontal: 20px;
+@subnav-margin-vertical  : 40px;
+
+@subnav-item-color                : @global-color;
+@subnav-item-hover-color          : @global-color;
+@subnav-item-hover-text-decoration: none;
+@subnav-item-active-color         : @global-emphasis-color;
+
+@subnav-divider-margin-horizontal: @subnav-margin-horizontal;
+@subnav-divider-border-height    : 1.5em;
+@subnav-divider-border-width     : @global-border-width;
+@subnav-divider-border           : @global-border;
+
+@subnav-pill-item-padding-vertical  : 0px;
+@subnav-pill-item-padding-horizontal: @button-padding-horizontal;
+@subnav-pill-item-background        : @button-default-background;
+@subnav-pill-item-color             : @button-default-color;
+@subnav-pill-item-hover-background  : @button-default-hover-background;
+@subnav-pill-item-hover-color       : @button-default-hover-color;
+@subnav-pill-item-onclick-background: @subnav-pill-item-hover-background;
+@subnav-pill-item-onclick-color     : @subnav-pill-item-hover-color;
+@subnav-pill-item-active-background : @button-default-active-background;
+@subnav-pill-item-active-color      : @button-default-active-color;
+
+@subnav-item-disabled-color: @global-muted-color;
+
+//
+// New
+//
+
+@subnav-item-font-size     : @button-font-size;
+@subnav-item-text-transform: @button-transform;
+@subnav-item-height        : @button-line-height;
+
+
+// Component
+// ========================================================================
+
+.hook-subnav() {
+    margin-top   : @subnav-margin-vertical;
+    margin-bottom: @subnav-margin-vertical;
+}
+
+.hook-subnav-item() {
+    font-size          : @subnav-item-font-size;
+    text-transform     : @subnav-item-text-transform;
+    border-radius      : @subnav-item-height / 2;
+    height             : @subnav-item-height;
+    line-height        : @subnav-item-height;
+    transition         : @global-transition-time ease-in-out;
+    transition-property: color, background-color;
+    height             : 50px;
+    border-radius      : 25px;
+    display            : flex;
+    align-items        : center;
+}
+
+.hook-subnav-item-hover() {}
+
+.hook-subnav-item-active() {}
+
+
+// Divider modifier
+// ========================================================================
+
+.hook-subnav-divider() {}
+
+
+// Pill modifier
+// ========================================================================
+
+.hook-subnav-pill-item() {}
+
+.hook-subnav-pill-item-hover() {}
+
+.hook-subnav-pill-item-onclick() {}
+
+.hook-subnav-pill-item-active() {}
+
+
+// Disabled
+// ========================================================================
+
+.hook-subnav-item-disabled() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-subnav-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+.hook-inverse-subnav-item() {}
+
+.hook-inverse-subnav-item-hover() {}
+
+.hook-inverse-subnav-item-active() {}
+
+.hook-inverse-subnav-divider() {}
+
+.hook-inverse-subnav-pill-item() {}
+
+.hook-inverse-subnav-pill-item-hover() {}
+
+.hook-inverse-subnav-pill-item-onclick() {}
+
+.hook-inverse-subnav-pill-item-active() {}
+
+.hook-inverse-subnav-item-disabled() {}
+
+@media (max-width: @breakpoint-small) {
+    .uk-subnav {
+        background   : #bc0000;
+        margin-top   : 0;
+        margin-bottom: 0;
+        margin       : 0 0 0 -20px;
+    }
+
+    #filters-container {
+        margin-bottom: 0;
+        position     : fixed;
+        bottom       : 0;
+        z-index      : 3;
+        width        : 100%;
+        left         : 0;
+    }
+
+    .uk-subnav-pill>.uk-active>a {
+        background-color   : #bc0000;
+        //display: block;
+        color              : #fff;
+        font-size          : 16px;
+        text-transform     : uppercase;
+        border-radius      : 18.5px;
+        //height: 37px;
+        line-height        : 37px;
+        transition         : 0.2s ease-in-out;
+        transition-property: color, background-color;
+
+    }
+
+    a.btn.red {
+       // background-color: #bc0000;
+        color           : #fff;
+    }
+
+    .uk-subnav-pill>*> :first-child {
+        color  : #fff;
+        padding: 0px 5px;
+    }
+
+    .uk-subnav.uk-subnav-pill li a {
+        padding: 14px 25px;
+    }
+}

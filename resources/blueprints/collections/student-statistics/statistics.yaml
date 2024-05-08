@@ -1,0 +1,22 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: item
+        field:
+          type: text
+          instructions: položka
+          localizable: true
+          display: item
+      -
+        handle: value
+        field:
+          type: main_addon
+          step: 0.01
+          min: 0
+          max: 9999
+          display: value
+          localizable: true
+taxonomies: true
+title: statistics

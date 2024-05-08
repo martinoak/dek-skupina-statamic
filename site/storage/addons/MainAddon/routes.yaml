@@ -1,0 +1,215 @@
+#
+# cesty pro prelozeni - url + zobrazovany nazev pro odkaz
+#
+pagesTranslate:
+    index:
+        url:
+            en: /en/
+            cz: /
+        name:
+            en: Group DEK – Homepage
+            cz: Skupina DEK – Hlavní stránka
+    about:
+        url:
+            en: /en/about
+            cz: /o-nas
+            sk: /sk/o-nas
+        name:
+            en: About us
+            cz: O nás
+            sk: O nás
+    companies:
+        url:
+            en: /en/our-companies
+            cz: /nase-spolecnosti
+            sk: /sk/nase-spolecnosti
+        name:
+            en: Our companies
+            cz: Naše společnosti
+            sk: Naše spoločnosti
+    media:
+        url:
+            en: /en/media
+            cz: /pro-media
+            sk: /sk/pro-media
+        name:
+            en: Print and media
+            cz: Tisk a média
+            sk: Tlač a Médiá
+    career:
+        url:
+            en: /en/career
+            cz: /kariera
+            sk: /sk/kariera
+        name:
+            en: Career
+            cz: Kariéra
+            sk: Kariéra
+    contact:
+        url:
+            en: /en/contact
+            cz: /kontakt
+            sk: /sk/kontakt
+        name:
+            en: Contact
+            cz: Kontakt
+    history:
+        url:
+            en: /en/about#history
+            cz: /o-nas#history
+            sk: /sk/o-nas#history
+        name:
+            en: History
+            cz: Historie
+            sk: História
+    footer:
+        url:
+            en: 
+            cz: 
+        name:
+            en: Others – footer
+            cz: Ostatní – patička
+    news-all:
+        url:
+            en: /en/media
+            cz: /pro-media
+            sk: /sk/pro-media
+        name:
+            en: All news
+            cz: Všechny zprávy
+            sk: Všetky správy
+    news-appr:
+        url:
+            en: /en/media?type=appreciation
+            cz: /pro-media?type=oceneni
+            sk: /sk/pro-media?type=oceneni
+        name:
+            en: Appreciation
+            cz: Ocenění
+            sk: Ocenenia
+    news-kontakt:
+        url:
+            en: /en/media/kontakt-pro-media
+            cz: /pro-media/kontakt-pro-media
+            sk: /sk/pro-media/kontakt-pro-media
+        name:
+            en: Contact for media
+            cz: Kontakt pro média
+            sk: Kontakt pre médiá
+    news-ann:
+        url:
+            en: /en/media?type=annual
+            cz: /pro-media?type=vyrocni-zpravy
+            sk: /sk/pro-media?type=vyrocni-zpravy
+        name:
+            en: Annual Publications
+            cz: Výroční publikace
+            sk: Výročné publikácie
+    news-about:
+        url:
+            en: /en/media?type=about
+            cz: /pro-media?type=o-nas
+            sk: /sk/pro-media?type=o-nas
+        name:
+            en: News about us
+            cz: Napsali o nás
+            sk: Napísali o nás
+    protection:
+        url:
+            en: /en/personal-protection
+            cz: /ochrana-osobnich-udaju
+            sk: /sk/ochrana-osobnich-udaju
+        name:
+            en: Protection of personal data
+            cz: Ochrana osobních údajů
+            sk: Ochrana osobných údajov
+    cookies:
+        url:
+            en: /en/cookies
+            cz: /soubory-cookies
+            sk: /sk/soubory-cookies
+        name:
+            en: Cookies
+            cz: Soubory cookies
+            sk: Súbory cookies
+    map:
+        url:
+            en: /en/web-map
+            cz: /mapa-stranek
+            sk: /sk/mapa-stranek
+        name:
+            en: Web map
+            cz: Mapa stránek
+            sk: Mapa stránky
+    condition:
+        url:
+            en: /en/conditions-of-use
+            cz: /podminky-pouziti
+            sk: /sk/podminky-pouziti
+        name:
+            en: Conditions of use
+            cz: Podmínky použití
+            sk: Podmienky použitia
+    volna-mista:
+        url:
+            en: /en/career
+            cz: /kariera/volna-pracovni-mista
+            sk: /sk/kariera/volna-pracovni-mista
+        name:
+            en: Vacancies
+            cz: Volné pozice
+            sk: Voľné pozície
+    zivot-v-dek:
+        url:
+            en: /en/career
+            cz: /kariera
+            sk: /sk/kariera
+        name:
+            en: Vacancies
+            cz: Život v DEK
+            sk: Život v DEK
+    casto-kladene-otazky:
+        url:
+            en: /en/career
+            cz: /kariera/casto-kladene-otazky
+            sk: /sk/kariera/casto-kladene-otazky
+        name:
+            en: Vacancies
+            cz: Rady pro uchazeče
+            sk: Rady pre uchádzačov
+    caste-dotazy:
+        url:
+            en: /en/career
+            cz: /kariera/casto-kladene-otazky
+            sk: /sk/kariera/casto-kladene-otazky
+        name:
+            en: Vacancies
+            cz: ČASTÉ DOTAZY
+            sk: NAJČASTEJŠIE OTÁZKY
+    pro-studenty:
+        url:
+            en: /en/for-students
+            cz: /kariera/pro-studenty
+            sk: /sk/kariera/pro-studenty
+        name:
+            en: For students
+            cz: Pro studenty
+            sk: Pre študentov
+    kalendar-akci:
+        url:
+            en: /en/calendar-of-events
+            cz: /kalendar-akci
+            sk: /sk/kalendar-akcii
+        name:
+            en: Calendar of events
+            cz: Kalendář akcí
+            sk: Kalendár akcií
+    archiv-akci:
+        url:
+            en: /en/calendar-of-events/archive
+            cz: /kalendar-akci/archiv
+            sk: /sk/kalendar-akcii/archiv
+        name:
+            en: Calendar of events archive
+            cz: Archiv akcí
+            sk: Archív akcií

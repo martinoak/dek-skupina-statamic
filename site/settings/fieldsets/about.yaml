@@ -1,0 +1,34 @@
+sections:
+  main:
+    display: Main
+    fields:
+      meta_description:
+        type: text
+        display: 'Meta Description'
+      title:
+        display: Nazev
+        type: text
+        localizable: true
+      introduction-heading:
+        display: Podnadpis
+        type: text
+        localizable: true
+      video:
+        localizable: true
+        type: video
+        display: Video
+        instructions: |
+          Video může být nahráno z youtube
+          - stačí zkopírovat adresu videa z youtube
+          
+          
+          Video může být nahráno jako soubor
+          - video musí být nahráno ve složce média
+          - cesta je poté ve formátu /assets/cesta_k_souboru/název_souboru např `/assets/homepage/videos/dek.mp4`
+      o_nas:
+        type: redactor
+        display: 'O nas'
+        localizable: true
+        restrict_assets: false
+taxonomies: true
+title: About

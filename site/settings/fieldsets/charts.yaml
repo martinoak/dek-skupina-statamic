@@ -1,0 +1,30 @@
+taxonomies: true
+title: charts
+fields:
+      title:
+        localizable: true
+        type: text
+        display: Nadpis grafu
+      subtitle:
+        localizable: true
+        type: text
+        display: podnadpis
+      bars:
+        localizable: true
+        type: replicator
+        display: 'Data pro graf'
+        sets:
+          axises:
+            display: Sloupec
+            fields:
+              axisX:
+                localizable: true
+                type: integer
+                display: Osa X
+              axisY:
+                localizable: true
+                type: text
+                instructions: 'Obrat společnosti v tvare 20.555 / Počet zaměstnanců celé čísla'
+                display: Osa Y
+taxonomies: true
+title: Charts

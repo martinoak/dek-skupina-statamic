@@ -1,0 +1,51 @@
+.map
+{
+    max-width: 750px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.map .column {
+    max-width: 346px;
+}
+.map li
+{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.map a
+{
+    display: inline-block;
+}
+.map li:not(.heading):before
+{
+    content: url(../../icons/arrows.svg); width: 20px; height: 20px; display: inline-block; margin-right: 17px;margin-left: 34px;
+}
+.map li.heading
+{
+    background-color: #e30013;
+    border-radius: 25px;
+    padding-left: 34px;
+    padding-top: 15px;
+    height: 50px;
+    font-weight: bold;
+    color: #fff;
+}
+li.heading:not(.nohover):hover
+{
+    background-color: #bc0000;
+}
+.map li:not(.heading) > a:hover {
+    text-decoration: underline;
+}
+/*.map li:not(.heading):hover:before
+{
+    animation-name:hover-arrows;
+    animation-duration:1.5s;
+    animation-iteration-count: infinite;
+}*/
+/*@keyframes hover-arrows
+{
+    0%{margin-left:-5px;}
+    50%{margin-left:-50px;}
+    100%{margin-left:-50px;}
+}*/

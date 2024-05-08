@@ -1,0 +1,128 @@
+sections:
+  main:
+    display: Statistiky
+    fields:
+      meta_description:
+        type: text
+        display: 'Meta Description'
+      statistics_heading:
+        type: text
+        instructions: '9. nejobdivovanější firma'
+        width: 25
+        display: 'Nadpis zprávy bloku Statistiky'
+        localizable: true
+      statistics_content:
+        type: redactor
+        localizable: true
+        width: 66
+        display: 'Obsah zprávy pro blok statistiky'
+        instructions: '- pro nedělitelné mezery vložte `&nbsp;`'
+        restrict_assets: false
+      companies:
+        type: section
+        display: Společnosti
+      company_last_heading:
+        type: text
+        localizable: true
+        display: 'Nadpis poslední karty'
+      company_last_tile:
+        type: text
+        display: 'obsah poslední karty'
+        localizable: true
+      employment:
+        type: section
+        display: Kariéra
+      employment_title:
+        type: text
+        localizable: true
+        display: Nadpis
+      employment_paragraph:
+        type: textarea
+        localizable: true
+        display: odstavec
+      employment_card:
+        type: text
+        display: 'Obsah karty'
+        localizable: true
+      videa:
+        sets:
+          video:
+            display: Video + Img
+            fields:
+              video:
+                type: video
+                instructions: |
+                  video v hlavičce na hlavní stránce (cesta k souboru videa)<br>
+                  - video musí být nahráno ve složce média
+                  - cesta je poté ve formátu /assets/cesta_k_souboru/<název_souboru> např `/assets/homepage/videos/dek.mp4`
+                display: Video
+              obrazek2:
+                container: main
+                folder: /
+                restrict: false
+                type: assets
+                instructions: 'First frame obrázek '
+                display: Obrázek
+                max_files: 1
+        type: replicator
+        display: Videa
+        localizable: true
+      nadpis-1:
+        localizable: true
+        type: text
+        width: 33
+        display: 'Nadpis bloku 1'
+      nadpis-2:
+        localizable: true
+        type: text
+        width: 33
+        display: 'Nadpis bloku 2'
+      nadpis-3:
+        localizable: true
+        type: text
+        width: 33
+        display: 'Nadpis bloku 3'
+      text-1:
+        localizable: true
+        type: text
+        width: 33
+        display: 'text bloku 1'
+      text-2:
+        localizable: true
+        type: text
+        width: 33
+        display: 'text bloku 2'
+      text-3:
+        localizable: true
+        type: text
+        width: 33
+        display: 'text bloku 3'
+      odkaz_1:
+        type: text
+        width: 33
+        display: 'Odkaz 1'
+        localizable: true
+      odkaz_2:
+        type: text
+        localizable: true
+        width: 33
+        display: 'Odkaz 2'
+      odkaz_3:
+        type: text
+        localizable: true
+        width: 33
+        display: 'Odkaz 3'
+      nadpis-mobil:
+        localizable: true
+        type: text
+        display: 'Text ktorý sa zobrazí na mobile'
+      obrazek:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        instructions: 'Obrázek pro mobil, min 1665px široké a optimalizované pro co nejmenší datovou náročnost'
+        display: Obrázek 1
+        max_files: 1
+taxonomies: true
+title: Homepage

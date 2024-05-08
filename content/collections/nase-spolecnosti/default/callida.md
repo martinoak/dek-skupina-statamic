@@ -1,0 +1,12 @@
+name: Callida
+type: 5-sluzby
+intro: 'Softwarová řešení pro efektivnější realizace projektů ve všech fázích životního cyklu zakázky.'
+logo: '-callida.png'
+logo_white: white_logo_callida.png
+foto: callida_dark.jpg
+description: 'Společnost Callida se stala členem skupiny DEK v roce 2021. Na českém trhu působí úspěšně již od roku 1990. Vyvíjí a dodává systémy pro efektivní řízení projektů především ve stavebnictví. Systém pro přípravu, realizaci a monitoring stavebních zakázek euroCALC výrazně zjednodušuje a urychluje pracovní procesy ve všech fázích projektu. Callida má také mnohaleté zkušenosti se zaváděním CDE a Field Managementu do praxe. Platforma Asite spojuje sdílené datové prostředí a účinný nástroj pro koordinaci a řízení zakázek, což zaručuje bezproblémovou a přehlednou spolupráci na projektech. V neposlední řadě nabízí bohatý vzdělávací program se zaměřením na různé oblasti a úrovně včetně videokurzu Rozpočtování staveb.'
+company_video: 'https://www.youtube.com/watch?v=KoBAEnLWK5U'
+web_url: 'https://callida.cz/cs/'
+title: Callida
+id: 19a6f1fe-6222-4e10-9ef7-d4bc97a38036
+blueprint: companies

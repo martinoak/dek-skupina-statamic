@@ -1,0 +1,228 @@
+---
+img_mobil: mapa.jpg
+en:
+    agree: 'I give my consent to '
+    agree_link: 'the processing my personal data'
+    agree-error: '*Before submitting form, you must to agree with processing your data'
+    email-error: '*Type correct email'
+    message: 'Message'
+    message-error: '*This field cannot be blank'
+    title-form: 'Write us'
+    form-mess: 'message'
+    form-button: 'SEND'
+    skupina-dek: 'DEK Group'
+    name: 'Name'
+    telefon: 'Phone'
+    telefon-error: '*Type your phone number'
+    name-error: '*Type your first and last name'
+    sledNas: 'Follow us'
+    locx: '14.53335000000000'
+    locy: '50.08201944444445'
+    mapID: '&id=9009461'
+cz:
+    agree: 'Souhlasím se'
+    agree_link: 'zpracováním osobních údajů'
+    agree-error: '*Potvrďte souhlas'
+    email-error: "*Zadejte e-mail ve správném tvaru"
+    message: 'Text dotazu'
+    message-error: '*Toto pole nesmí být prázdné'
+    title-form: 'Napište nám'
+    form-mess: 'zpráva'
+    form-button: 'ODESLAT'
+    skupina-dek: 'Skupina DEK'
+    name: 'Jméno a příjmení'
+    telefon: 'Telefon'
+    telefon-error: '*Vyplňte vaše telefonní číslo'
+    name-error: '*Zadejte jméno a příjmení'
+    sledNas: 'Sledujte nás'
+    locx: '14.53335000000000'
+    locy: '50.08201944444445'
+    mapID: '&id=9009461'
+sk:
+    agree: 'Súhlasím so'
+    agree_link: 'spracovaním osobných údajov'
+    agree-error: '*Potvrďte súhlas'
+    email-error: "*Zadajte e-mail v správnom formáte"
+    message: 'Text otázky'
+    message-error: '*Toto pole nesmie byť prázdne'
+    title-form: 'Napíšte nám'
+    form-mess: 'zpráva'
+    form-button: 'ODOSLAŤ'
+    skupina-dek: 'Skupina DEK'
+    name: 'Meno a priezvisko'
+    telefon: 'Telefón'
+    telefon-error: '*Vyplňte svoje telefónne číslo'
+    name-error: '*Zadajte meno a priezvisko'
+    sledNas: 'Sledujte nás'
+    locx: '18.726834'
+    locy: '49.206661'
+    mapID: ''
+---
+
+<div class="container">
+    <h1 class="page-name">{{title}}</h1>
+</div>
+
+<div class="kontakt_base">
+    <div>
+        <b>{{company_name}}</b>
+        <span class="novy-riadok"></span>
+        <br>
+        {{company_adresse | nl2br}}
+    </div>
+    <div class="zak-centrum">
+        {{zak_centrum}} <br>
+        <div style="display: flex;">
+            <strong>{{zak_centrum_tel}}</strong>
+
+            <div class="more-info" id="zak-centrum-info">i
+                <div class="tooltip">
+                    {{tooltip_v_paticce}}
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        {{{{locale}}.sledNas}}
+        <div style="display: flex;margin-top: 10px;">
+            <a target="_blank" href="https://www.instagram.com/stavebninydek/"><div class="i-instagram social"></div></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCME2nISYQRZs6vybOp11tUg"><div class="i-youtube social"></div></a>
+            <a target="_blank" href="https://www.facebook.com/StavebninyDEK"><div class="i-facebook social"></div></a>
+        </div>
+    </div>
+    <div></div>
+
+</div>
+
+<div class="big-map">
+<script src="https://api.mapy.cz/loader.js"></script>
+<script>Loader.load();</script>
+<div id="mapa-fd5f5360b27fc374b0d70f64fd9237b1" class="map7654" ></div>
+<script>
+var center = SMap.Coords.fromWGS84('{{{{locale}}.locx}}', '{{{{locale}}.locy}}');
+var mapa = new SMap(JAK.gel("mapa-fd5f5360b27fc374b0d70f64fd9237b1"), center, 14);
+mapa.addDefaultLayer(SMap.DEF_BASE).enable();
+var layer = new SMap.Layer.Marker();
+mapa.addLayer(layer).enable()
+var mCoord = SMap.Coords.fromWGS84('{{{{locale}}.locx}}', '{{{{locale}}.locy}}');
+var mOpt = {
+anchor: {left:14, top:49},
+url:SMap.CONFIG.img + "/marker/balloon-3.png"
+}
+var marker = new SMap.Marker(mCoord,"MyMarker", mOpt);
+layer.addMarker(marker);
+var msOpt = SMap.MOUSE_PAN;  // | SMap.MOUSE_WHEEL | SMap.MOUSE_ZOOM;
+var mouse = new SMap.Control.Mouse(msOpt);
+mapa.addControl(mouse);
+var keyboard = new SMap.Control.Keyboard(SMap.KB_PAN | SMap.KB_ZOOM);
+mapa.addControl(keyboard);
+var selection = new SMap.Control.Selection(2);
+mapa.addControl(selection);
+var zn = new SMap.Control.ZoomNotification();
+mapa.addControl(zn);
+var zoomOpt = {showZoomMenu:false};
+var zoom = new SMap.Control.Zoom(null,{titles:["Přiblížit", "Oddálit"], showZoomMenu:false});
+mapa.addControl(zoom, {right:"2px", top:"10x"});
+var lnt = "Zobrazit na Mapy.cz";
+
+var lnd = JAK.mel("a", {href:"https://mapy.cz/zakladni?x={{{{locale}}.locx}}&y={{{{locale}}.locy}}&z=17&source=addr{{{{locale}}.mapID}}", target:"_blank", innerHTML:lnt});
+
+lnd.style.cssText = "position:absolute;left:8px; bottom:20px;"+
+"display:block; padding:4px 8px; background-color:#fff; border:medium none;"+
+"border-radius:3px; box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);"+
+"text-decoration:none; color:#6b7580;";
+mapa.getContainer().appendChild(lnd);
+</script>
+</div>
+
+
+<div style="max-width: 820px;margin: 0 auto;" class="contact-media">
+{{ get_content from="/pro-media/kontakt-pro-media" }}
+
+<h1>{{ title }}</h1>
+
+{{ content }}
+
+{{ /get_content }}
+</div>
+
+{{ form:create in="kontaktni_formular_new" attr="id:contact-form-kont|onsubmit:return validateKontaktForm(this.id)"}}
+{{ partial:errors-block }}
+<div class="uk-container uk-container-small dotaznik_pro_uchazece">
+    <input type="hidden" readonly="true" name="lang" value="{{ locale }}">
+    <h1>{{{{locale}}.title-form}}</h1>
+
+    {{ if errors }}
+        <ul class="form-errors">
+        {{ errors }}
+            <li>{{ value }}</li>
+        {{ /errors }}
+        </ul>
+    {{ /if }}
+
+    <div class="required">
+        <label for="name">{{{{locale}}.name}}</label>
+        <input class="required" id="name" type="text" name="name">
+        <span class="error-message" id="error-name-k" value="{{ old:name }}">{{{{locale}}.name-error}}</span>
+
+    </div>
+
+    <div class="dotaznik_oneline">
+        <div class="required">
+            <label for="email"> E-mail</label>
+            <input class="required" id="email" name="e-mail" placeholder="..." type="text" value="{{ old:e-mail }}">
+            <span class="error-message" id="error-email-k">{{{{locale}}.email-error}}</span>
+
+        </div>
+        <div class="required">
+            <label for="telefon">{{{{locale}}.telefon}}</label>
+            <input class="required" id="telefon" name="telefon" type="text"  value="{{ old:telefon }}">
+            <span class="error-message" id="error-telefon-k">{{{{locale}}.telefon-error}}</span>
+        </div>
+    </div>
+
+    <div class="required">
+        <label for="zprava">{{{{locale}}.message}}</label>
+        <textarea id="zprava" placeholder="..." name="zprava" class="required" rows="5">{{ old:zprava }}</textarea>
+        <span class="error-message" id="error-message-k">{{{{locale}}.message-error}}</span>
+
+        <span>&nbsp;</span>
+    </div>
+
+    <div class="required">
+        <label id="agree">
+            <input type='checkbox' class="required" name="agree" {{ if old:agree == 'on' }}checked{{ /if }}>
+            <span>
+                {{{{locale}}.agree}}
+                <a href="{{main_addon:translate type='url' :lang="locale" page="protection"}}" class="form-protection-link">{{{{locale}}.agree_link}}</a>
+            </span>
+        </label><br>
+        <span class="error-message" id="error-agree-k">{{{{locale}}.agree-error}}</span>
+    </div>
+    
+    <button type="submit" class="btn red">{{{{locale}}.form-button}}</button>
+    
+</div>
+
+    {{ if errors }}
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {	
+                UIkit.notification('Formulář obsahuje chyby!', {status: 'danger'});
+                scrollToElement('form#contact-form-kont');
+            });
+        </script>
+    {{ /if }}
+    {{ if success }}
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {	
+                UIkit.notification('Formulář byl úspěšně odeslán.', {status: 'success'});
+                dataLayer.push({'event': 'send-form', 'eventCategory': 'Kontakty', 'eventAction': '', 'eventLabel': ''});
+                scrollToElement('form#contact-form-kont');
+            });
+        </script>
+    {{ /if }}
+
+{{/form:create}}
+<script>
+    dekReCaptcha.createInput("kontaktni_formular_new", "contact-form-kont");
+</script>

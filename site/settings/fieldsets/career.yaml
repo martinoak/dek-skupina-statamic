@@ -1,0 +1,33 @@
+sections:
+  main:
+    display: Career
+    fields:
+      introduction-heading:
+        type: text
+        localizable: true
+        display: Nadpis
+      introduction:
+        type: redactor
+        localizable: true
+        display: 'Zaměstnání v DEK'
+        restrict_assets: false
+      video:
+        type: video
+        display: Video
+        instructions: |
+          Video může být nahráno z youtube
+          - stačí zkopírovat adresu videa z youtube
+          
+          
+          Video může být nahráno jako soubor
+          - video musí být nahráno ve složce média
+          - cesta je poté ve formátu /assets/cesta_k_souboru/název_souboru např `/assets/homepage/videos/dek.mp4`
+      vacanies_image:
+        container: main
+        folder: /
+        restrict: false
+        max_files: 1
+        type: assets
+        width: 33
+        display: 'Náhled k počtu volných pozic'
+taxonomies: true

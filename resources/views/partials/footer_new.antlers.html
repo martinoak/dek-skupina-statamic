@@ -1,0 +1,244 @@
+---
+en: 
+    agree: 'I give my consent to '
+    agree_link: 'the processing my personal data'
+    agree-error:  '*Before submitting form, you must to agree with processing your data'
+    email-error: '*Type correct email'
+    message-error: '*This field cannot be blank'
+    title: 'Write us'
+    form-mess: 'message'
+    form-button: 'SEND'
+    skupina-dek: 'DEK Group'
+    zakCentrum: 'Customer&nbsp;service'
+cz: 
+   agree: 'Souhlasím se'
+   agree_link: 'zpracováním osobních údajů'
+   agree-error: '*Potvrďte souhlas'
+   email-error: "*Zadejte e-mail ve správném tvaru"
+   message-error: '*Toto pole nesmí být prázdné'
+   title: 'Napište nám'
+   form-mess: 'zpráva'
+   form-button: 'ODESLAT'
+   skupina-dek: 'Skupina DEK'
+   zakCentrum: 'Zákaznické&nbsp;centrum'
+sk: 
+   agree: 'Súhlasím so'
+   agree_link: 'spracovaním osobných údajov'
+   agree-error: '*Potvrďte súhlas'
+   email-error: "*Zadajte e-mail v správnom tvare"
+   message-error: '*Toto pole nesmie byť prázdne'
+   title: 'Napíšte nám'
+   form-mess: 'správa'
+   form-button: 'ODOSLAŤ'
+   skupina-dek: 'Skupina DEK'
+   zakCentrum: 'Zákaznícke&nbsp;centrum'
+---
+<div class="footer" >
+    <div class="footer__top">
+        <div class="top__wrap">
+            <div class="article__left">
+                <div class="article__adress dt-w">
+                    <div style="margin-bottom: 1rem" class="footer__logo">
+                        <a href="{{main_addon:translate :lang="locale" page="index" type="url"}}" class='logo'></a>
+                        <br style='margin-bottom:11px'>
+                        &copy;&nbsp;{{ now format="Y"}}&nbsp;DEK&nbsp;a.s.
+                    </div>
+                    <div class="footer__adress">
+                        <div class="footer__zakCentrum--tel">
+                            <div style="margin-right: 10px;">{{{{locale}}.zakCentrum}}</div>
+                            <div id="phone">
+                                
+                                {{if locale != "sk"}}
+                                <a href="tel:+420510000100"><img src="/assets/phone.png" height='10'
+                                        style="height: 10px;">&nbsp;<b>510&nbsp;000&nbsp;100</b></a>
+                                {{else}}
+                                <a href="tel:+421232223022"><img src="/assets/phone.png" height='10'
+                                    style="height: 10px;">&nbsp;<b>02/32 22 30 22</b></a>
+                                {{/if}}
+
+                                <div class="more-info" id="footer-info">i
+                                    <div class="tooltip">
+                                        {{tooltip_v_paticce}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__adress--street">
+                            {{if locale != "sk"}}
+                            Tiskařská&nbsp;10/257, Budova&nbsp;TTC
+                            <br>
+                            108&nbsp;00 Praha&nbsp;10&nbsp;-&nbsp;Malešice
+                            {{else}}
+                            Kamenná&nbsp;ul.&nbsp;6<br>
+                            010&nbsp;01&nbsp;Žilina
+                            {{/if}}
+                        </div>
+                    </div>
+
+                    <div class="grecaptcha-info">
+                        <small>
+                            {{if locale =="cz"}}
+                            Tento web je chráněn reCAPTCHA a&nbsp;platí zásady 
+                            <a href="https://policies.google.com/privacy" target="_blank">ochrany osobních údajů</a> 
+                            a&nbsp;<a href="https://policies.google.com/terms" target="_blank">smluvní podmínky</a> 
+                            společnosti Google.
+                            {{elseif locale =="en"}}
+                            This site is protected by reCAPTCHA and the Google
+                            <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer nofollow">Privacy Policy</a>  
+                            and&nbsp;<a href="https://policies.google.com/terms" target="_blank" rel="noreferrer nofollow">Terms of Service</a>  apply.
+                            {{elseif locale =="sk"}}
+                             Tento web je chránený reCAPTCHA a&nbsp;platia zásady 
+                            <a href="https://policies.google.com/privacy" target="_blank">ochrany osobných údajov</a> 
+                            a&nbsp;<a href="https://policies.google.com/terms" target="_blank">zmluvné podmienky</a> 
+                            spoločnosti Google.
+                            {{/if}}
+                    </small>
+                    </div>
+
+
+                </div>
+                <div class="footer__middleSection">
+                    <div class="middleSection__article dt-w">
+                        <ul>
+                            <li class="strong">{{{{locale}}.skupina-dek}}</li>
+                            {{nav from="/"  is_hidden:isnt="true" title:isnt="kariéra" title:isnt="employment"}}
+                            <li><a href="{{ url }}">{{ tag:nav_title or title }}</a></li>
+                            {{if count == 2}}
+                            <li><a
+                                    href="{{main_addon:translate type="url" :lang="locale" page="history"}}">{{main_addon:translate type="name" :lang="locale" page="history"}}</a>
+                            </li>
+                            {{/if}}
+                            {{/nav}}
+                            {{if locale !="en"}}
+                            <li><a
+                                    href="{{main_addon:translate type="url" :lang="locale" page="news-ann"}}">{{main_addon:translate type="name" :lang="locale" page="news-ann"}}</a>
+                            </li>
+                            {{/if}}
+                        </ul>
+                    </div>
+                    <div class="middleSection__article dt-w">
+                        {{ if locale != "en" }}
+                        <ul>
+                            <li class="strong">Kariéra</li>
+                            <li>
+                            <a href="{{main_addon:translate type="url" :lang="locale" page="zivot-v-dek"}}">
+                                {{main_addon:translate type="name" :lang="locale" page="zivot-v-dek"}}
+                            </a>
+                            </li>
+                            <li>
+                            <a href="{{main_addon:translate type="url" :lang="locale" page="volna-mista"}}">
+                                {{main_addon:translate type="name" :lang="locale" page="volna-mista"}}
+                            </a>
+                            </li>
+                            <li>
+                            <a href="{{main_addon:translate type="url" :lang="locale" page="casto-kladene-otazky"}}">
+                                {{main_addon:translate type="name" :lang="locale" page="casto-kladene-otazky"}}
+                            </a>
+                            </li>
+                            <li>
+                                <a href="{{main_addon:translate type="url" :lang="locale" page="pro-studenty"}}">
+                                {{main_addon:translate type="name" :lang="locale" page="pro-studenty"}}
+                                </a>
+                            </li>
+                        </ul>
+                        {{ /if }}
+                    </div>
+                </div>
+            </div>
+            <div class="footer__form" id='form'>
+                {{ form:set is="kontaktni_formular" }}
+                    {{ form:create in="kontaktni_formular"attr="id:footer-form|onsubmit:return validateForm(this.id)"}}
+                    <input type="hidden" readonly="true" name="lang" value="{{ locale }}">
+                    <div class="brbuzd">
+                        <strong>{{{{locale}}.title}}</strong>
+                    </div>
+
+                    {{ if errors }}
+                        {{ errors }}
+                            <span class="error visible">{{ value }}</span><br>
+                        {{ /errors }}
+                    {{ /if }}
+
+                    <div class="okhdxs">
+                        <input type='text' name="e-mail" placeholder="e-mail" value="{{ old:e-mail }}" />
+                        <div id="error-email" class="error">{{{{locale}}.email-error}}</div>
+                    </div>
+                    <div class="bpjmjn">
+                        <textarea placeholder='{{{{locale}}.form-mess}}' name="zprava">{{ old:zprava }}</textarea>
+                        <div id="error-message" class="error">{{{{locale}}.message-error}}</div>
+                    </div>
+                    <div style="display: flex;" class="rxlhxt">
+                        <label>
+                            <input type='checkbox' name="agree" {{ if old:agree == 'on' }}checked{{ /if }}>
+                            <span style="color: #D8D8D8;margin-left: .5rem;">
+                                {{{{locale}}.agree}}
+                                <a href="{{main_addon:translate type='url' :lang="locale" page="protection"}}" class="form-protection-link">{{{{locale}}.agree_link}}</a>
+                            </span>
+                            
+                        </label>
+                        
+                        <input type='submit' value='{{{{locale}}.form-button}}' class='btn'>
+                    </div>
+                    <div id="error-agree" class="error">{{{{locale}}.agree-error}}</div>
+                    <div></div>
+
+                    {{ if errors }}
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function(event) {	
+                                UIkit.notification('Formulář obsahuje chyby!', {status: 'danger'});
+                                scrollToElement('form#footer-form');
+                            });
+                        </script>
+                    {{ /if }}
+
+                    {{/form:create}}
+
+                    {{ if {form:success} }}
+                        {{ form:submission }}
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function(event) {	
+                                    UIkit.notification('Formulář byl úspěšně odeslán.', {status: 'success'});
+                                    dataLayer.push({'event': 'send-form', 'eventCategory': 'Paticka', 'eventAction': '', 'eventLabel': ''});
+                                    scrollToElement('form#footer-form');
+                                });
+                            </script>
+                        {{ /form:submission }}
+                    {{ /if }}
+                {{ /form:set }}
+            </div>
+        </div>   
+        
+        <div class="grecaptcha-info-mob">
+            <small>
+                {{if locale =="cz"}}
+                Tento web je chráněn reCAPTCHA a&nbsp;platí zásady 
+                <a href="https://policies.google.com/privacy" target="_blank">ochrany osobních údajů</a> 
+                a&nbsp;<a href="https://policies.google.com/terms" target="_blank">smluvní podmínky</a> 
+                společnosti Google.
+                {{elseif locale =="en"}}
+                This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer nofollow">Privacy Policy</a>  
+                and&nbsp;<a href="https://policies.google.com/terms" target="_blank" rel="noreferrer nofollow">Terms of Service</a>  apply.
+                {{elseif locale =="sk"}}
+                 Tento web je chránený reCAPTCHA a&nbsp;platia zásady 
+                <a href="https://policies.google.com/privacy" target="_blank">ochrany osobných údajov</a> 
+                a&nbsp;<a href="https://policies.google.com/terms" target="_blank">zmluvné podmienky</a> 
+                spoločnosti Google.
+                {{/if}}          
+        </small>
+        </div>
+
+    </div>
+    <div class="footer__bottom">
+        <div class="bottom__wrap">
+            <a href="{{main_addon:translate type='url' :lang="locale" page="protection"}}">{{main_addon:translate type='name' :lang="locale" page="protection"}}</a>
+            <a href="{{main_addon:translate type='url' :lang="locale" page="cookies"}}">{{main_addon:translate type='name' :lang="locale" page="cookies"}}</a>
+            <a href="{{main_addon:translate type='url' :lang="locale" page="condition"}}">{{main_addon:translate type='name' :lang="locale" page="condition"}}</a>
+            <a href="{{main_addon:translate type='url' :lang="locale" page="map"}}">{{main_addon:translate type='name' :lang="locale" page="map"}}</a>
+        </div>    
+    </div>
+</div>
+
+<script>
+    dekReCaptcha.createInput("kontaktni_formular", "footer-form");
+</script>

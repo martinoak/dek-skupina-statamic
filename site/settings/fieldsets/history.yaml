@@ -1,0 +1,32 @@
+sections:
+  main:
+    display: Main
+    fields:
+      year:
+        type: integer
+        width: 50
+        display: year
+      direction:
+        options:
+          left: 'Levá strana'
+          right: 'Pravá strana'
+        inline: true
+        type: radio
+        instructions: 'Možnost kde se bude zobrazovat obsah (levá/pravá strana)'
+        width: 50
+        display: direction
+      obsah:
+        type: textarea
+        instructions: 'Obsah historické události'
+        display: Obsah
+        localizable: true
+      obrazek:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        instructions: 'Obrázek týkající se události, min 550px široké.'
+        display: obrázek
+        max_files: 1
+taxonomies: true
+title: History

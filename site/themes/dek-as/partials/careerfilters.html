@@ -1,0 +1,24 @@
+<div id="filters-container">
+    <ul class="uk-subnav uk-subnav-pill uk-flex-center" data-uk-margin="">
+        <li class="{{ main_addon:is_url_active page="career" :lang="locale" class="uk-active" }}">
+            <a class="btn" id="kariera__lifeInDek" href="{{main_addon:translate type='url' :lang="locale" page="career"}}">
+                ŽIVOT V DEK
+            </a>
+        </li>
+        <li class="{{ main_addon:is_url_active page="volna-mista" :lang="locale" class="uk-active" }}">
+            <a href="{{ main_addon:translate type='url' :lang="locale" page="volna-mista" }}" class="btn">
+                {{ main_addon:translate type='name' :lang="locale" page="volna-mista" }}
+            </a>
+        </li>
+        <li class="{{ main_addon:is_url_active page="caste-dotazy" :lang="locale" class="uk-active" }}" id="faq-btn">
+            <a href="{{ main_addon:translate type='url' :lang="locale" page="caste-dotazy" }}" class="btn" id="kariera__faq">
+                {{ main_addon:translate type='name' :lang="locale" page="caste-dotazy" }}
+            </a>
+        </li>
+        <li class="{{ main_addon:is_url_active page="pro-studenty" :lang="locale" class="uk-active" }}" id="internship-btn">
+            <a href="{{ main_addon:translate type='url' :lang="locale" page="pro-studenty" }}" class="btn">
+                {{ main_addon:translate type='name' :lang="locale" page="pro-studenty" }}
+            </a>
+        </li>
+    </ul>
+</div>

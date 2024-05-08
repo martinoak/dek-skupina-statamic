@@ -1,0 +1,78 @@
+title: Default
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Nazev
+        type: text
+        width: 66
+        localizable: true
+      slug:
+        type: text
+        width: 33
+      subtext:
+        type: text
+        width: 100
+        localizable: true
+      obor:
+        display: Obor
+        type: text
+        width: 33
+        localizable: true
+      typAkce:
+        display: Typ akce
+        type: text
+        width: 33
+        localizable: true
+      forma:
+        display: Forma
+        type: text
+        width: 33
+        localizable: true
+      zobrazeni:
+        display: Zobrazení
+        type: text
+        width: 33
+        localizable: true
+      razeni:
+        display: Řazení
+        type: text
+        width: 33
+        localizable: true
+      podNadpis:
+        display: Podnadpis
+        type: text
+        width: 100
+        localizable: true
+      prazdnyTucne:
+        display: Prazdny tucne
+        type: text
+        width: 100
+        localizable: true
+      prazdnyNormalni:
+        display: Prazdny normalni
+        type: text
+        width: 100
+        localizable: true
+      praznyTlacitko:
+        display: Prazny tlacitko
+        type: text
+        width: 100
+        localizable: true
+      nadchazejici:
+        display: Nadchazejici
+        type: text
+        width: 50
+        localizable: true
+      archiv:
+        display: Archiv
+        type: text
+        width: 50
+        localizable: true
+      nextButton:
+        display: Tlacitko dalsi
+        type: text
+        width: 33
+        localizable: true
+taxonomies: true

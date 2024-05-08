@@ -1,0 +1,7 @@
+roles:
+  - editor
+locale: cz
+super: true
+id: 1be9ca69-a6a9-408b-827a-ded0462de438
+password_hash: $2y$10$XpxiRQfO40D9aXfHQWb4VujqIg98kzW0bA1MVrvknKapsoSlITYTm
+name: 'Admin admin'

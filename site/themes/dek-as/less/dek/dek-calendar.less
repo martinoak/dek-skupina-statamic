@@ -1,0 +1,757 @@
+/* 
+  v tejto classe maju byt umiestnene vsetky ostatne 
+*/
+
+.section-kalendar-akci, 
+.section-calendar-of-events, 
+.section-kalendar-akcii {
+  
+  @dek-calendar-border-color: #ebebeb;
+
+  .beforeelement {
+    content: "";
+    display: inline-block;
+    height: 14px;
+    width: 17px;
+    margin-left: -5px;
+    margin-right: 10px;
+    background-size: 17px 14px;
+    background-repeat: no-repeat;
+  }
+
+  #js-actions-list {
+    min-height: 320px;
+    row-gap: 42px;
+
+    //media queries menej ako 768px
+    @media (max-width: 649px) {
+      row-gap: 15px;
+    }
+    @media (min-width: 650px) {
+      &.actions-list-row {
+        row-gap: 0;
+      }
+  }
+  }
+
+
+
+  //zobrazenie akcii archiv
+
+  #employment {
+    align-items: center;
+  }
+
+  .holder--small {
+    width: auto;
+    .carr-sellector,
+    .nameFilerSelect,
+    .carr-sellector--name {
+      font-size: 14px;
+    }
+
+    .carr-sellector--name {
+      margin-left: 5px;
+      text-decoration: underline;
+    }
+
+    .selected-value {
+      padding: 10px 8px;
+      position: relative;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    .clear {
+      display: none;
+    }
+    .null-value {
+      margin-left: 12px;
+      font-weight: 400;
+      font-size: 14px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 6px;
+        left: 0;
+        width: 1px;
+        height: 7px;
+        background: #464646;
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+        left: -5px;
+      }
+    }
+
+    .carr-sellector--list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+  }
+
+  .calendar__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fill;
+
+    height: -webkit-fill-available;
+  }
+
+  .calendar__name {
+    //color: @dek-color-red;
+    font: normal normal 900 16px/21px Roboto;
+    font-size: 18px;
+    min-height: 3rem;
+    display: block;
+  }
+
+  .calendar__address {
+    font: normal normal normal 16px/21px Roboto;
+    font-size: 16px;
+    margin-left: 5px;
+
+    &:before {
+      &:extend(.section-kalendar-akci .beforeelement);
+      background-image: url("../icons/domcek.svg");
+    }
+  }
+
+  .calendar__address--online {
+    font: normal normal normal 16px/21px Roboto;
+    font-size: 16px;
+
+    &:before {
+      &:extend(.section-kalendar-akci .beforeelement);
+      background-image: url("../icons/pocitac.svg");
+    }
+  }
+
+  .calendar__date {
+    display: block;
+    margin-left: 5px;
+    font-weight: bold;
+
+    &:before {
+      &:extend(.section-kalendar-akci .beforeelement);
+      background-image: url("../icons/kalendar.svg");
+    }
+  }
+  .calendar__date--big {
+    display: block;
+
+    &:before {
+      &:extend(.section-kalendar-akci .beforeelement);
+      height: 28px;
+      width: 26px;
+      background-size: 26px 28px;
+      background-image: url("../icons/kalendar_big.svg");
+    }
+  }
+
+
+
+  .dek-action {
+    border: 1px solid @dek-calendar-border-color;
+    display: flex;
+    flex-direction: column;
+
+    .second-title {
+      display: none;
+    }
+
+    logo {
+      background-color: #fafafa;
+      display: block;
+      width: 100%;
+      padding: 5px;
+      background-repeat: no-repeat;
+      height: 31px;
+    }
+
+
+
+    .calendar__time_from {
+      font-weight: normal;
+    }
+    .calendar__price {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 14px;
+      margin-left: 5px;
+
+      &:before {
+        &:extend(.section-kalendar-akci .beforeelement);
+        background-image: url("../icons/penazenka.svg");
+      }
+    }
+    .calendar__image {
+      display: block;
+      height: 159px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    .calendar__description {
+      height: 159px;
+      width: 100%;
+      padding: 14px;
+    }
+    .calendar__description--hidden {
+      display: none;
+    }
+
+    logo {
+      &.argos {
+        background-image: url("../logo/argos.png");
+      }
+      &.atelier {
+        background-image: url("../logo/atelier.png");
+      }
+      &.best {
+        background-image: url("../logo/best.png");
+      }
+      &.callida {
+        background-image: url("../logo/callida.png");
+      }
+      &.dekmetal {
+        background-image: url("../logo/dekmetal.png");
+      }
+      &.dekpartner {
+        background-image: url("../logo/dekpartner.png");
+      }
+      &.dekpartner {
+        background-image: url("../logo/dekpartner.png");
+      }
+      &.dek_stavebniny {
+        background-image: url("../logo/dek_stavebniny.png");
+      }
+      &.dek_stavebniny_sk {
+        background-image: url("../logo/dek_stavebniny.png");
+      }
+      &.dekwood {
+        background-image: url("../logo/dekwood.png");
+      }
+      &.first {
+        background-image: url("../logo/first.png");
+      }
+      &.gservis {
+        background-image: url("../logo/gservis.png");
+      }
+      &.nemopas {
+        background-image: url("../logo/nemopas.png");
+      }
+      &.protea {
+        background-image: url("../logo/protea.png");
+      }
+      &.retek {
+        background-image: url("../logo/retek.png");
+      }
+      &.stachema {
+        background-image: url("../logo/stachema.png");
+      }
+      &.urs {
+        background-image: url("../logo/urs.png");
+      }
+      &.deksoft {
+        background-image: url("../logo/deksoft.png");
+      }
+      &.dekprime {
+        background-image: url("../logo/dekprime.png");
+      }
+    }
+  }
+  @media (min-width: 650px) {
+  .actions-list-row {
+    .dek-action {
+      border-top: none;
+      border-bottom: 1px solid @dek-calendar-border-color;
+      border-left: 1px solid @dek-calendar-border-color;
+      border-right: 1px solid @dek-calendar-border-color;
+      display: flex;
+      flex-direction: row;
+
+      &:hover {
+        background-color: #fafafa;
+        cursor: pointer;
+      }
+    }
+
+    .popopuuyiuyiy:first-child {
+      .dek-action {
+        border-top: 1px solid @dek-calendar-border-color;
+      }
+    }
+
+    logo {
+      width: auto;
+      border-bottom: none;
+    }
+
+    .calendar__image {
+      display: none;
+    }
+    .calendar__description {
+      display: block;
+    }
+
+    .calendar__wrap {
+      width: 100%;
+    }
+
+    .calendar__wrap-blok {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .calendar__name {
+      width: 35%;
+      min-height: auto;
+      order: 1;
+    }
+
+    .calendar__address {
+      width: 18%;
+      order: 3;
+    }
+
+    .calendar__date {
+      width: 15%;
+      order: 2;
+    }
+
+    .calendar__price {
+      width: 12%;
+      margin-bottom: 0;
+      order: 4;
+    }
+
+    .calendar__description {
+      width: 100%;
+      padding: 0;
+      margin-left: 14px;
+      visibility: visible;
+      height: auto;
+      margin-top : 24px;
+      margin-bottom: 24px;
+      transition: all 250ms ease-out;
+      overflow: hidden;
+    }
+
+    .calendar__description--hidden {
+      visibility: hidden;
+      height: 0;
+      margin-top : 0;
+      margin-bottom: 0;
+      //transition: all 0.5s ease-out;
+    }
+  }
+}
+
+
+
+
+
+  .dek-action--archive {
+    logo {
+      display: none;
+    }
+    .logo_wrap {
+      display: none;
+    }
+
+    .calendar__address {
+      display: none;
+    }
+
+    .calendar__price {
+      display: none;
+    }
+
+    .calendar__time_from {
+      display: none;
+    }
+
+    .calendar__wrap {
+      flex-direction: column-reverse;
+    }
+
+    .calendar__date {
+      margin-bottom: 14px;
+      &:before {
+        display: none;
+      }
+    }
+
+    &.dek-active-false {
+      obrazok {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
+
+      .calendar__name,
+      .calendar__date {
+        color: #6b6b6b;
+      }
+
+      a {
+        display: none;
+      }
+      .second-title {
+        display: block;
+      }
+    }
+  }
+
+  .dek-action--archive-hidden {
+    display: none;
+  }
+
+  button.btn {
+    cursor: pointer;
+    border: none;
+    width: 170px;
+    margin-top: 20px;
+    background-color: #e30013;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 37px;
+    transition: 0.2s ease-in-out;
+    transition-property: color, background-color;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  #js-clear-filters {
+    width: 225px;
+    & .clear {
+      margin-left: 0;
+      &::before {
+        background: #fff;
+      }
+      &::after {
+        background: #fff;
+      }
+    }
+
+    &:hover {
+      background-color: @global-link-hover-color;
+      transition: 0.2s ease-in-out;
+      transition-property: color, background-color;
+    }
+  }
+
+  .logo_wrap {
+    background: #fafafa;
+    padding: 5px 15px;
+    border-bottom: 1px solid @dek-calendar-border-color;
+  }
+  @media (min-width: 650px) {
+  .actions-list-row {
+    .logo_wrap {
+      border-bottom: none;
+      min-width: 86px;
+    }
+  }
+}
+
+  #js-cal-1 {
+    &::before {
+      &:extend(.section-kalendar-akci .beforeelement);
+      background-image: url("../icons/pocitac.svg");
+      margin-left: 20px;
+    }
+  }
+
+  #js-cal-0 {
+    &::before {
+      &:extend(.section-kalendar-akci .beforeelement);
+      background-image: url("../icons/domcek.svg");
+      margin-left: 20px;
+    }
+  }
+
+
+  .calendar__hack-width{
+    width: calc(100% - 120px);
+    //pri rozliseni 768px a menej nastavime sirku na 100%
+    @media (max-width: 899px) {
+      width: calc(100% - 30px);
+    }
+
+    @media (max-width: 899px) {
+      width: calc(100% - 60px);
+    }
+  }
+
+  .calendar__wrap-nadpis{
+    margin-top: 2rem;
+    @media (max-width: 785px) {
+      flex-direction: column;
+
+      h2{
+        margin-bottom: 0 0 10px 0;
+      }
+
+      .holder--small{
+        margin: 0;
+
+        .selected-value{
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+
+  
+  .actions-list-grid{
+    .dek-action{
+      &:hover {
+        .calendar__description {
+          display: block;
+          height: 159px;
+          padding: 14px;
+        }
+        .calendar__image {
+          display: none;
+        }
+      }
+
+      .calendar__wrap-blok{
+        padding: 14px 14px 0 14px;
+      }
+    }
+  }
+
+  @media(min-width:650px){
+    @delayIn: 0.4s;
+    @delayOut: 0.2s;
+    .actions-list-grid{
+      .dek-action--nonarchive, .dek-action--archive{
+  
+        .calendar__description{
+          display: block;
+  
+          height: 0;
+          opacity: 0;
+          padding: 0;
+          visibility: hidden;
+
+          transition: opacity @delayOut ease-in-out,
+                      padding 0s ease-in-out,
+                      height 0s ease-in-out,
+                      visibility 0s ease-in-out;
+        }
+
+        .calendar__image{
+          display: block;
+          opacity: 1;
+          height: 159px;
+          width: 100%;
+          background-repeat: no-repeat;
+          background-size: 100%;
+
+          transition: opacity @delayOut ease-in-out,
+                      padding 0s ease-in-out,
+                      height 0s ease-in-out,
+                      background-size 0s ease-in-out,
+                      background-repeat 0s ease-in-out;
+        }
+  
+        &:hover {
+          .calendar__image{
+            display: block;
+            opacity: 0;
+            height: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-size: 0;
+  
+            transition: opacity @delayIn ease-in-out 0s,
+                        padding 0s ease-in-out @delayIn,
+                        height 0s ease-in-out @delayIn,
+                        background-size 0s ease-in-out @delayIn,
+                        background-repeat 0s ease-in-out @delayIn;
+  
+          }
+
+          .calendar__description{
+            visibility: visible;
+            padding: 14px;
+            height: 159px;
+            opacity: 1;
+            transition: height 0s ease-in-out,
+                        opacity 0.2s ease-in-out,
+                        padding 0s ease-in-out;
+            transition-delay: @delayIn, @delayIn, @delayIn;
+          }
+  
+        }
+
+        .calendar__wrap-blok{
+          padding: 14px 14px 0 14px;
+        }
+      }
+    }
+    
+  }
+
+
+
+  
+  @media (min-width: 650px) {
+  .actions-list-row{
+    .calendar__wrap-blok{
+      padding: 14px;
+      align-items: center;
+    }
+    .logo_wrap{
+      padding: 0;
+      padding-top: 10px;
+      width: 155px;
+      overflow: hidden;
+    }
+  
+    logo{
+      height: 31px;
+      width: 135px;
+      margin-left: 14px;
+    }
+  }
+}
+
+  .calendar__wrap-nadpis{
+    @media (max-width: 785px) {
+      margin-top: 0;
+    }
+  }
+
+  //media queries max-width 650px
+  @media (max-width: 650px) {
+    .dek-action {
+      .calendar__image{
+        display: none;
+      }
+
+      .calendar__wrap{
+        height: auto;
+      }
+      
+      #js-online, #js-typakce{
+        .list{
+          position: absolute;
+          left: initial;
+          right: 0;
+        }
+      }
+    }
+
+    .actions-list-grid{
+      .dek-action{
+        .calendar__description--hidden{
+          visibility: visible;
+          height: auto;
+          display: block;
+          padding: 0 14px 14px 14px;
+        }
+      }
+    }
+    .actions-list-row{
+      .calendar__wrap-blok {
+        padding: 14px 14px 0 14px;
+      }
+      .calendar__description{
+        height: auto;
+      }
+      .calendar__description--hidden{
+        display: block;
+        padding-top: 0;
+      }
+      .calendar__description{
+        padding-top: 0;
+      }
+    }
+
+  .hid-mob{
+    display: none;
+  }
+
+  
+
+
+  #employment{
+    position: relative;
+
+    .holder{
+      position: unset;
+      .list{
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+  }
+
+  .holder--small{
+    position: relative;
+
+    .holder{
+      position: unset;
+      .list{
+        position: absolute;
+        top: 10px;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  
+    .dek-action.dek-action--archive{
+    .calendar__description--hidden{
+      display: none;
+    }
+    .calendar__image{
+      display: block;
+    }
+  }
+  
+}
+
+.item.js-h-p_asc {
+  display: none;
+}
+
+.item.js-h-p_desc {
+  display: none;
+}
+}
+
+@media (max-width: @breakpoint-small-max) {
+  .section-kalendar-akci{
+    .holder{
+      width: unset;
+    }
+  }
+
+  .section-kalendar-akci{
+    #employment{
+      justify-content: space-between;
+    }
+  }
+}

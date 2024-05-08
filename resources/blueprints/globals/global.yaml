@@ -1,0 +1,12 @@
+title: 'Tooltip v patičce'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: tooltip_v_paticce
+        field:
+          type: text
+          display: 'Tooltip v patičce'
+          localizable: true
+taxonomies: true

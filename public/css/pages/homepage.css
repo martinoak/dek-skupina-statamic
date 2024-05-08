@@ -1,0 +1,882 @@
+/*<editor-fold desc="homepage nav" defaultstate="collapsed">*/
+#nav-container
+{
+    position: absolute; 
+}
+
+.nav-items
+{
+    background-color: transparent;
+    border: 1px solid #b8b8b8;
+    transition-duration: .5s;
+    transition-property: background-color;
+    color: #FFF;
+    box-shadow: none;
+}
+
+#nav-container:hover .nav-items
+{
+    color: #464646;
+    background-color: #FFF;
+}
+#nav-container:hover .logo > a
+{
+    background-image: url('../../icons/DEK_logo_CERVENE.svg');
+}
+#nav-container .logo > a
+{
+    background-image: url('../../icons/DEK_logo_BILE.svg');
+}
+.head-container
+{
+    min-height: 0;
+}
+/*#nav-container ul li
+{
+    height: 78px;
+}*/
+@media (max-width: 900px)
+{
+    #nav-container .column
+    {
+        padding-top: 0;
+    }
+    #nav-container .logo
+    {
+        color: #e1001a;
+    }
+    #nav-container
+    {
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+    }
+    .nav-items
+    {
+        border: none;
+        margin-top: 0;
+    }
+
+}
+/*</editor-fold>*/
+/*<editor-fold desc="statistics" defaultstate="collapsed">*/
+#statistics
+{
+    background-image: linear-gradient(#f3f3f3,#FFFFFF,#FFFFFF);
+}
+
+.card
+{
+    background-color: #FFF;
+    text-align: center;
+    max-width: 95%;
+    height: 250px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 3px 5px #ddd;
+}
+
+.card > h2
+{
+    padding-left: 0;
+    font-size: 60px;
+    font-weight: 400;
+    padding-top: 50px;
+
+}
+.card > h2:after
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px;
+    content: '';
+    height: 2px;
+    background: #E30013;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.card > p 
+{
+    font-weight: 500;
+}
+#statistics .column > p
+{
+    max-width: 390px;
+}
+/*#statistics .row:nth-child(2) .column:nth-child(1)
+{
+    margin-top: 100px;
+}
+#statistics .row:nth-child(2) .column:nth-child(2)
+{
+    margin-top: 30px
+}
+#statistics .row:nth-child(2) .column:nth-child(3)
+{
+    margin-top: 200px;
+}
+#statistics .row:nth-child(2) .column:nth-child(4)
+{
+    margin-top: 80px;
+}*/
+.parts
+{
+    display: inherit;
+    padding: 0;
+}
+/*</editor-fold>*/
+/*<editor-fold desc="companies" defaultstate="collapsed">*/
+#companies
+{
+    background-color: #fff;
+}
+
+.company-grid:last-child
+{
+    background-color: transparent !important;
+}
+.company-grid:last-child > *
+{
+    visibility: visible;
+    margin-top: 45px;
+}
+img.title
+{
+    display: none;
+}
+.company-wrap
+{
+    background: radial-gradient(#eee,#fff 65%);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-left: 0px;
+    padding: 0;
+    list-style: none;
+}
+.company-grid
+{
+    overflow: hidden;
+    position: relative;
+    background: white;
+    padding: 10px;
+    width: 25%;
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    border-left: 1px solid #d8d8d8;
+    transition: 0.2s ease-in-out;
+}
+
+.company-grid .title,.company-grid > .cross
+{
+    display: none;
+}
+
+.company-grid:nth-child(4n + 1)
+{
+    border: none;
+}
+.company-grid:nth-child(n + 5)
+{
+    border-top: 1px solid #d8d8d8;
+    border-bottom: none;
+}
+
+.company-grid > *:not(div)
+{
+    visibility: hidden;
+    width: 100%;
+}
+.company-grid p
+{
+    font-size: 16px;
+    padding: 15px 20px;
+    /*padding: 38px 0 15px 0;*/
+    /*max-width: 200px;*/
+    margin: auto;
+    min-height: 170px;
+}
+.company-grid strong
+{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 22px;
+
+}
+.company-grid:hover
+{
+    background: transparent;
+}
+.company-grid:hover > *
+{
+    visibility: visible;
+}
+.company-grid:hover > div
+{
+    display: none;
+}
+.company-grid .btn
+{
+    width: 120px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.company-grid .logo
+{
+    position: absolute;
+    margin: auto;
+    width: auto;
+    height: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    max-width: 100%;
+}
+.company-grid .foto, .company-grid .logo.white
+{
+    object-fit: scale-down;
+    width: 100%;
+    height: auto;
+    object-position: 50% 50%;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.company-grid > div
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+
+/*</editor-fold>*/
+/*<editor-fold desc="employment" defaultstate="collapsed">*/
+#employment
+{
+    position: relative;
+    background-color: #d8d8d8;
+    min-height: 705px;
+}
+.employment_card
+{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position:absolute;
+
+    background-color: #fff;
+}
+.employment_card#text
+{
+    min-width: 271px;
+    width: 16vw;
+    height: 267px;
+    padding: 20px 30px;
+    left:249px;
+    top:350px;
+    z-index: 2;
+    box-shadow: 2px 3px 7px #aaa;
+    max-width: 283px;
+}
+.employment_card#text > *:not(.btn)
+{
+    text-align: center;
+    padding-top: 20px;
+    max-width: 180px;
+    margin: 0 auto;
+}
+.employment_card:nth-child(3)
+{
+    background-image: url('/assets/employmentcards/kariera_1-min.JPG');
+    width: 330px;
+    height:330px;
+    top: 262px;
+    left: 20px;
+    z-index: 1
+}
+.employment_card:nth-child(4)
+{
+    background-image: url('/assets/employmentcards/kariera_2-min.jpg');
+    left: 50%;
+    top: 260px;
+    height: 285px;
+    width: 280px;
+    z-index: 1
+}
+.employment_card:nth-child(5)
+{
+    background-image: url('/assets/employmentcards/kariera_4-min.JPG');
+    max-height:180px;
+    max-width: 180px;
+    width: 17vw;
+    height: 17vw;
+    left: 70%;
+    top: 515px;
+    z-index: 0;
+}
+.employment_card:nth-child(6)
+{
+    background-image: url('/assets/employmentcards/kariera_3-min.JPG');
+    top: 74px;
+    left: 70%;
+    max-width:324px;
+    max-height: 324px;
+    width: 23vw;
+    height: 23vw;
+    z-index: 0;
+}
+/*</editor-fold>*/
+a.arrow
+{
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    right: 20px;
+}
+
+.uk-animation-reverse{animation-duration:.2s}
+.uk-animation-kenburns{animation-name:uk-scale-kenburns;animation-duration:15s}
+.uk-animation-reverse{animation-direction:reverse;animation-timing-function:ease-in}
+.uk-transform-origin-center-left{transform-origin:0 50%}
+@keyframes uk-scale-kenburns{100%{transform:scale(1)}0%{transform:scale(1.2)}}
+.tiles
+{
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
+}
+.tiles .btn
+{
+    line-height: 33px;
+}
+.tiles .column
+{
+    
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.tiles .phone-title
+{
+    display: none;
+    position: absolute;
+    z-index: 20;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+    width: 60%;
+    font-size: 25pt;
+    left: 20%;
+    top: 20%;
+}
+.tiles .column:hover
+{
+    /*filter: grayscale(0%);*/
+    box-shadow: 0px 3px 4px #464646;
+}
+.tiles video
+{
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background: black;
+    border: none;
+}
+.tiles
+{
+    height: 95vh;
+    background: #333;
+}
+.tiles > .row
+{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.tiles img
+{
+    min-height: 100%;
+    min-width: 100%;
+    transition-duration: 5s;
+    transition-property: transform;
+}
+.tiles .column{
+    transition-duration: 3s;
+    transition-property: flex-grow;
+}
+.tiles .column:hover img
+{
+    transform: scale(1.2);
+}
+.tiles .column:hover{
+    flex-grow: 1.1;
+}
+/*.tiles .column:hover video{
+        transition-duration: 3s;
+    transition-property: transform;
+    }
+.tiles .column:hover video{
+    transform: scale(1.2);
+}*/
+.tile-text
+{
+    display: none;
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    min-height: 30px;
+    background: linear-gradient(transparent,#000 100%);
+    padding: 40px;
+    padding-right: 0px;
+}
+.tile-text > h3
+{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.tile-text > .redactor-style
+{
+    font-size: 14px;
+    max-width: 300px !important;
+    float: left;
+}
+.tile-text > .redactor-style p {
+    margin: 0 !important;
+}
+.tile-text .btn
+{
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.tile-text .btn:hover
+{
+    border-color: #e30013;
+    background-color: #e30013;
+}
+
+.tiles .column:hover .tile-text
+{
+    display: block;
+}
+#statistics .column:nth-child(3), #statistics .column:nth-child(1)
+{
+    margin-top: 20px;
+}
+#employment .column:nth-child(2)
+{
+    margin-top: 89px;
+}
+#employment .column
+{
+    padding: 0;
+}
+#employment .column:nth-child(1)
+{
+    margin-top: 80px;
+}
+
+#employment .container
+{
+    margin-bottom: 0;
+}
+
+.more-button
+{
+    visibility: hidden;
+}
+@media (min-width: 901px)
+{
+    .tiles .column:nth-child(3) .tile-text .btn
+    {
+        position: absolute;
+        left: calc(100% - 210px);
+        bottom: 40px;
+    }
+}
+@media (max-width: 900px)
+{
+    .tiles .column:hover img {
+        transform: none;
+    }
+    .company-grid p
+    {
+        font-size: 14px;
+    }
+    #nav-container .logo > a
+    {
+        background-image: url('../../icons/DEK_logo_CERVENE.svg');
+    }
+    .container
+    {
+        padding: 0;
+    }
+    .company-grid
+    {
+        font-size: 11px;
+    }
+    a.arrow 
+    {
+        display: none;
+    }
+
+    #statistics .column 
+    {
+        margin-top: 0 !important;
+    }
+    .card
+    {
+        height: 168px;
+        width: 100%;
+    }
+    .card > h2
+    {
+        padding-top: 25px;
+        font-size: 50px;
+    }
+    .tiles
+    {
+        margin-top: 65px;
+    }
+    .tiles > .row
+    {
+        display: block;
+    }
+    .tiles
+    {
+        height: 100vh;
+    }
+    .tiles > .row > .column
+    {
+        height: calc(100vh / 3);
+        transition-property: height;
+    }
+    .tiles video
+    {
+        min-height: 0;
+        height: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
+    .tiles img
+    {
+        width: 100vw;
+        height: auto;
+    }
+    .employment_card#text 
+    {
+        height: 245px;
+        width: 245px;
+        left: 199px;
+        min-height: 0;
+        min-width: 0;
+    }
+    .employment_card:nth-child(3)
+    {
+        top: 242px;
+        width: 218px;
+        height: 218px;
+    }
+    .employment_card:nth-child(4)
+    {
+        width: 190px;
+        height: 190px;
+        top: 262px;
+        left: 464px;
+    }
+    .employment_card:nth-child(5)
+    {
+        left: 80%;
+
+        top: 447px;
+        height: 121px;
+        width: 121px;
+    }
+    .employment_card:nth-child(6)
+    {
+        display: none;
+    }
+
+}
+@media (max-width: 650px)
+{
+    h1
+    {
+        font-size: 25pt;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    h2
+    {
+        font-size: 19pt;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    #statistics
+    {
+        text-align: center;
+    }
+    .tiles .column
+    {
+        filter: grayscale(0%);
+    }
+    .tiles
+    {
+        height: 80vh;
+    }
+    .tiles .phone-title
+    {
+        display: block;
+    }
+    .tiles .column:hover .tile-text
+    {
+        display: none;
+    }
+    .company-grid p
+    {
+        font-size: 16px;
+    }
+    #statistics
+    {
+        min-height: 700px;
+    }
+    #statistics .row:first-child .column:nth-child(3)
+    {
+        position: absolute;
+        bottom: -220px;
+    }
+    .employment_card:not(#text),#employment .row, .company-grid:last-child
+    {
+        display: none;
+    }
+    #statistics .row:nth-child(2) .column:nth-child(3)
+    {
+        margin-top: 17px !important;
+    }
+    #employment
+    {
+        min-height: 400px;
+        padding: 40px 0;
+        background-image: url('/assets/employmentcards/dek_bear_upr.jpg ');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    #companies
+    {
+        box-shadow: 0px -13px 60px -58px black;
+    }
+    .company-wrap
+    {
+        background: #fff;
+    }
+    .company-grid strong
+    {
+        display: none;
+    }
+    .company-grid img.title
+    {
+        display: block;
+    }
+    #companies .column
+    {
+        padding-bottom: 0;
+        padding-top: 1em;
+    }
+    #companies h1
+    {
+        text-align: center;
+    }
+    .parts
+    {
+        display: block;
+        width: 100%;
+    }
+    .parts > .column
+    {
+        width: 48%;
+        height: 180px;
+        display: inline-block;
+    }
+    .company-grid,.employment_card#text
+    {
+        top: auto;
+        left: auto;
+        position: relative;
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        border: 1px solid #fff !important;
+        padding: 0;
+    }
+    .company-grid > p
+    {
+        max-width: 250px;
+        font-size: 16px;
+        margin: auto;
+    }
+    .employment_card#text
+    {
+        padding: 20px;
+        width: 70%;
+        min-width: 220px;
+    }
+    .employment_card#text h2:after
+    {
+        content: '';
+        border-bottom: 2px solid #E30013;
+        width: 60px;
+        margin-top: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    #companies .container
+    {
+        margin-bottom: 0;
+    }
+    .company-grid .logo:not(.white)
+    {
+        visibility: hidden;
+    }
+    .company-grid .foto, .company-grid .logo.white
+    {
+        display: block;
+    }
+    .company-grid > div:after
+    {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 35px;
+        height: 35px;
+        content: '+';
+        text-align: center;
+        font-size: 29px;
+        background: #fff;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 50%;
+        line-height: 1.3;
+        cursor: pointer;
+    }
+    .company-grid .cross
+    {
+        display: block;
+    }
+    .company-grid.closed > .cross
+    {
+        display: none;
+    }
+    .company-grid.closed:hover > *:not(div)
+    {
+        visibility: hidden;
+        width: 100%;
+    }
+    .company-grid.closed:hover > div
+    {
+        display: block;
+    }
+    .tiles
+    {
+        height: 80vh !important;
+    }
+    .tiles .column:not(:first-child)
+    {
+        display: none;
+    }
+    .tiles img
+    {
+        height: 100%;
+        width: auto;
+    }
+    .tiles video
+    {
+        display: none;
+    }
+
+    .tiles > .row > .column,.tiles > .row > .column:hover
+    {
+        height: 100%;
+    }
+    .tiles *
+    {
+        max-height: 90vh;
+    }
+}
+
+@media (max-width: 350px)
+{
+    #statistics
+    {
+        min-height: 1100px;
+    }
+    .parts .column
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px ) and (min-width: 651px)
+{
+    .more-button
+    {
+        max-height: 30px;
+        line-height: 1.4;
+        visibility: visible;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        color: #f6f6f6;
+        padding: 6px 10px;
+        border: 1px solid #f6f6f6;
+        border-radius: 20px;
+        width: 80px;
+        text-transform: uppercase;
+        font-size: 13px;
+        padding-top: 6px;
+    }
+    .more-button:after
+    {
+        content: '+';
+        font-size: 20px;
+        float: right;
+        line-height: 0.8;
+    }
+    .tile-text .redactor-style
+    {
+        width: 50%;
+    }
+    .tiles .column .more-button:hover
+    {
+        background: #e30013;
+        color: #fff;
+        border-color: #e30013;
+    }
+    .tiles .column:hover .btn
+    {
+        display: none;
+    }
+}
+
+

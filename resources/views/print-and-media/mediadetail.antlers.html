@@ -1,0 +1,68 @@
+---
+uikit: true
+---
+<div class="uk-container uk-container-small">
+    <h1 class="page-name">{{title}}</h1>
+</div>
+
+
+<div class='media-detail-navigation'>
+    {{ collection:next in="vyrocni-zpravy" limit="1" sort="date:asc" type:contains=NewsAddon:getType}}
+        {{ if no_results }}
+            {{collection:vyrocni-zpravy limit="1" sort='date:asc' type:contains=NewsAddon:getType }}
+                <a href="{{NewsAddon:setAnchorHref url=url}}" class="nav-arrow nav-back"></a>
+            {{/collection:vyrocni-zpravy}}
+        {{else}}
+            <a href="{{NewsAddon:setAnchorHref url=url}}" class="nav-arrow nav-back"></a>
+        {{ /if }}
+    {{/collection:next}}
+    <a href='{{main_addon:translate :lang="locale" type="url" page="media"}}' class="icon icon-close">
+        <svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="close">
+            <path fill="none" stroke="#fff" stroke-width="2.06" d="M16,16 L4,4"></path>
+            <path fill="none" stroke="#fff" stroke-width="2.06" d="M16,4 L4,16"></path>
+        </svg>
+    </a>
+    {{ collection:previous in="vyrocni-zpravy" limit="1" sort="date:asc" type:contains=NewsAddon:getType}}
+        {{ if no_results }}
+            {{collection:vyrocni-zpravy limit="1" sort="date:desc" type:contains=NewsAddon:getType }}
+                <a href="{{NewsAddon:setAnchorHref url=url}}"  class="nav-arrow nav-next"></a>
+            {{/collection:vyrocni-zpravy}}
+        {{else}}
+            <a href="{{NewsAddon:setAnchorHref url=url}}" class="nav-arrow nav-next"></a>
+        {{ /if }}
+    {{/collection:previous}}
+</div>
+
+<section class="uk-section uk-section-secondary media-detail">
+    <div class="uk-container uk-container-xsmall">
+
+            <div class="redactor-style" data-uk-grid>
+                
+                <div class="uk-width-1-1">
+                   {{if intro != ""}}
+                   <div class="redactor-style detail-header">
+                       {{intro}}
+                   </div>
+                   {{/if}}
+                   {{if before-image != ""}}
+                   <div class="redactor-style detail-header">
+                       {{before-image}}    
+                   </div>
+                   {{/if}}
+                  
+                   <div class="uk-align-center detail-image">
+                       <img src="{{ glide:image width="800" fit="max"}}">
+                   </div>
+                   <div class="detail-content">
+                       {{content}}
+                   </div>
+{{#
+    <div class="detail-footer">
+        <span class="date">{{date format="j. n. Y"}}</span>
+    </div>    
+#}}
+                </div>
+            </div>
+
+    </div>
+</section>

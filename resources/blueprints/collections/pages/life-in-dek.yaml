@@ -1,0 +1,26 @@
+sections:
+  main:
+    display: 'Zivot v DEKu'
+    fields:
+      -
+        handle: intro
+        field:
+          type: textarea
+          instructions: |-
+            Zpráva zobrazovaná ve výpisu `Kariera - Co se u nás děje?`
+            - pro nedělitelné mezery vložte `&nbsp;`
+          localizable: true
+          display: Text
+      -
+        handle: image
+        field:
+          type: assets
+          container: main
+          folder: media
+          restrict: false
+          display: 'Obrázek ke zprávě'
+          instructions: 'Obrázky vkládejte alespoň 900px široké, jinak budou na některých zařízeních rozmazané'
+          mode: list
+          max_files: 1
+taxonomies: true
+title: news

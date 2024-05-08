@@ -1,0 +1,24 @@
+datetime_format: 'Y-m-d H:i:s'
+replace: true
+menu_icon: download
+menu_label: Forms
+callbacks:
+  dotaznik_pro_uchazece:
+    api: Forms
+    method: saveCandidateForm
+  kontaktni_formular:
+    api: Forms
+    method: saveContactForm
+  kontaktni_formular_new:
+    api: Forms
+    method: saveContactForm
+  studentske_staze:
+    api: Forms
+    method: saveInternshipForm
+store: default
+hard_del: false
+csv_delimiter: ;
+csv_bom: BOM_UTF8
+recaptcha_enabled: true
+recaptcha_site_key: '{env:RECAPTCHA_SITE_KEY}'
+recaptcha_secret_key: '{env:RECAPTCHA_SECRET_KEY}'

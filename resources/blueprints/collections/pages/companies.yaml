@@ -1,0 +1,134 @@
+sections:
+  main:
+    display: ''
+    fields:
+      -
+        handle: meta_description
+        field:
+          type: text
+          display: 'Meta Description'
+      -
+        handle: name
+        field:
+          type: text
+          instructions: 'jméno společnosti'
+          width: 50
+          display: Název
+      -
+        handle: type
+        field:
+          type: select
+          instructions: 'pro změnu pořadí je nutné přejít do Fieldsets->Companies->type->Extras a upravit čísla na jednotlivé hodnoty, poté se vrátit do tohoto pole a nastavit hodnotu, ve statamic není propojeno oběma směry.'
+          options:
+            2-obchod: Obchod
+            3-vyroba: Výroba
+            5-sluzby: Služby
+          display: type
+          width: 50
+      -
+        handle: intro
+        field:
+          type: textarea
+          instructions: |-
+            Úvodní krátký text o společnosti zobrazovaný na hlavní stránce.
+            - max 95 znaků
+          localizable: true
+          display: Popis
+          validate: 'max:95'
+      -
+        handle: logo
+        field:
+          type: assets
+          container: main
+          folder: /
+          restrict: false
+          instructions: 'Logo společnosti'
+          width: 50
+          display: logo
+          max_files: 1
+      -
+        handle: logo_white
+        field:
+          type: assets
+          container: main
+          folder: /
+          restrict: false
+          max_files: 1
+          instructions: |-
+            Logo bílé, zobrazující se přes fotku na HP v gridu při mobilní verzi
+            - šířka loga nastavena na 150px, výška automaticky dle rozměrů vloženého obrázku
+          width: 50
+          display: 'Logo bílé'
+      -
+        handle: foto
+        field:
+          type: assets
+          container: main
+          folder: /
+          restrict: false
+          instructions: 'obrázek společnosti pro mobilní verzi'
+          width: 50
+          display: Foto
+          max_files: 1
+      -
+        handle: description
+        field:
+          type: bard
+          instructions: 'Dlouhy text pro detail spolecnosti'
+          localizable: true
+          display: 'Dlouhy text'
+          save_html: true
+          buttons:
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - html
+            - image
+            - quote
+            - codeblock
+            - h1
+            - h2
+            - h3
+            - h4
+            - h5
+            - h6
+            - anchor
+      -
+        handle: company_video
+        field:
+          type: video
+          instructions: |-
+            Video pro detail firmy
+            Video může být nahráno z youtube<br>
+            - stačí zkopírovat adresu videa z youtube
+
+
+            Video může být nahráno jako soubor
+            - video musí být nahráno ve složce média
+            - cesta je poté ve formátu /assets/cesta_k_souboru/název_souboru např `/assets/homepage/videos/dek.mp4`
+          display: Video
+      -
+        handle: big_picture
+        field:
+          type: assets
+          container: main
+          folder: /
+          restrict: false
+          instructions: 'Obrazek pro detail firmy'
+          display: Obrazek
+          max_files: 1
+      -
+        handle: web_url
+        field:
+          type: text
+          instructions: 'https://example.cz/'
+          localizable: true
+          display: 'Stránky webu'
+      -
+        handle: order
+        field:
+          type: integer
+          display: pořadí
+taxonomies: true
+title: Companies

@@ -1,0 +1,15 @@
+
+<div class="documents">
+	<div class="uk-container uk-container-small">
+		<h1 class="page-name">{{ title }} </h1>
+		{{ documents scope="section" }}
+			{{ if section:title }}<h2>{{ section:title }}</h2>{{ /if }}
+			<ul class="download-table urs-box">
+			{{ assets:files }}
+                <a class="down {{ locale }}" href="{{ url }}" target="_blank"><li>{{ if title }}{{ title }}{{ else }}{{ url }}{{ /if }}</li></a>
+			{{ /assets:files }}
+			</ul>
+		{{ /documents }}
+		
+	</div>
+</div>

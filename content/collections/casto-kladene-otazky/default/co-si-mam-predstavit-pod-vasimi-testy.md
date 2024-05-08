@@ -1,0 +1,26 @@
+---
+title: 'Co si mám představit pod vašimi testy?'
+id: 241dff03-13a2-427c-ac93-09f16ea1d4d9
+published: false
+blueprint: simple_redactor_page
+---
+<p>V rámci výběrového řízení se můžete setkat s různými druhy testů. Většinou jste na absolvování testu v rámci pohovoru upozorněni předem. Můžeme je rozdělit do tří skupin:
+</p>
+<ul>
+	<li><strong>Testy praktických schopností a      dovedností</strong> –      Patří sem například jazykové testy, testy počítačových znalostí, testy      manuální zručnosti apod.</li>
+	<li><strong>Testy
+              všeobecných logických předpokladů
+	</strong> – Mají doplňující funkci při hledání vhodného kandidáta. Některé mohou být i časově náročné. Při zadání pozorně sledujte instrukce, pokud vám není něco jasné, zeptejte se. Na otázky odpovídejte pravdivě a odpovědi nezkreslujte, většinou se na to při vyhodnocení přijde. Do této skupiny testů řadíme:<o:p></o:p>
+	<ul>
+		<li>Testy schopností – mají ověřit vaše schopnosti, nadání, výkonnost (IQ testy, testy pozornosti apod.).<o:p></o:p></li>
+		<li>Osobnostní dotazníky – soustředí se na osobnostní charakteristiky, styly chování, vztahy k ostatním lidem (např. MBTI test, testy týmových rolí, zvládání stresu, postoje k práci).<o:p></o:p></li>
+		<li>Projektivní testy – jde například o malování obrázku či doplňování příběhu.</li>
+	</ul></li>
+	<li><strong>Assessment Centre (AC)</strong> – Používají se většinou při
+     výběru kandidátů na manažerské nebo obchodní pozice. Jedná se především o
+     řešení různých situací ať už týmově či jednotlivě. Jsou časově
+     nejnáročnější a mohou trvat i dva dny. Účastní se ho více uchazečů a
+     několik hodnotitelů. Součástí bývá i individuální pohovor. Vyhodnocení je velmi složité, proto výsledky
+     očekávejte v horizontu týdne či dvou.
+	</li>
+</ul>

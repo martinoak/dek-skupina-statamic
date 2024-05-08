@@ -1,0 +1,28 @@
+sections:
+  main:
+    display: Benefity
+    fields:
+      -
+        handle: image
+        field:
+          type: assets
+          container: main
+          folder: /
+          restrict: false
+          max_files: 1
+          display: obrazek
+      -
+        handle: title
+        field:
+          type: text
+          display: nadpis
+          localizable: true
+      -
+        handle: content
+        field:
+          type: textarea
+          display: obsah
+          localizable: true
+          instructions: '- pro nedělitelné mezery vložte `&nbsp;`'
+taxonomies: true
+title: benefits

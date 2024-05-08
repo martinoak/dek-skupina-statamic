@@ -1,0 +1,269 @@
+
+.holder
+{
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+#employment
+{
+    display: flex;
+    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid #d8d8d8;
+    /*justify-content: center;*/
+    padding: 5px 0;
+}
+.selected-value
+{
+    padding: 10px 8px;
+    position: relative;
+}
+.clear, .null-value,.selected
+{
+    margin-left: 10%;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: inline-block;
+}
+.clear:before,  .clear:after, .null-value:before, .null-value:after,.selected:before,.selected:after
+{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 3px;
+    left: 0;
+    width: 2px;
+    height: 14px;
+    background: #464646;
+    transform: rotate(45deg);
+}
+.selected
+{
+    margin-left: 0;
+    float: right;
+}
+.selected + span {
+    font-weight: bold;
+}
+.clear:hover:before,.clear:hover:after, .null-value:hover:before,.null-value:hover:after,.slected:hover:before,.selected:after,.selected:before
+{
+    background: #e30013;
+}
+.clear:after, .null-value:after,.selected:after
+{
+    transform: rotate(-45deg);
+}
+.selected:after
+{
+    height: 8px;
+    left: -2px;
+    top: 8px;
+}
+.selected:before
+{
+    left: 5px;
+}
+.null-value:before
+{
+    left: 9px;
+}
+#table h2
+{
+    margin: 30px 0px 15px 0px;
+    font-size: 16pt;
+}
+#table
+{
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 20px;
+}
+
+
+.list
+{
+    position: absolute;
+    top: 38px;
+    left: 10px;
+    z-index: 2;
+    background: white;
+    box-shadow: 0px 0px 11px #333;
+    padding: 15px 15px;
+    min-width: 240px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+.list > .item
+{
+    padding: 5px 0;
+    position: relative;
+}
+.list > .item:hover:before,.list > .item:hover:after
+{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 8px;
+    right: 8px;
+    width: 2px;
+    height: 14px;
+    opacity: 0.5;
+    background: #e30013;
+    transform: rotate(45deg);
+}
+.list > .item:hover:after
+{
+    height: 8px;
+    right: 15px;
+    top: 13px;
+    transform: rotate(-45deg);
+}
+.employment-row > span:not(.location){
+    color: #e30013;
+    font-weight: bold;
+    display: inline-block;
+    max-width: calc(100% - 15px);
+}
+.employment-row
+{
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    padding: 9px 15px;
+}
+.employment-row:before,.employment-row:after
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 2px;
+    height: 15px;
+    background: #cccccc;
+    transform: rotate(135deg);
+    top: 4px;
+    right: 20px;
+}
+.employment-row:after
+{
+    top: 14px;
+    transform: rotate(225deg);
+}
+.employment-row > span,.employment-row > span:before
+{
+    color: #464646;
+    font-weight: normal;
+}
+.employment-row > span.location:before
+{
+    display: inline-block;
+    content: '/';
+    margin: 0 10px;
+}
+.employment-row:hover, .employment-row:hover > span,.employment-row:hover > span:before
+{
+    color: #fff;
+    background: #e30013;
+}
+.employment-row:hover:before
+{
+    transform: none;
+    content: 'Detail pozice';
+    text-decoration: underline;
+    font-weight: normal;
+    right: 15px;
+    color: #fff;
+    font-size: 12px;
+    background: transparent;
+    width: auto;
+    top: 11px;
+}
+.employment-row:hover:after
+{
+    display: none;
+}
+
+@media(max-width: 377px)
+{
+    .selected-value{
+        padding: 10px 0;
+    }
+    .holder{
+        margin: 0;
+        font-size: 16px;
+    }
+}
+@media(max-width: 650px){
+    .holder{
+        position: static;
+    }
+    .list{
+        left: 10%;
+        width: 80%;
+        top: auto;
+    }
+}
+
+#table a.specialization:before{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-image: url('../../icons/Administrativa.svg');
+    margin-top: 5px;
+}
+#table a.specialization > .employment-row{
+    padding-left: 30px;
+}
+
+.item[data-value] > span:first-child:before{
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-left: -5px;
+    margin-right: 10px;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+}
+
+.nameFilerSelect.administrativa:before{
+    background-image: url('../../icons/Administrativa.svg');
+}
+.nameFilerSelect.finance:before{
+    background-image: url('../../icons/Finance.svg');
+}
+.nameFilerSelect.it-is:before{
+    background-image: url('../../icons/It.svg');
+}
+.nameFilerSelect.jine:before{
+    background-image: url('../../icons/Jine.svg');
+}
+.nameFilerSelect.logistika:before{
+    background-image: url('../../icons/Logistika.svg');
+}
+.nameFilerSelect.marketing:before{
+    background-image: url('../../icons/Marketing.svg');
+}
+.nameFilerSelect.obchod:before{
+    background-image: url('../../icons/Obchod.svg');
+}
+.nameFilerSelect.personalistika:before{
+    background-image: url('../../icons/Personalistika.svg');
+}
+.nameFilerSelect.technicke:before{
+    background-image: url('../../icons/Technicke.svg');
+}
+.nameFilerSelect.vyroba:before{
+    background-image: url('../../icons/Vyroba.svg');
+}
+
+span.nameFilerSelect {
+    font-weight: 400;
+}
